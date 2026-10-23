@@ -44,6 +44,7 @@ def main() -> None:
     p.add_argument("--subsample", type=int, default=1)
     p.add_argument("--head", type=Path, default=None)
     p.add_argument("--burst", type=int, default=2)
+    p.add_argument("--budget", type=int, default=2000, help="agent's own step cap (local sim allows 60,000)")
     p.add_argument("--tau", type=float, default=1.0)
     p.add_argument("--near-hops", type=int, default=6)
     p.add_argument("--out", type=Path, default=Path("results/eval.csv"))
@@ -66,7 +67,7 @@ def main() -> None:
                 agent = MyAgent(
                     data, descriptor=args.descriptor, subsample=args.subsample, head=args.head, burst=args.burst,
                     tau=args.tau, near_hops=args.near_hops, cache_dir=Path("cache") / f"local-{seed}",
-                    log_dir=args.log_dir,
+                    log_dir=args.log_dir, budget=args.budget,
                 )
                 res = run(
                     agent, f"local:{seed}", viewer=False, check=False, confirm=False,
@@ -75,7 +76,8 @@ def main() -> None:
                 if res is not None:
                     row.update(
                         points=res.points, spl=res.spl, steps=res.nav_steps,
-                        distance_m=res.arrival.distance_m, heading_deg=res.arrival.heading_deg,
+                        distance_m=getattr(res.arrival, "distance_m", ""),
+                        heading_deg=getattr(res.arrival, "heading_deg", ""),
                         gate=int(res.points > 0),
                     )
                 else:

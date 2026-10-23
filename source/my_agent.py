@@ -65,6 +65,7 @@ class MyAgent(Agent):
         tau: float = 1.0,
         log_dir: Path | None = None,
         verbose: bool = False,
+        budget: int | None = None,
     ) -> None:
         cache = cache_dir or Path("cache") / Path(data_dir).name
         self.frames, bounds = load_frames(Path(data_dir), subsample)
@@ -80,7 +81,7 @@ class MyAgent(Agent):
         self.burst, self.near_hops = burst, near_hops
         self.lookahead, self.steer_deg, self._feat_cache = lookahead, steer_deg, {}
         self.scale_tol = scale_tol
-        self.log_dir, self.verbose = log_dir, verbose
+        self.log_dir, self.verbose, self.budget = log_dir, verbose, budget
         self.sign = 1  # +1: a LEFT turn moves scene content to the right in the image
         self._reset()
 
@@ -101,16 +102,22 @@ class MyAgent(Agent):
         self.max_steps = info.limits.max_steps
         self.targets = info.targets
         self.tfeat = [self.matcher.features(t) for t in self.targets]
-        sims = self.topo.db @ self.desc.extract(self.targets[0])
-        cands = [int(i) for i in np.argsort(-sims)[:8]]
-        inl = [
-            self.matcher.match(self.tfeat[0], self.matcher.features(cv2.imread(str(self.frames[i].path)))).n
-            for i in cands
-        ]
-        goal = cands[int(np.argmax(inl))] if max(inl) >= 12 else cands[0]
+        # The goal photos are views from the goal in four directions; the exploration drive may
+        # have passed the goal facing any way, so look for all four, keep the best geometric match.
+        best = (-1, None, None)  # (inliers, node, view)
+        for k in range(4):
+            sims = self.topo.db @ self.desc.extract(self.targets[k])
+            for i in np.argsort(-sims)[:6]:
+                n = self.matcher.match(self.tfeat[k], self._node_feat(int(i))).n
+                if n > best[0]:
+                    best = (n, int(i), k)
+        if best[0] >= 12:
+            goal = best[1]
+        else:  # weak evidence: fall back to the front view's top retrieval hit
+            goal = int(np.argmax(self.topo.db @ self.desc.extract(self.targets[0])))
         self.topo.plan_to(goal)
         self.goal = goal
-        print(f"goal: node {goal} (cands {cands[:4]} inliers {inl[:4]})")
+        print(f"goal: node {goal} (best match: view {best[2]}, {best[0]} inliers)")
 
     def finish(self, result: Result | None) -> None:
         print("result:", result)
@@ -123,7 +130,8 @@ class MyAgent(Agent):
 
     def act(self, obs: Observation) -> Action | tuple[Action, int]:
         self.t += 1
-        if obs.steps_left <= 12:
+        left = obs.steps_left if self.budget is None else min(obs.steps_left, self.budget - obs.step)
+        if left <= 12:
             return self._out(Action.CHECKIN, "budget")
         small = cv2.resize(cv2.cvtColor(obs.image, cv2.COLOR_BGR2GRAY), (40, 30)).astype(np.float32)
 
@@ -282,6 +290,7 @@ def main() -> None:
     parser.add_argument("--subsample", type=int, default=1)
     parser.add_argument("--head", type=Path, default=None, help="projection from train_head.py")
     parser.add_argument("--burst", type=int, default=2)
+    parser.add_argument("--budget", type=int, default=None, help="own step cap, e.g. 2000")
     parser.add_argument("--tau", type=float, default=1.0)
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--log-dir", type=Path, default=None)
@@ -289,7 +298,7 @@ def main() -> None:
     data = cli.exploration_data(args, args.data)
     agent = MyAgent(
         data, descriptor=args.descriptor, subsample=args.subsample, head=args.head, burst=args.burst,
-        tau=args.tau, log_dir=args.log_dir, verbose=args.verbose,
+        tau=args.tau, log_dir=args.log_dir, verbose=args.verbose, budget=args.budget,
     )
     run(agent, cli.challenge(args), **cli.run_options(args))
 
