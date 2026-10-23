@@ -184,7 +184,7 @@ class TopoMap:
 
 
 class BeliefFilter:
-    def __init__(self, topo: TopoMap, tau: float = 0.05, sigma: float = 1.5, stay: float = 0.4, floor: float = 1e-3):
+    def __init__(self, topo: TopoMap, tau: float = 1.0, sigma: float = 1.5, stay: float = 0.4, floor: float = 1e-3):
         n = topo.n
         rows, cols, vals = [], [], []
         reach = int(np.ceil(3 * sigma))
@@ -211,7 +211,10 @@ class BeliefFilter:
         if moved:
             self.b = self.kt @ self.b
         sims = self.db @ q
-        like = np.exp((sims - sims.max()) / self.tau) + self.floor
+        # Raw VLAD similarities are tiny (best ~0.1, rest ~0.0 at 16k dims), so a fixed
+        # temperature in raw units is meaningless: score in standard deviations above the crowd.
+        z = (sims - sims.mean()) / (sims.std() + 1e-9)
+        like = np.exp((z - z.max()) / self.tau) + self.floor
         self.b = self.b * like
         self.b /= self.b.sum()
         self.last_sim = float(sims.max())
