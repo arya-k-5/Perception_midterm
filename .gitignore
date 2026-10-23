@@ -18,3 +18,10 @@ wheels/
 vis_nav_player.log
 .ruff_cache/
 .pytest_cache/
+
+# Experiments
+/results/
+/models/
+/logs/
+/runs/
+/data_train/
