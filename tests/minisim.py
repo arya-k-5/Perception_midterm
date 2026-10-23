@@ -245,7 +245,7 @@ def make_episode(seed: int, data_dir: Path, n: int = 7, length: int = 60):
 def run_episode(agent, world: MiniWorld, start, goal, max_steps: int = 4000) -> dict:
     world.x, world.y, world.th = start
     cam = Camera(W, H, "bgr", "jpeg", np.array([[F, 0, CX], [0, F, CY], [0, 0, 1.0]]))
-    info = SessionInfo("s", {"id": "mini"}, cam, Limits(max_steps), targets(world, goal))
+    info = SessionInfo("s", {"id": "mini"}, cam, Limits(max_steps, 8, 0, 3, 120, 300, 3600), targets(world, goal))
     agent.setup(info)
     steps, obs = 0, Observation(world.render(), 0, max_steps)
     oracle = world.oracle_steps(world.cell_of(*start[:2]), world.cell_of(*goal[:2]))

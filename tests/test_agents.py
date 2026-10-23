@@ -224,18 +224,20 @@ def test_baseline_indexes_localises_and_hints(dataset, tmp_path, session, keys):
     assert np.allclose(again.database, agent.database)
 
 
-def test_the_template_agent_is_a_complete_skeleton():
-    from pathlib import Path
-
+def test_my_agent_is_a_complete_agent(tmp_path):
+    """The kit's template raised NotImplementedError in pre-flight; ours is written, so pre-flight
+    (setup + one act on random frames) must pass. Built on a tiny stand-in maze, not data/."""
+    import minisim
     from my_agent import MyAgent
-    from vis_nav_sdk import Agent, SimError, preflight
+    from vis_nav_sdk import Agent, preflight
 
-    agent = MyAgent(Path("data/none"))
+    minisim.make_episode(2, tmp_path, n=5, length=45)
+    agent = MyAgent(tmp_path, n_clusters=64, cache_dir=tmp_path / "cache")
     for hook in ("setup", "act", "finish", "hud", "panel"):
+        if hook in ("hud", "panel"):
+            continue  # optional viewer hooks
         assert getattr(MyAgent, hook) is not getattr(Agent, hook), f"{hook} not spelled out"
-    with pytest.raises(SimError, match="pre-flight") as caught:
-        preflight(agent)  # no attempt is spent on an act() that is not written yet
-    assert isinstance(caught.value.__cause__, NotImplementedError)
+    preflight(agent)
 
 
 def test_dotenv_fills_the_environment_without_overriding_it(tmp_path, monkeypatch):

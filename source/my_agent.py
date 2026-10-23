@@ -57,7 +57,7 @@ class MyAgent(Agent):
         n_clusters: int = 128,
         cache_dir: Path | None = None,
         head: Path | None = None,
-        burst: int = 4,
+        burst: int = 2,
         lookahead: int = 4,
         steer_deg: float = 5.0,
         scale_tol: float = 0.04,
@@ -86,7 +86,7 @@ class MyAgent(Agent):
 
     def _reset(self) -> None:
         self.phase, self.log, self.t = "calib0", [], 0
-        self.prev_small, self.prev_act, self.stuck, self.recov = None, None, 0, 0
+        self.prev_small, self.prev_act, self.stuck, self.queue, self.n_stuck = None, None, 0, [], 0
         self.appr_steps, self.node, self.hops, self.state = 0, -1, -1, "init"
         self.best_cost, self.best_t, self.unstick, self.last_follow = np.inf, 0, 0, None
         self.jump_waits: dict = {}
@@ -145,19 +145,24 @@ class MyAgent(Agent):
             and self.prev_small is not None
             and float(np.abs(small - self.prev_small).mean()) < 1.0
         )
-        self.stuck = self.stuck + 1 if stuck_now else 0
+        if self.prev_act in ("FORWARD", "BACKWARD"):
+            # a blocked burst counts; a burst that moved clears it. Turns (steering, recovery)
+            # leave the count alone: resetting on them hid a wall the robot kept pushing into.
+            self.stuck = self.stuck + 1 if stuck_now else 0
         self.prev_small = small
 
         q = self.desc.extract(obs.image)
         self.node = self.belief.update(q)
         self.hops = self.topo.hops(self.node)
 
-        if self.recov > 0:  # finish a recovery turn
-            self.recov -= 1
-            return self._out((Action.LEFT if self.recov % 2 else Action.RIGHT, 3), "recover")
+        if self.queue:  # recovery: back off the wall, then turn well away from it
+            return self._out(self.queue.pop(0), "recover")
         if self.stuck >= 2:
-            self.stuck, self.recov = 0, 2
-            return self._out((Action.RIGHT if self.t % 2 else Action.LEFT, 5), "stuck")
+            self.stuck, self.n_stuck = 0, self.n_stuck + 1
+            turn = Action.RIGHT if self.n_stuck % 2 else Action.LEFT  # alternate sides
+            self.queue = [(turn, min(8 + 3 * (self.n_stuck % 4), 20))]
+            self.belief.reset()  # the pose estimate got us here; do not trust it
+            return self._out((Action.BACKWARD, 4), "stuck")
 
         if self.hops <= self.near_hops:
             r = self._approach(obs)
@@ -170,9 +175,9 @@ class MyAgent(Agent):
             self.best_cost, self.best_t = cost, self.t
         if self.unstick > 0:  # watchdog: no progress for a long while -> drive on, then re-plan
             self.unstick -= 1
-            return self._out((Action.FORWARD, 6), "unstick")
+            return self._out((Action.FORWARD, 2), "unstick")
         if self.t - self.best_t > 60:
-            self.best_t, self.unstick = self.t, 8
+            self.best_t, self.unstick = self.t, 24
             self.belief.reset()
         name = self.topo.action_toward_goal(self.node, prefer=self.last_follow)
         self.last_follow = name
@@ -276,7 +281,7 @@ def main() -> None:
     parser.add_argument("--descriptor", default="vlad", choices=["vlad", "dino", "both"])
     parser.add_argument("--subsample", type=int, default=1)
     parser.add_argument("--head", type=Path, default=None, help="projection from train_head.py")
-    parser.add_argument("--burst", type=int, default=4)
+    parser.add_argument("--burst", type=int, default=2)
     parser.add_argument("--tau", type=float, default=1.0)
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--log-dir", type=Path, default=None)
