@@ -261,7 +261,7 @@ class SptmAgent(Agent):
                     break
         wp = path[l]
         name = self.scorer.locomote(obs.image, self._frame_img(wp), wp)
-        self.state = f"wp +{l} p={p[wp]:.2f} best={p.max():.2f}"
+        self.state = f"wp +{l} p={p[wp]:.2f} {getattr(self.scorer, 'dbg', '')}"
         if hasattr(self.scorer, "ticks"):
             n = self.scorer.ticks if name != "FORWARD" else self.burst
         else:

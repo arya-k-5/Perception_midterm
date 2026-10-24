@@ -27,8 +27,12 @@ def test_locomote_turns_toward_waypoint(tmp_path):
     wp = _scene()
     same = sc.locomote(_shift(wp, 3), wp, 1)  # identical images are degenerate for RANSAC
     assert same == "FORWARD"
-    left_of = sc.locomote(_shift(wp, 100), wp, 1)  # picture shifted: camera is rotated
-    right_of = sc.locomote(_shift(wp, -100), wp, 1)
+    sc2 = ClassicalScorer(tmp_path)
+    sc2.set_focal(160.0)
+    left_of = sc2.locomote(_shift(wp, 100), wp, 1)  # picture shifted: camera is rotated
+    sc3 = ClassicalScorer(tmp_path)
+    sc3.set_focal(160.0)
+    right_of = sc3.locomote(_shift(wp, -100), wp, 1)
     assert {left_of, right_of} == {"LEFT", "RIGHT"}
 
 

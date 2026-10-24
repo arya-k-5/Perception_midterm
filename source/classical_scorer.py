@@ -15,6 +15,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from collections import deque
+
 import cv2
 import numpy as np
 from geometry import Matcher, shift_deg
@@ -24,7 +26,7 @@ TURN_DEG = 3.44
 
 
 class ClassicalScorer:
-    def __init__(self, cache_dir: Path, sign: int = +1, turn_tol: float = 12.0, n_clusters: int = 128):
+    def __init__(self, cache_dir: Path, sign: int = +1, turn_tol: float = 15.0, n_clusters: int = 128):
         self.ex = VLADExtractor(n_clusters, cache_dir)
         self.matcher = Matcher()
         self.sign, self.turn_tol = sign, turn_tol
@@ -35,6 +37,8 @@ class ClassicalScorer:
         self._wp_feat: dict[int, object] = {}
         self._last_turn = "LEFT"
         self._turned_last = False
+        self._lefts: deque = deque(maxlen=3)
+        self.dbg = ""
 
     # ---- setup (called by the agent before and after embedding the database)
 
@@ -97,8 +101,14 @@ class ClassicalScorer:
         m = self.matcher.match(self._wp_feat[node], self.matcher.features(cur))
         if m.n < 8:  # cannot see the waypoint: look around in a fixed direction
             self.ticks = 3
+            self._lefts.clear()
+            self.dbg = f"blind n={m.n}"
             return self._last_turn
-        left = self.sign * shift_deg(m, self.focal)  # how far left of the waypoint we point
+        # one bearing from two near-identical frames is noisy (+-10 deg); the median of the last
+        # three keeps the robot from flipping left/right every step
+        self._lefts.append(self.sign * shift_deg(m, self.focal))
+        left = float(np.median(self._lefts))
+        self.dbg = f"n={m.n} left={left:+.0f}"
         if abs(left) > self.turn_tol:
             want = "RIGHT" if left > 0 else "LEFT"
             if want != self._last_turn and self._turned_last and abs(left) < 2 * self.turn_tol:
@@ -107,7 +117,7 @@ class ClassicalScorer:
                 return "FORWARD"
             self._turned_last = True
             self._last_turn = want
-            self.ticks = int(np.clip(round(abs(left) / TURN_DEG) - 1, 1, 4))
+            self.ticks = int(np.clip(round(abs(left) / TURN_DEG) - 2, 1, 3))
             return self._last_turn
         self._turned_last = False
         self.ticks = 1
