@@ -62,7 +62,7 @@ class MyAgent(Agent):
         steer_deg: float = 5.0,
         scale_tol: float = 0.04,
         near_hops: int = 6,
-        tau: float = 1.0,
+        tau: float = 0.04,
         log_dir: Path | None = None,
         verbose: bool = False,
         budget: int | None = None,
@@ -291,7 +291,7 @@ def main() -> None:
     parser.add_argument("--head", type=Path, default=None, help="projection from train_head.py")
     parser.add_argument("--burst", type=int, default=1)
     parser.add_argument("--budget", type=int, default=None, help="own step cap, e.g. 2000")
-    parser.add_argument("--tau", type=float, default=1.0)
+    parser.add_argument("--tau", type=float, default=0.04)
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--log-dir", type=Path, default=None)
     args = parser.parse_args()

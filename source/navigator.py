@@ -184,7 +184,7 @@ class TopoMap:
 
 
 class BeliefFilter:
-    def __init__(self, topo: TopoMap, tau: float = 1.0, sigma: float = 1.5, stay: float = 0.4, floor: float = 1e-3):
+    def __init__(self, topo: TopoMap, tau: float = 0.04, sigma: float = 2.5, stay: float = 0.4, floor: float = 1e-3, scale: str = "raw"):
         n = topo.n
         rows, cols, vals = [], [], []
         reach = int(np.ceil(3 * sigma))
@@ -201,7 +201,7 @@ class BeliefFilter:
         k = sp.csr_matrix((vals, (rows, cols)), shape=(n, n))
         k = sp.diags(1 / np.asarray(k.sum(1)).ravel()) @ k
         self.kt = k.T.tocsr()  # b_new = K^T b
-        self.db, self.tau, self.floor, self.n = topo.db, tau, floor, n
+        self.db, self.tau, self.floor, self.n, self.scale = topo.db, tau, floor, n, scale
         self.reset()
 
     def reset(self) -> None:
@@ -211,10 +211,11 @@ class BeliefFilter:
         if moved:
             self.b = self.kt @ self.b
         sims = self.db @ q
-        # Raw VLAD similarities are tiny (best ~0.1, rest ~0.0 at 16k dims), so a fixed
-        # temperature in raw units is meaningless: score in standard deviations above the crowd.
-        z = (sims - sims.mean()) / (sims.std() + 1e-9)
-        like = np.exp((z - z.max()) / self.tau) + self.floor
+        # Tuned offline on real simulator drives (3 mazes): raw similarity with tau ~0.04 beat
+        # z-scored similarity (scale="z", tau ~1) on within-0.4 m rate, both halve 'lost' frames.
+        if self.scale == "z":
+            sims = (sims - sims.mean()) / (sims.std() + 1e-9)
+        like = np.exp((sims - sims.max()) / self.tau) + self.floor
         self.b = self.b * like
         self.b /= self.b.sum()
         self.last_sim = float(sims.max())
