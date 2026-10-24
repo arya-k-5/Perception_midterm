@@ -54,33 +54,39 @@ class SptmAgent(Agent):
         window: int = 3,
         near_hops: int = 3,
         burst: int = 1,
+        geo_min: int = 0,
         scale_tol: float = 0.04,
         budget: int | None = None,
         log_dir: Path | None = None,
         verbose: bool = False,
     ) -> None:
         self.scorer = scorer
+        self.geo_min = geo_min
         self.frames, self.bounds = load_frames(Path(data_dir), subsample)
         print(f"{len(self.frames)} frames from {len(self.bounds)} trajectories")
         self.n = len(self.frames)
         self.traj = np.concatenate([[t] * (e - s) for t, (s, e) in enumerate(self.bounds)])
+        if hasattr(scorer, "prepare"):
+            scorer.prepare(self.frames)
         imgs = [cv2.imread(str(f.path)) for f in self.frames]
         self.emb = np.asarray(scorer.embed(imgs), np.float32)
         del imgs
+        if hasattr(scorer, "calibrate"):
+            scorer.calibrate(self.emb, self.bounds)
         self.G = nx.Graph()
         self.G.add_nodes_from(range(self.n))
         for s, e in self.bounds:
             self.G.add_edges_from((i, i + 1) for i in range(s, e - 1))
+        self.matcher = Matcher()
+        self._img: dict[int, np.ndarray] = {}
         self.shortcuts = self._shortcuts(shortcut_gap, shortcut_k, window, s_shortcut)
         self.G.add_edges_from(self.shortcuts)
         print(f"graph: {self.G.number_of_edges()} edges, {len(self.shortcuts)} verified shortcuts")
-        self.matcher = Matcher()
         self.h_min, self.h_max, self.s_local, self.s_reach = h_min, h_max, s_local, s_reach
         self.local_hops, self.near_hops, self.burst = local_hops, near_hops, burst
         self.scale_tol, self.budget = scale_tol, budget
         self.log_dir, self.verbose = log_dir, verbose
         self._local: dict[int, np.ndarray] = {}
-        self._img: dict[int, np.ndarray] = {}
         self._reset()
 
     # ---- graph
@@ -119,6 +125,20 @@ class SptmAgent(Agent):
         for p, (i, j) in enumerate(plist):
             if np.median(pr[owner == p]) > thr:
                 out.append((i, j))
+        if self.geo_min > 0:  # a look-alike corridor fools appearance; shared geometry does not
+            keep, fc = [], {}
+
+            def feat(k: int):
+                if k not in fc:
+                    fc[k] = self.matcher.features(cv2.imread(str(self.frames[k].path)))
+                return fc[k]
+
+            for i, j in out:
+                n = self.matcher.match(feat(i), feat(j)).n
+                if n >= self.geo_min:
+                    keep.append((i, j))
+            print(f"shortcuts: {len(out)} by appearance, {len(keep)} after RANSAC (>= {self.geo_min} inliers)")
+            out = keep
         return out
 
     def _local_nodes(self, node: int) -> np.ndarray:
@@ -133,10 +153,13 @@ class SptmAgent(Agent):
         self.t, self.node, self.hops, self.state, self.log = 0, -1, -1, "init", []
         self.prev_small, self.prev_act, self.stuck, self.queue, self.n_stuck = None, None, 0, [], 0
         self.appr_steps = 0
+        self.prev_feat = None
 
     def setup(self, info: SessionInfo) -> None:
         self._reset()
         self.focal = _intrinsic_focal(info)
+        if hasattr(self.scorer, "set_focal"):
+            self.scorer.set_focal(self.focal)
         self.targets = info.targets
         self.tfeat = [self.matcher.features(t) for t in self.targets]
         tembs = np.asarray(self.scorer.embed(list(self.targets)), np.float32)
@@ -179,10 +202,18 @@ class SptmAgent(Agent):
         if left <= 12:
             return self._out(Action.CHECKIN, "budget")
         small = cv2.resize(cv2.cvtColor(obs.image, cv2.COLOR_BGR2GRAY), (40, 30)).astype(np.float32)
+        cur_feat = None
         if self.prev_act in ("FORWARD", "BACKWARD"):
             blocked = self.prev_small is not None and float(np.abs(small - self.prev_small).mean()) < 1.0
+            if self.prev_feat is not None:  # moving forward must make the scene expand
+                cur_feat = self.matcher.features(obs.image)
+                mm = self.matcher.match(self.prev_feat, cur_feat)
+                if mm.n >= 15:
+                    sc = scale_ratio(mm)
+                    blocked = blocked or not (sc > 1.004 if self.prev_act == "FORWARD" else sc < 0.996)
             self.stuck = self.stuck + 1 if blocked else 0
         self.prev_small = small
+        self.prev_feat = cur_feat if cur_feat is not None else self.matcher.features(obs.image)
 
         if self.queue:
             return self._out(self.queue.pop(0), "recover")
@@ -224,7 +255,10 @@ class SptmAgent(Agent):
         wp = path[l]
         name = self.scorer.locomote(obs.image, self._frame_img(wp), wp)
         self.state = f"wp +{l} p={p[wp]:.2f} best={p.max():.2f}"
-        n = self.burst if name in ("FORWARD", "BACKWARD") else 1
+        if hasattr(self.scorer, "ticks"):
+            n = self.scorer.ticks if name != "FORWARD" else self.burst
+        else:
+            n = self.burst if name in ("FORWARD", "BACKWARD") else 1
         return self._out((Action[name], n), "follow")
 
     def _approach(self, obs: Observation):
@@ -278,6 +312,8 @@ def main() -> None:
     parser.add_argument("--r", type=Path, default=Path("models/sptm_r.pt"))
     parser.add_argument("--l", type=Path, default=Path("models/sptm_l.pt"))
     parser.add_argument("--device", default=None)
+    parser.add_argument("--classical", action="store_true", help="no trained networks: VLAD + feature matching")
+    parser.add_argument("--geo-min", type=int, default=None, help="RANSAC inliers a shortcut must have")
     parser.add_argument("--burst", type=int, default=1)
     parser.add_argument("--budget", type=int, default=None)
     parser.add_argument("--s-local", type=float, default=0.7)
@@ -287,9 +323,15 @@ def main() -> None:
     parser.add_argument("--log-dir", type=Path, default=None)
     args = parser.parse_args()
     data = cli.exploration_data(args, args.data)
-    scorer = TorchScorer(args.r, args.l, args.device)
+    if args.classical:
+        from classical_scorer import ClassicalScorer
+
+        scorer = ClassicalScorer(Path("cache") / f"sptm-{Path(data).name}")
+    else:
+        scorer = TorchScorer(args.r, args.l, args.device)
+    geo = args.geo_min if args.geo_min is not None else (22 if args.classical else 0)
     agent = SptmAgent(
-        data, scorer, burst=args.burst, budget=args.budget, s_local=args.s_local,
+        data, scorer, geo_min=geo, burst=args.burst, budget=args.budget, s_local=args.s_local,
         s_reach=args.s_reach, s_shortcut=args.s_shortcut, log_dir=args.log_dir, verbose=args.verbose,
     )
     run(agent, cli.challenge(args), **cli.run_options(args))
