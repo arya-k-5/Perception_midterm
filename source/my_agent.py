@@ -207,6 +207,10 @@ class MyAgent(Agent):
             steer = self._steer(obs, name)
             if steer is not None:
                 return steer
+        elif name in ("LEFT", "RIGHT"):
+            out, name = self._turn_servo(obs, name)  # logs showed 10+ identical turns at one node
+            if out is not None:
+                return out
         n = self.burst if name in ("FORWARD", "BACKWARD") else 2
         return self._out((Action[name], n), "follow")
 
@@ -229,6 +233,34 @@ class MyAgent(Agent):
         if i not in self._feat_cache:
             self._feat_cache[i] = self.matcher.features(cv2.imread(str(self.frames[i].path)))
         return self._feat_cache[i]
+
+    def _turn_servo(self, obs: Observation, name: str):
+        """Replaying a recorded turn blindly spins in place when the belief does not advance (the
+        run logs show 10+ identical turns at one node). Instead rotate until the camera matches the
+        frame where the recorded turn ENDED, then carry on with whatever the plan does there.
+        Returns (action_or_None, action_name)."""
+        tgt = cur = self.node
+        for _ in range(14):
+            nxt = int(self.topo.next_hop[cur])
+            if nxt < 0:
+                return None, name
+            if self.topo.edge_action(cur, nxt) != name:
+                tgt = cur
+                break
+            cur = nxt
+        else:
+            return None, name  # a very long turn: nothing to align against
+        if tgt == self.node:
+            return None, name
+        m = self.matcher.match(self._node_feat(tgt), self.matcher.features(obs.image))
+        if m.n < 10:
+            return None, name
+        left = self.sign * shift_deg(m, self.focal)
+        self.state = f"turn-servo n={m.n} left={left:+.1f}"
+        if abs(left) <= 1.5 * self.steer_deg:
+            return None, self.topo.action_toward_goal(tgt, prefer=None)  # turn is done
+        turn = Action.RIGHT if left > 0 else Action.LEFT
+        return self._out((turn, int(np.clip(round(abs(left) / TURN_DEG), 1, 6))), "turn-servo"), name
 
     def _steer(self, obs: Observation, name: str):
         """On a straight stretch, match the camera to the frame ``lookahead`` hops ahead on the
