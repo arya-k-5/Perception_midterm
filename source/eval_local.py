@@ -43,7 +43,7 @@ def main() -> None:
     p.add_argument("--descriptor", default="vlad", choices=["vlad", "dino", "both"])
     p.add_argument("--subsample", type=int, default=1)
     p.add_argument("--head", type=Path, default=None)
-    p.add_argument("--burst", type=int, default=2)
+    p.add_argument("--burst", type=int, default=1)
     p.add_argument("--budget", type=int, default=2000, help="agent's own step cap (local sim allows 60,000)")
     p.add_argument("--tau", type=float, default=1.0)
     p.add_argument("--near-hops", type=int, default=6)

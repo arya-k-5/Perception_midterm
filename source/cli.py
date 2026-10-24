@@ -59,6 +59,7 @@ def parser(description: str) -> argparse.ArgumentParser:
         "--no-browser", action="store_true", help="do not open the run's page on the site"
     )
     p.add_argument("--no-check", action="store_true", help="skip the pre-flight check")
+    p.add_argument("--fps", type=float, default=None, help="cap steps per second so you can watch (e.g. 8)")
     return p
 
 
@@ -76,6 +77,7 @@ def run_options(args: argparse.Namespace) -> dict:
         "api_key": args.api_key,
         "server": args.server,
         "viewer": True,
+        "fps": getattr(args, "fps", None),
         "check": not args.no_check,
         "confirm": False if args.yes else None,
         "browser": False if args.no_browser else None,

@@ -57,7 +57,7 @@ class MyAgent(Agent):
         n_clusters: int = 128,
         cache_dir: Path | None = None,
         head: Path | None = None,
-        burst: int = 2,
+        burst: int = 1,
         lookahead: int = 4,
         steer_deg: float = 5.0,
         scale_tol: float = 0.04,
@@ -193,7 +193,7 @@ class MyAgent(Agent):
             steer = self._steer(obs, name)
             if steer is not None:
                 return steer
-        n = self.burst if name in ("FORWARD", "BACKWARD") else 3
+        n = self.burst if name in ("FORWARD", "BACKWARD") else 2
         return self._out((Action[name], n), "follow")
 
     def _check_jump(self) -> None:
@@ -289,7 +289,7 @@ def main() -> None:
     parser.add_argument("--descriptor", default="vlad", choices=["vlad", "dino", "both"])
     parser.add_argument("--subsample", type=int, default=1)
     parser.add_argument("--head", type=Path, default=None, help="projection from train_head.py")
-    parser.add_argument("--burst", type=int, default=2)
+    parser.add_argument("--burst", type=int, default=1)
     parser.add_argument("--budget", type=int, default=None, help="own step cap, e.g. 2000")
     parser.add_argument("--tau", type=float, default=1.0)
     parser.add_argument("--verbose", action="store_true")
