@@ -230,12 +230,24 @@ class MyAgent(Agent):
                 break
         if node not in cands:
             cands.insert(0, node)
+        # Also test the frames AHEAD on the planned path. During a turn the picture changes a lot
+        # per step but VLAD barely moves the belief (run log: 11 identical turns at one node);
+        # feature matching against the next frames on the path tells how far along we really are.
+        ahead, cur_n = [], node
+        for k in range(1, 25):
+            nxt = int(self.topo.next_hop[cur_n])
+            if nxt < 0:
+                break
+            cur_n = nxt
+            if k % 2 == 0 and cur_n not in cands:
+                ahead.append(cur_n)
+        cands += ahead
         cur = self.prev_feat
         if cur is None:
             return node
         inl = {c: self.matcher.match(self._node_feat(c), cur).n for c in cands}
         best = max(inl, key=inl.get)
-        if best != node and inl[best] >= 20 and inl[best] > 1.5 * max(inl[node], 1):
+        if best != node and inl[best] >= (15 if best in ahead else 20) and inl[best] > (1.3 if best in ahead else 1.5) * max(inl[node], 1):
             lo, hi = max(0, best - 2), min(len(b), best + 3)
             self.belief.b[lo:hi] += 0.5 / (hi - lo)
             self.belief.b /= self.belief.b.sum()
