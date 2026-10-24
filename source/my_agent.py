@@ -175,6 +175,7 @@ class MyAgent(Agent):
 
         q = self.desc.extract(obs.image)
         self.node = self.belief.update(q)
+        self.node = self._verify_node(self.node)
         self.hops = self.topo.hops(self.node)
 
         if self.queue:  # recovery: back off the wall, then turn well away from it
@@ -213,6 +214,34 @@ class MyAgent(Agent):
                 return out
         n = self.burst if name in ("FORWARD", "BACKWARD") else 2
         return self._out((Action[name], n), "follow")
+
+    def _verify_node(self, node: int) -> int:
+        """Place recognition alone sends the belief to look-alike spots across the maze (the run
+        log shows it jumping 30+ frames, 70 times in 1,000 steps), and the robot then wanders.
+        Check the few most probable places geometrically and trust the one whose frame shares the
+        most RANSAC-verified features with the live image."""
+        b = self.belief.b
+        order = np.argsort(-b)[:40]
+        cands: list[int] = []
+        for i in order:
+            if all(abs(int(i) - c) > 4 for c in cands):
+                cands.append(int(i))
+            if len(cands) >= 5:
+                break
+        if node not in cands:
+            cands.insert(0, node)
+        cur = self.prev_feat
+        if cur is None:
+            return node
+        inl = {c: self.matcher.match(self._node_feat(c), cur).n for c in cands}
+        best = max(inl, key=inl.get)
+        if best != node and inl[best] >= 20 and inl[best] > 1.5 * max(inl[node], 1):
+            lo, hi = max(0, best - 2), min(len(b), best + 3)
+            self.belief.b[lo:hi] += 0.5 / (hi - lo)
+            self.belief.b /= self.belief.b.sum()
+            self.n_verified = getattr(self, "n_verified", 0) + 1
+            return best
+        return node
 
     def _check_jump(self) -> None:
         """A shortcut we keep standing in front of without ever ending up on its far side was
