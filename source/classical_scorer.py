@@ -24,7 +24,7 @@ TURN_DEG = 3.44
 
 
 class ClassicalScorer:
-    def __init__(self, cache_dir: Path, sign: int = +1, turn_tol: float = 9.0, n_clusters: int = 128):
+    def __init__(self, cache_dir: Path, sign: int = +1, turn_tol: float = 12.0, n_clusters: int = 128):
         self.ex = VLADExtractor(n_clusters, cache_dir)
         self.matcher = Matcher()
         self.sign, self.turn_tol = sign, turn_tol
@@ -34,6 +34,7 @@ class ClassicalScorer:
         self._db: np.ndarray | None = None
         self._wp_feat: dict[int, object] = {}
         self._last_turn = "LEFT"
+        self._turned_last = False
 
     # ---- setup (called by the agent before and after embedding the database)
 
@@ -77,6 +78,19 @@ class ClassicalScorer:
         z = ((a * b).sum(1) - self.mu) / self.scale
         return 1.0 / (1.0 + np.exp(-np.clip(z, -30, 30)))
 
+    def pick_waypoint(self, cur: np.ndarray, cands: list[tuple[int, int]], get_img, min_inliers: int = 20):
+        """Furthest candidate (k hops ahead, node) whose frame shares >= min_inliers verified
+        features with the live image. Far waypoints give a well-conditioned heading; a frame one
+        step ahead looks identical to the live one, so its measured bearing is mostly noise
+        (the first classical run spent 87% of its ticks turning left and right because of it)."""
+        cf = self.matcher.features(cur)
+        for k, node in cands:  # ordered furthest first
+            if node not in self._wp_feat:
+                self._wp_feat[node] = self.matcher.features(get_img(node))
+            if self.matcher.match(self._wp_feat[node], cf).n >= min_inliers:
+                return k
+        return None
+
     def locomote(self, cur: np.ndarray, wp: np.ndarray, node: int = -1) -> str:
         if node not in self._wp_feat:
             self._wp_feat[node] = self.matcher.features(wp)
@@ -86,8 +100,15 @@ class ClassicalScorer:
             return self._last_turn
         left = self.sign * shift_deg(m, self.focal)  # how far left of the waypoint we point
         if abs(left) > self.turn_tol:
-            self._last_turn = "RIGHT" if left > 0 else "LEFT"
+            want = "RIGHT" if left > 0 else "LEFT"
+            if want != self._last_turn and self._turned_last and abs(left) < 2 * self.turn_tol:
+                self._turned_last = False  # reversing a turn we just made = overshoot noise: go on
+                self.ticks = 1
+                return "FORWARD"
+            self._turned_last = True
+            self._last_turn = want
             self.ticks = int(np.clip(round(abs(left) / TURN_DEG) - 1, 1, 4))
             return self._last_turn
+        self._turned_last = False
         self.ticks = 1
         return "FORWARD"

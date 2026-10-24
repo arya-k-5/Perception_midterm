@@ -62,6 +62,7 @@ class SptmAgent(Agent):
     ) -> None:
         self.scorer = scorer
         self.geo_min = geo_min
+        self.geo_hops = 12
         self.frames, self.bounds = load_frames(Path(data_dir), subsample)
         print(f"{len(self.frames)} frames from {len(self.bounds)} trajectories")
         self.n = len(self.frames)
@@ -246,12 +247,18 @@ class SptmAgent(Agent):
                 return r
         self.appr_steps = 0
 
-        top = min(self.h_max, self.hops)
-        l = self.h_min if self.hops >= self.h_min else 0
-        for k in range(top, self.h_min - 1, -1):  # furthest waypoint still "reachable"
-            if p[path[k]] >= self.s_reach:
-                l = k
-                break
+        l = None
+        if hasattr(self.scorer, "pick_waypoint"):  # geometric visibility instead of R
+            top = min(self.geo_hops, self.hops)
+            cands = [(k, path[k]) for k in range(top, self.h_min - 1, -1)]
+            l = self.scorer.pick_waypoint(obs.image, cands, self._frame_img)
+        if l is None:
+            top = min(self.h_max, self.hops)
+            l = self.h_min if self.hops >= self.h_min else 0
+            for k in range(top, self.h_min - 1, -1):  # furthest waypoint still "reachable"
+                if p[path[k]] >= self.s_reach:
+                    l = k
+                    break
         wp = path[l]
         name = self.scorer.locomote(obs.image, self._frame_img(wp), wp)
         self.state = f"wp +{l} p={p[wp]:.2f} best={p.max():.2f}"
