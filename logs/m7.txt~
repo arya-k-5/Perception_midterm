@@ -1,0 +1,752 @@
+2404 frames from 3 trajectories
+VLAD:   0%|          | 0/2404 [00:00<?, ?it/s]VLAD:   7%|▋         | 166/2404 [00:00<00:01, 1659.17it/s]VLAD:  15%|█▌        | 367/2404 [00:00<00:01, 1863.28it/s]VLAD:  23%|██▎       | 557/2404 [00:00<00:00, 1875.40it/s]VLAD:  31%|███       | 745/2404 [00:00<00:00, 1785.83it/s]VLAD:  39%|███▊      | 927/2404 [00:00<00:00, 1797.34it/s]VLAD:  46%|████▌     | 1108/2404 [00:00<00:00, 1786.18it/s]VLAD:  54%|█████▎    | 1287/2404 [00:00<00:00, 1781.66it/s]VLAD:  61%|██████▏   | 1477/2404 [00:00<00:00, 1817.45it/s]VLAD:  70%|██████▉   | 1673/2404 [00:00<00:00, 1860.43it/s]VLAD:  77%|███████▋  | 1862/2404 [00:01<00:00, 1868.40it/s]VLAD:  86%|████████▌ | 2058/2404 [00:01<00:00, 1893.57it/s]VLAD:  94%|█████████▎| 2248/2404 [00:01<00:00, 1875.06it/s]VLAD: 100%|██████████| 2404/2404 [00:01<00:00, 1847.80it/s]
+checking your agent on a sample frame...
+goal: node 1698 (best match: view 0, 0 inliers)
+[1] node -1 hops -1 calib (<Action.LEFT: 4>, 6) init
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 7                                                                                                         │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=2978934087                                            │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:7")                                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+goal: node 1570 (best match: view 3, 29 inliers)
+[1] node -1 hops -1 calib (<Action.LEFT: 4>, 6) init
+calibration: shift +26.0 deg after LEFT x6 (28 matches) -> sign +1
+[2] node -1 hops -1 calib (<Action.RIGHT: 8>, 6) init
+[3] node 2008 hops 43 follow (<Action.FORWARD: 1>, 2) init
+[4] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[5] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[6] node 0 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[7] node 1 hops 48 follow (<Action.RIGHT: 8>, 3) init
+[8] node 1 hops 48 follow (<Action.RIGHT: 8>, 3) init
+[9] node 2 hops 47 follow (<Action.RIGHT: 8>, 3) init
+[10] node 3 hops 46 follow (<Action.RIGHT: 8>, 3) init
+[11] node 3 hops 46 follow (<Action.RIGHT: 8>, 3) init
+[12] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[13] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[14] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[15] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[16] node 6 hops 44 follow (<Action.RIGHT: 8>, 3) init
+[17] node 6 hops 44 follow (<Action.RIGHT: 8>, 3) init
+[18] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[19] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[20] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[21] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) init
+[22] node 1253 hops 44 follow (<Action.FORWARD: 1>, 2) init
+[23] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) init
+[24] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) init
+[25] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) init
+[26] node 6 hops 44 follow (<Action.FORWARD: 1>, 2) init
+[27] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) init
+[28] node 2 hops 47 follow (<Action.RIGHT: 8>, 3) init
+[29] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[30] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[31] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[32] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[33] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[34] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[35] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) init
+[36] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) init
+[37] node 1278 hops 43 follow (<Action.LEFT: 4>, 3) init
+[38] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) init
+[39] node 1277 hops 42 follow (<Action.BACKWARD: 2>, 2) init
+[40] node 1277 hops 42 follow (<Action.BACKWARD: 2>, 2) init
+[41] node 1273 hops 38 follow (<Action.LEFT: 4>, 3) init
+[42] node 1274 hops 39 follow (<Action.LEFT: 4>, 3) init
+[43] node 1273 hops 38 follow (<Action.LEFT: 4>, 3) init
+[44] node 1274 hops 39 follow (<Action.LEFT: 4>, 3) init
+[45] node 1273 hops 38 follow (<Action.LEFT: 4>, 3) init
+[46] node 1273 hops 38 follow (<Action.LEFT: 4>, 3) init
+[47] node 1274 hops 39 follow (<Action.LEFT: 4>, 3) init
+[48] node 1277 hops 42 steer (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[49] node 1273 hops 38 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[50] node 5 hops 45 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[51] node 4 hops 45 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[52] node 3 hops 46 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[53] node 3 hops 46 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[54] node 1250 hops 47 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[55] node 1249 hops 48 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[56] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[57] node 1249 hops 48 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[58] node 1250 hops 47 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[59] node 1251 hops 46 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[60] node 1252 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[61] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[62] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[63] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[64] node 3 hops 46 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[65] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[66] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[67] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[68] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[69] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[70] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[71] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[72] node 1253 hops 44 follow (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[73] node 3 hops 46 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[74] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[75] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[76] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[77] node 12 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[78] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[79] node 10 hops 48 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[80] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[81] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[82] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[83] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[84] node 10 hops 48 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[85] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[86] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[87] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[88] node 11 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[89] node 13 hops 48 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[90] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[91] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[92] node 0 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[93] node 1248 hops 49 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[94] node 1249 hops 48 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[95] node 1252 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[96] node 4 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[97] node 5 hops 45 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[98] node 5 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[99] node 5 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[100] node 5 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[101] node 6 hops 44 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[102] node 1254 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[103] node 1256 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[104] node 1256 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[105] node 1256 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[106] node 1257 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[107] node 1257 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[108] node 1257 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[109] node 1258 hops 39 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[110] node 1258 hops 39 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[111] node 1259 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[112] node 1260 hops 37 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[113] node 1260 hops 37 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[114] node 1259 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[115] node 1261 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[116] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[117] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[118] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[119] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[120] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[121] node 1263 hops 34 stuck (<Action.BACKWARD: 2>, 4) steer n=13 left=-69.9
+[122] node 1260 hops 37 recover (<Action.RIGHT: 8>, 11) steer n=13 left=-69.9
+[123] node 1260 hops 37 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[124] node 1263 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[125] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[126] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[127] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[128] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[129] node 1262 hops 35 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[130] node 1264 hops 33 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[131] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[132] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[133] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[134] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[135] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[136] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[137] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[138] node 1267 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[139] node 1267 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[140] node 1269 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[141] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[142] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[143] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[144] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[145] node 1266 hops 31 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[146] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[147] node 1266 hops 31 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[148] node 1267 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[149] node 1267 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[150] node 1269 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[151] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[152] node 1270 hops 35 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[153] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[154] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[155] node 1266 hops 31 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[156] node 1266 hops 31 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[157] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[158] node 1265 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[159] node 1265 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[160] node 1265 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[161] node 1265 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[162] node 1264 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[163] node 1263 hops 34 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[164] node 1261 hops 36 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[165] node 1261 hops 36 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[166] node 1261 hops 36 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[167] node 1263 hops 34 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[168] node 1263 hops 34 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[169] node 1263 hops 34 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[170] node 1263 hops 34 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[171] node 1260 hops 37 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[172] node 1259 hops 38 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[173] node 1260 hops 37 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[174] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[175] node 1263 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[176] node 1263 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[177] node 1263 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[178] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[179] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[180] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[181] node 1261 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[182] node 1263 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[183] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[184] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[185] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[186] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[187] node 1265 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[188] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[189] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[190] node 1266 hops 31 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[191] node 1267 hops 32 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[192] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[193] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[194] node 1267 hops 32 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[195] node 1266 hops 31 follow (<Action.LEFT: 4>, 3) steer n=13 left=-69.9
+[196] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[197] node 128 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[198] node 1267 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[199] node 1267 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[200] node 1269 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[201] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[202] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[203] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[204] node 1271 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[205] node 1272 hops 37 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[206] node 1273 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[207] node 1274 hops 39 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[208] node 1274 hops 39 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[209] node 1271 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[210] node 1271 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[211] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[212] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[213] node 1271 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[214] node 1268 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[215] node 1268 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[216] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[217] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[218] node 1273 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[219] node 1269 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[220] node 1268 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[221] node 1270 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-69.9
+[222] node 1274 hops 39 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[223] node 1273 hops 38 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[224] node 1272 hops 37 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[225] node 1274 hops 39 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[226] node 633 hops 37 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[227] node 634 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[228] node 634 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[229] node 635 hops 35 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-69.9
+[230] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=12 left=-27.9
+[231] node 637 hops 33 follow (<Action.FORWARD: 1>, 2) steer n=12 left=-27.9
+[232] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=12 left=-27.9
+[233] node 637 hops 33 follow (<Action.FORWARD: 1>, 2) steer n=12 left=-27.9
+[234] node 637 hops 33 follow (<Action.FORWARD: 1>, 2) steer n=12 left=-27.9
+[235] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=15 left=-20.8
+[236] node 637 hops 33 steer (<Action.LEFT: 4>, 2) steer n=16 left=-5.4
+[237] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-5.4
+[238] node 637 hops 33 steer (<Action.LEFT: 4>, 2) steer n=13 left=-8.5
+[239] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=14 left=-12.7
+[240] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=14 left=-12.0
+[241] node 635 hops 35 follow (<Action.RIGHT: 8>, 3) steer n=14 left=-12.0
+[242] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=14 left=-12.0
+[243] node 637 hops 33 follow (<Action.FORWARD: 1>, 2) steer n=11 left=-0.8
+[244] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=11 left=-0.8
+[245] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=14 left=-41.2
+[246] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=19 left=-23.1
+[247] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=18 left=-13.5
+[248] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=12 left=-16.5
+[249] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=12 left=-16.5
+[250] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=12 left=-16.5
+[251] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=16 left=-39.5
+[252] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-39.5
+[253] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=14 left=-39.3
+[254] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=14 left=-17.6
+[255] node 637 hops 33 follow (<Action.FORWARD: 1>, 2) steer n=18 left=-3.5
+[256] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=19 left=-37.7
+[257] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[258] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=20 left=-27.6
+[259] node 1650 hops 80 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[260] node 1263 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[261] node 640 hops 30 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[262] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[263] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[264] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[265] node 558 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[266] node 635 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[267] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[268] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[269] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[270] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[271] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[272] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[273] node 681 hops 41 stuck (<Action.BACKWARD: 2>, 4) steer n=20 left=-27.6
+[274] node 680 hops 42 recover (<Action.LEFT: 4>, 14) steer n=20 left=-27.6
+[275] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[276] node 640 hops 30 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[277] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[278] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[279] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[280] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[281] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[282] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[283] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[284] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[285] node 640 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=20 left=-27.6
+[286] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[287] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[288] node 637 hops 33 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[289] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[290] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[291] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[292] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[293] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[294] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[295] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[296] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[297] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=20 left=-27.6
+[298] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[299] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=20 left=-27.6
+[300] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[301] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=15 left=-56.9
+[302] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[303] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=15 left=-56.9
+[304] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[305] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[306] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=15 left=-56.9
+[307] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[308] node 1987 hops 44 follow (<Action.RIGHT: 8>, 3) steer n=15 left=-56.9
+[309] node 1987 hops 44 follow (<Action.RIGHT: 8>, 3) steer n=15 left=-56.9
+[310] node 2323 hops 61 follow (<Action.LEFT: 4>, 3) steer n=15 left=-56.9
+[311] node 638 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=15 left=-56.9
+[312] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=12 left=-69.2
+[313] node 2323 hops 61 follow (<Action.LEFT: 4>, 3) steer n=12 left=-69.2
+[314] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=11 left=-65.3
+[315] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[316] node 1987 hops 44 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[317] node 639 hops 31 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[318] node 639 hops 31 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[319] node 639 hops 31 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[320] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[321] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[322] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[323] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[324] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[325] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[326] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[327] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[328] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[329] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[330] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[331] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[332] node 2322 hops 60 stuck (<Action.BACKWARD: 2>, 4) steer n=11 left=-65.3
+[333] node 2010 hops 45 recover (<Action.RIGHT: 8>, 17) steer n=11 left=-65.3
+[334] node 1282 hops 47 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[335] node 631 hops 39 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[336] node 632 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[337] node 336 hops 42 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[338] node 630 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[339] node 629 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[340] node 578 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[341] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[342] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[343] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[344] node 680 hops 42 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[345] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=11 left=-65.3
+[346] node 681 hops 41 follow (<Action.BACKWARD: 2>, 2) steer n=11 left=-65.3
+[347] node 680 hops 42 steer (<Action.RIGHT: 8>, 2) steer n=15 left=+8.1
+[348] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=15 left=+8.1
+[349] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=37 left=+71.2
+[350] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=16 left=-1.8
+[351] node 673 hops 43 follow (<Action.FORWARD: 1>, 2) steer n=16 left=-1.8
+[352] node 672 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=16 left=-1.8
+[353] node 678 hops 44 follow (<Action.LEFT: 4>, 3) steer n=16 left=-1.8
+[354] node 672 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-1.8
+[355] node 671 hops 41 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-1.8
+[356] node 672 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-1.8
+[357] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=25 left=+71.8
+[358] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=37 left=+70.7
+[359] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=13 left=-3.1
+[360] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=13 left=-3.1
+[361] node 678 hops 44 follow (<Action.LEFT: 4>, 3) steer n=13 left=-3.1
+[362] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=13 left=-3.1
+[363] node 678 hops 44 follow (<Action.LEFT: 4>, 3) steer n=13 left=-3.1
+[364] node 683 hops 39 follow (<Action.FORWARD: 1>, 2) steer n=13 left=-3.1
+[365] node 682 hops 40 steer (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[366] node 686 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[367] node 686 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[368] node 686 hops 36 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[369] node 690 hops 32 follow (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[370] node 689 hops 33 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[371] node 692 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[372] node 687 hops 35 follow (<Action.RIGHT: 8>, 3) steer n=13 left=-39.9
+[373] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[374] node 1418 hops 53 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[375] node 1268 hops 33 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[376] node 1418 hops 53 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[377] node 1418 hops 53 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[378] node 1418 hops 53 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[379] node 1418 hops 53 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[380] node 1419 hops 54 follow (<Action.LEFT: 4>, 3) steer n=13 left=-39.9
+[381] node 634 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[382] node 634 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[383] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[384] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[385] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[386] node 636 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[387] node 634 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[388] node 635 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[389] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[390] node 681 hops 41 stuck (<Action.BACKWARD: 2>, 4) steer n=13 left=-39.9
+[391] node 680 hops 42 recover (<Action.LEFT: 4>, 8) steer n=13 left=-39.9
+[392] node 2149 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[393] node 2010 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[394] node 2010 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[395] node 1281 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[396] node 1282 hops 47 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[397] node 1281 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[398] node 1282 hops 47 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[399] node 1281 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[400] node 1282 hops 47 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[401] node 1282 hops 47 stuck (<Action.BACKWARD: 2>, 4) steer n=13 left=-39.9
+[402] node 2225 hops 47 recover (<Action.RIGHT: 8>, 11) steer n=13 left=-39.9
+[403] node 1698 hops 59 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[404] node 1379 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[405] node 1378 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[406] node 1379 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[407] node 1377 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[408] node 675 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=-39.9
+[409] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=21 left=+72.2
+[410] node 676 hops 46 follow (<Action.LEFT: 4>, 3) steer n=21 left=+72.2
+[411] node 672 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=21 left=+72.2
+[412] node 670 hops 40 follow (<Action.RIGHT: 8>, 3) steer n=21 left=+72.2
+[413] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=37 left=+70.1
+[414] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=35 left=+68.8
+[415] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=25 left=+67.7
+[416] node 672 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=25 left=+67.7
+[417] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=16 left=+72.3
+[418] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=38 left=+70.9
+[419] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=15 left=+0.6
+[420] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=34 left=+71.9
+[421] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=15 left=+2.3
+[422] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=36 left=+71.5
+[423] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=41 left=+70.2
+[424] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=44 left=+68.9
+[425] node 673 hops 43 steer (<Action.RIGHT: 8>, 3) steer n=37 left=+67.8
+[426] node 679 hops 43 follow (<Action.LEFT: 4>, 3) steer n=37 left=+67.8
+[427] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[428] node 675 hops 45 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[429] node 672 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=14 left=-2.4
+[430] node 675 hops 45 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[431] node 672 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=14 left=-2.4
+[432] node 675 hops 45 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[433] node 677 hops 45 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[434] node 678 hops 44 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[435] node 669 hops 39 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[436] node 669 hops 39 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[437] node 669 hops 39 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[438] node 669 hops 39 follow (<Action.LEFT: 4>, 3) steer n=14 left=-2.4
+[439] node 666 hops 36 follow (<Action.BACKWARD: 2>, 2) steer n=14 left=-2.4
+[440] node 666 hops 36 follow (<Action.BACKWARD: 2>, 2) steer n=14 left=-2.4
+[441] node 666 hops 36 follow (<Action.BACKWARD: 2>, 2) steer n=14 left=-2.4
+[442] node 1179 hops 54 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[443] node 396 hops 51 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[444] node 397 hops 50 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[445] node 635 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[446] node 634 hops 36 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[447] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[448] node 1944 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[449] node 635 hops 35 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[450] node 2149 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[451] node 2151 hops 48 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[452] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[453] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[454] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[455] node 681 hops 41 stuck (<Action.BACKWARD: 2>, 4) steer n=14 left=-2.4
+[456] node 680 hops 42 recover (<Action.LEFT: 4>, 14) steer n=14 left=-2.4
+[457] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[458] node 640 hops 30 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[459] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[460] node 638 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[461] node 637 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[462] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[463] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[464] node 640 hops 30 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[465] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[466] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[467] node 639 hops 31 stuck (<Action.BACKWARD: 2>, 4) steer n=14 left=-2.4
+[468] node 2010 hops 45 recover (<Action.RIGHT: 8>, 17) steer n=14 left=-2.4
+[469] node 2011 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[470] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[471] node 5 hops 45 follow (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[472] node 336 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[473] node 630 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=14 left=-2.4
+[474] node 1383 hops 28 follow (<Action.FORWARD: 1>, 2) steer n=42 left=+1.8
+[475] node 1384 hops 27 follow (<Action.LEFT: 4>, 3) steer n=42 left=+1.8
+[476] node 627 hops 43 follow (<Action.FORWARD: 1>, 2) steer n=42 left=+1.8
+[477] node 627 hops 43 follow (<Action.FORWARD: 1>, 2) steer n=42 left=+1.8
+[478] node 630 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=42 left=+1.8
+[479] node 625 hops 45 follow (<Action.LEFT: 4>, 3) steer n=42 left=+1.8
+[480] node 625 hops 45 follow (<Action.LEFT: 4>, 3) steer n=42 left=+1.8
+[481] node 625 hops 45 follow (<Action.LEFT: 4>, 3) steer n=42 left=+1.8
+[482] node 626 hops 44 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+4.2
+[483] node 2010 hops 45 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[484] node 2010 hops 45 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[485] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[486] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[487] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[488] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[489] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[490] node 639 hops 31 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[491] node 640 hops 30 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[492] node 636 hops 34 follow (<Action.LEFT: 4>, 3) steer n=10 left=+4.2
+[493] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=15 left=-42.7
+[494] node 638 hops 32 steer (<Action.LEFT: 4>, 3) steer n=23 left=-40.2
+[495] node 637 hops 33 steer (<Action.LEFT: 4>, 3) steer n=16 left=-35.1
+[496] node 636 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[497] node 640 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[498] node 640 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[499] node 640 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[500] node 640 hops 30 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[501] node 641 hops 29 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[502] node 641 hops 29 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[503] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[504] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[505] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[506] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[507] node 639 hops 31 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[508] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[509] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[510] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[511] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[512] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[513] node 1419 hops 54 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[514] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[515] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[516] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[517] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[518] node 1419 hops 54 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[519] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[520] node 1420 hops 55 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[521] node 1419 hops 54 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[522] node 1418 hops 53 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[523] node 371 hops 61 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[524] node 372 hops 62 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[525] node 371 hops 61 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[526] node 371 hops 61 unstick (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[527] node 372 hops 62 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[528] node 370 hops 60 follow (<Action.BACKWARD: 2>, 2) steer n=16 left=-35.1
+[529] node 371 hops 61 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[530] node 370 hops 60 follow (<Action.BACKWARD: 2>, 2) steer n=16 left=-35.1
+[531] node 366 hops 56 follow (<Action.BACKWARD: 2>, 2) steer n=16 left=-35.1
+[532] node 366 hops 56 follow (<Action.BACKWARD: 2>, 2) steer n=16 left=-35.1
+[533] node 365 hops 57 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[534] node 2219 hops 41 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[535] node 2218 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[536] node 2218 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[537] node 2219 hops 41 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[538] node 2219 hops 41 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[539] node 2220 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[540] node 2217 hops 43 follow (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[541] node 2217 hops 43 follow (<Action.FORWARD: 1>, 2) steer n=16 left=-35.1
+[542] node 2218 hops 42 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[543] node 2216 hops 44 follow (<Action.RIGHT: 8>, 3) steer n=16 left=-35.1
+[544] node 2215 hops 45 steer (<Action.LEFT: 4>, 3) steer n=10 left=-46.3
+[545] node 2216 hops 44 follow (<Action.RIGHT: 8>, 3) steer n=10 left=-46.3
+[546] node 2215 hops 45 steer (<Action.LEFT: 4>, 3) steer n=10 left=-42.8
+[547] node 2215 hops 45 follow (<Action.FORWARD: 1>, 2) steer n=10 left=-42.8
+[548] node 2216 hops 44 follow (<Action.RIGHT: 8>, 3) steer n=10 left=-42.8
+[549] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=-42.8
+[550] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=-42.8
+[551] node 682 hops 40 steer (<Action.RIGHT: 8>, 3) steer n=18 left=+33.0
+[552] node 682 hops 40 steer (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[553] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[554] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[555] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[556] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[557] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[558] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[559] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[560] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[561] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[562] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[563] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=10 left=+44.5
+[564] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[565] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[566] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[567] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[568] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[569] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[570] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[571] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[572] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[573] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[574] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[575] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[576] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[577] node 681 hops 41 stuck (<Action.BACKWARD: 2>, 4) steer n=10 left=+44.5
+[578] node 1378 hops 33 recover (<Action.LEFT: 4>, 8) steer n=10 left=+44.5
+[579] node 1378 hops 33 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[580] node 681 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[581] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[582] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[583] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[584] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[585] node 682 hops 40 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[586] node 682 hops 40 stuck (<Action.BACKWARD: 2>, 4) steer n=10 left=+44.5
+[587] node 675 hops 45 recover (<Action.RIGHT: 8>, 11) steer n=10 left=+44.5
+[588] node 673 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[589] node 627 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[590] node 627 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[591] node 627 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[592] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[593] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[594] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[595] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[596] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[597] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[598] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[599] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[600] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[601] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[602] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=10 left=+44.5
+[603] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[604] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[605] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[606] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[607] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=10 left=+44.5
+[608] node 680 hops 42 steer (<Action.LEFT: 4>, 3) steer n=61 left=-56.5
+[609] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-56.5
+[610] node 680 hops 42 steer (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[611] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[612] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[613] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[614] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[615] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[616] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[617] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[618] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[619] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[620] node 680 hops 42 follow (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[621] node 684 hops 38 follow (<Action.RIGHT: 8>, 3) steer n=61 left=-52.3
+[622] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[623] node 679 hops 43 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[624] node 689 hops 33 follow (<Action.LEFT: 4>, 3) steer n=61 left=-52.3
+[625] node 2224 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[626] node 2224 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[627] node 2010 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[628] node 2010 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[629] node 1248 hops 49 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[630] node 1249 hops 48 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[631] node 1249 hops 48 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[632] node 0 hops 49 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[633] node 0 hops 49 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[634] node 0 hops 49 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[635] node 0 hops 49 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[636] node 0 hops 49 stuck (<Action.BACKWARD: 2>, 4) steer n=61 left=-52.3
+[637] node 2009 hops 44 recover (<Action.LEFT: 4>, 14) steer n=61 left=-52.3
+[638] node 623 hops 47 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[639] node 625 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[640] node 626 hops 44 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[641] node 626 hops 44 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[642] node 626 hops 44 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[643] node 627 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[644] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[645] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[646] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[647] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[648] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[649] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[650] node 2322 hops 60 unstick (<Action.FORWARD: 1>, 2) steer n=61 left=-52.3
+[651] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=60 left=-65.1
+[652] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=85 left=-65.6
+[653] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=84 left=-63.8
+[654] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=73 left=-62.7
+[655] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=69 left=-61.7
+[656] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=53 left=-60.8
+[657] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=53 left=-60.0
+[658] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=42 left=-58.7
+[659] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=34 left=-57.3
+[660] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=27 left=-55.4
+[661] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=29 left=-52.3
+[662] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=28 left=-47.8
+[663] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=20 left=-40.6
+[664] node 2322 hops 60 steer (<Action.LEFT: 4>, 3) steer n=14 left=-29.1
+[665] node 2322 hops 60 steer (<Action.LEFT: 4>, 2) steer n=16 left=-5.9
+[666] node 2322 hops 60 follow (<Action.FORWARD: 1>, 2) steer n=19 left=+1.7
+[667] node 2322 hops 60 steer (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[668] node 2325 hops 59 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[669] node 2325 hops 59 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[670] node 2325 hops 59 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[671] node 2322 hops 60 follow (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[672] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[673] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[674] node 2322 hops 60 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[675] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[676] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[677] node 2320 hops 58 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[678] node 2321 hops 59 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[679] node 2321 hops 59 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[680] node 2313 hops 51 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[681] node 2314 hops 52 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[682] node 2315 hops 53 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[683] node 2315 hops 53 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[684] node 2315 hops 53 follow (<Action.BACKWARD: 2>, 2) steer n=13 left=+29.5
+[685] node 2317 hops 55 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[686] node 1379 hops 32 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[687] node 632 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[688] node 632 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[689] node 632 hops 38 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[690] node 628 hops 42 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[691] node 629 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[692] node 2210 hops 50 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[693] node 2212 hops 48 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[694] node 2210 hops 50 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[695] node 2212 hops 48 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[696] node 2212 hops 48 stuck (<Action.BACKWARD: 2>, 4) steer n=13 left=+29.5
+[697] node 2211 hops 49 recover (<Action.RIGHT: 8>, 17) steer n=13 left=+29.5
+[698] node 629 hops 41 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[699] node 626 hops 44 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[700] node 624 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[701] node 625 hops 45 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[702] node 627 hops 43 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[703] node 624 hops 46 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[704] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[705] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[706] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[707] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[708] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[709] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[710] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[711] node 688 hops 34 unstick (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[712] node 682 hops 40 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[713] node 682 hops 40 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[714] node 682 hops 40 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[715] node 682 hops 40 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[716] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[717] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[718] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[719] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[720] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[721] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[722] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[723] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[724] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[725] node 688 hops 34 follow (<Action.RIGHT: 8>, 3) steer n=13 left=+29.5
+[726] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[727] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[728] node 681 hops 41 follow (<Action.LEFT: 4>, 3) steer n=13 left=+29.5
+[729] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[730] node 682 hops 40 follow (<Action.FORWARD: 1>, 2) steer n=13 left=+29.5
+[731] node 682 hops 40 budget 16 steer n=13 left=+29.5
+╭─ result ─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                                                                  │
+│ 1,989 steps · SPL 0.00                                                                                               │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+730 round trips · median 0.7 ms (server 0.7 ms, network 0.0 ms) · your code 32.5 ms per step
+result: Result(goal_tier='failed', nav_steps=1989, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-7-34087', session_id='local-7', arrival=None, think={'steps': 730, 'ticks': 1989, 'payload_bytes': 168192000, 'rtt_ms_p50': 0.6760415, 'server_ms_p50': 0.6760415, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 32.53025, 'steps_per_second': 29.937373437014294}, attempts_used=0, attempts_allowed=None)
