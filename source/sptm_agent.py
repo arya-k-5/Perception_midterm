@@ -342,7 +342,14 @@ def main() -> None:
         data, scorer, geo_min=geo, burst=args.burst, budget=args.budget, s_local=args.s_local,
         s_reach=args.s_reach, s_shortcut=args.s_shortcut, log_dir=args.log_dir, verbose=args.verbose,
     )
+    if args.local is not None:  # local only: print the TRUE distance to the goal afterwards
+        import groundtruth
+
+        groundtruth.install()
     run(agent, cli.challenge(args), **cli.run_options(args))
+    if args.local is not None:
+        print("ground truth:", groundtruth.summary())
+        groundtruth.dump(f"logs/gt/local{args.local}.json")
 
 
 if __name__ == "__main__":

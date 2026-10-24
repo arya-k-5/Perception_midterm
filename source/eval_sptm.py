@@ -22,6 +22,7 @@ os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
 os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 
 import cli  # noqa: E402
+import groundtruth  # noqa: E402
 from classical_scorer import ClassicalScorer  # noqa: E402
 from sptm_agent import SptmAgent  # noqa: E402
 from vis_nav_sdk import run  # noqa: E402
@@ -48,13 +49,16 @@ def main() -> None:
     args = p.parse_args()
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    fields = ["seed", "descriptor", "points", "spl", "distance_m", "heading_deg", "steps", "gate", "seconds", "error"]
+    fields = ["seed", "descriptor", "points", "spl", "distance_m", "heading_deg", "steps", "gate", "seconds", "error",
+              "start_m", "min_m", "min_at_tick", "final_m", "oracle_ticks", "ticks_within_1m"]
     new = not args.out.exists()
     with args.out.open("a", newline="") as fh:
         w = csv.DictWriter(fh, fields)
         if new:
             w.writeheader()
+        groundtruth.install()
         for seed in parse_seeds(args.seeds):
+            groundtruth.reset()
             row = dict.fromkeys(fields, "")
             row.update(seed=seed, descriptor="classical")
             t0 = time.time()
@@ -80,6 +84,8 @@ def main() -> None:
             except Exception:  # keep sweeping; the traceback is the useful part
                 row.update(points=0, gate=0, error=traceback.format_exc().splitlines()[-1])
                 traceback.print_exc()
+            row.update({k: v for k, v in groundtruth.summary().items() if k in fields})
+            groundtruth.dump(f"logs/gt/seed{seed}.json")
             row["seconds"] = round(time.time() - t0)
             w.writerow(row)
             fh.flush()
