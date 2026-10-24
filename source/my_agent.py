@@ -88,6 +88,7 @@ class MyAgent(Agent):
     def _reset(self) -> None:
         self.phase, self.log, self.t = "calib0", [], 0
         self.prev_small, self.prev_act, self.stuck, self.queue, self.n_stuck = None, None, 0, [], 0
+        self.prev_feat = None
         self.appr_steps, self.node, self.hops, self.state = 0, -1, -1, "init"
         self.best_cost, self.best_t, self.unstick, self.last_follow = np.inf, 0, 0, None
         self.jump_waits: dict = {}
@@ -153,6 +154,19 @@ class MyAgent(Agent):
             and self.prev_small is not None
             and float(np.abs(small - self.prev_small).mean()) < 1.0
         )
+        # Pixel difference misses a robot that is pressed on a wall while noise keeps nudging its
+        # heading (the picture shifts sideways, so it looks like it moved). Moving forward must
+        # make the scene EXPAND; if matched features keep the same spacing, we did not move.
+        cur_feat = None
+        if self.prev_act in ("FORWARD", "BACKWARD") and self.prev_feat is not None:
+            cur_feat = self.matcher.features(obs.image)
+            mm = self.matcher.match(self.prev_feat, cur_feat)
+            if mm.n >= 15:
+                sc = scale_ratio(mm)
+                moved = sc > 1.004 if self.prev_act == "FORWARD" else sc < 0.996
+                stuck_now = stuck_now or not moved
+                self.state = f"scale {sc:.3f} n={mm.n}"
+        self.prev_feat = cur_feat if cur_feat is not None else self.matcher.features(obs.image)
         if self.prev_act in ("FORWARD", "BACKWARD"):
             # a blocked burst counts; a burst that moved clears it. Turns (steering, recovery)
             # leave the count alone: resetting on them hid a wall the robot kept pushing into.
