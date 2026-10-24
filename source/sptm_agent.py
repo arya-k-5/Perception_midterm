@@ -305,7 +305,6 @@ class SptmAgent(Agent):
 
 def main() -> None:
     import cli
-    from sptm_models import TorchScorer
 
     parser = cli.parser(__doc__)
     parser.add_argument("--data", default=None, help="exploration data directory")
@@ -328,6 +327,8 @@ def main() -> None:
 
         scorer = ClassicalScorer(Path("cache") / f"sptm-{Path(data).name}")
     else:
+        from sptm_models import TorchScorer  # needs torch + torchvision
+
         scorer = TorchScorer(args.r, args.l, args.device)
     geo = args.geo_min if args.geo_min is not None else (22 if args.classical else 0)
     agent = SptmAgent(
