@@ -47,6 +47,17 @@ class MetricMap:
         self.o_dth = np.asarray(dth, float)
         self.P = np.zeros((self.n, 3))
 
+    def set_turns(self, measured: dict[int, float]) -> int:
+        """Replace the nominal turn of frame i -> i+1 by a measured yaw (radians). Between two recorded frames
+        the robot can turn more than one frame's worth (IDLE frames are dropped but the robot keeps turning)."""
+        pos = {int(i): k for k, i in enumerate(self.oi)}
+        n = 0
+        for i, yaw in measured.items():
+            if i in pos:
+                self.o_dth[pos[i]] = yaw
+                n += 1
+        return n
+
     # ---- step 1
 
     def integrate(self) -> np.ndarray:

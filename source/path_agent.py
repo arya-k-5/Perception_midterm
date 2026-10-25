@@ -61,6 +61,23 @@ class PathAgent(base.SptmAgent):
     def build_map(self) -> None:
         tpf = self._ticks_per_frame()
         mm = MetricMap([f.action for f in self.frames], self.bounds, tpf)
+        # turns: measure them. The recorded frames skip the IDLE records, but the robot keeps turning through them,
+        # so "one turn frame = tpf * 3.44 deg" drifts the heading by hundreds of degrees over a drive.
+        turns, cache = {}, {}
+        def feat_of(k):
+            if k not in cache:
+                cache.clear() if len(cache) > 4 else None
+                cache[k] = self._feat(k)
+            return cache[k]
+        for s, e in self.bounds:
+            for i in range(s, e - 1):
+                a = self.frames[i].action
+                if a in ("LEFT", "RIGHT"):
+                    m = self.matcher.match(feat_of(i), feat_of(i + 1))
+                    y = yaw_deg(m, self.focal) * D2R if m.n >= 12 else None
+                    if y is not None and (y > 0) == (a == "LEFT") and abs(y) < 0.9:
+                        turns[i] = y
+        print(f"metric map: measured {mm.set_turns(turns)} of {sum(f.action in ('LEFT', 'RIGHT') for f in self.frames)} turn steps from the images")
         loops = []
         for i, j in self.shortcuts:
             m = self.matcher.match(self._feat(i), self._feat(j))
@@ -69,7 +86,7 @@ class PathAgent(base.SptmAgent):
         mm.integrate()
         odo = mm.P.copy()
         placed = mm.init_align(loops) if self.anchor_pos is None else len(self.bounds)
-        mm.optimise(loops, anchor_pos=self.anchor_pos)
+        mm.optimise(loops, anchor_pos=self.anchor_pos, odo_yaw_deg=1.0)
         self.map, self.P, self.odo = mm, mm.P, odo
         self.tree = cKDTree(self.P[:, :2])
         self._img.clear()
