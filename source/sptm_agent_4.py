@@ -350,10 +350,13 @@ class SptmAgent(Agent):
             if m.n >= 25 or (latched and m.n >= 12 and (self.ah is None or abs(left_k - self.ah) <= 30)):
                 good.append((m.n, k, left_k))
         if not good:
-            if self.appr_on and self.ah is not None and self.dead < 6 and abs(self.ah) > 6:
+            if self.appr_on and self.ah is not None and self.dead < 14:
                 self.dead += 1
-                self.state = f"approach dead-reckoning left={self.ah:+.1f}"
-                return self._turn(self.ah, "approach-turn")
+                if abs(self.ah) > 6:
+                    self.state = f"approach dead-reckoning left={self.ah:+.1f}"
+                    return self._turn(self.ah, "approach-turn")
+                self.state = f"approach facing the goal heading, walking forward (left={self.ah:+.1f})"
+                return self._out((Action.FORWARD, 1), "approach-nudge")  # lined up: the goal photo is just ahead
             return None
         _, k, left = max(good)
         m = ms[k]
