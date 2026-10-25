@@ -40,9 +40,13 @@ def main():
     ap.add_argument("--out", type=Path, default=Path("results/map_truth"))
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+    except ImportError:
+        plt = None
+        print("(matplotlib not installed: skipping the pictures; `uv pip install matplotlib` to get them)")
 
     for seed in seeds(args.seeds):
         data = Path("data_gt") / f"local-{seed}"
@@ -108,7 +112,7 @@ def main():
             dd = np.hypot(P[:, 0] - target[0], P[:, 1] - target[1])
             print(f"closest exploration frame to the real goal: {dd.min():.2f} m (node {int(dd.argmin())}); frames within 0.5 m: {(dd<0.5).sum()}")
         # plot
-        if gt_json.exists():
+        if gt_json.exists() and plt is not None:
             m = json.loads(gt_json.read_text())["maze"]; G = np.array([[1 if c == '#' else 0 for c in r] for r in m["grid"]]); cs = m["cell_size"]
             fig, ax = plt.subplots(figsize=(10, 10))
             ax.imshow(G, cmap="Greys", origin="lower", extent=[0, 31 * cs, 0, 31 * cs], alpha=.75)
