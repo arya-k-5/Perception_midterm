@@ -24,7 +24,7 @@ os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 import cli  # noqa: E402
 import groundtruth  # noqa: E402
 from classical_scorer import ClassicalScorer  # noqa: E402
-from sptm_agent import SptmAgent  # noqa: E402
+import importlib  # noqa: E402
 from vis_nav_sdk import run  # noqa: E402
 
 
@@ -43,10 +43,13 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--seeds", default="7-16")
     p.add_argument("--burst", type=int, default=1)
+    p.add_argument("--agent", type=int, default=1, choices=[1, 2], help="1 = sptm_agent.py, 2 = sptm_agent_2.py (strict shortcuts)")
     p.add_argument("--budget", type=int, default=10000, help="agent's own tick cap (the real challenge: 10,000)")
     p.add_argument("--out", type=Path, default=Path("results/classical.csv"))
     p.add_argument("--log-dir", type=Path, default=None)
     args = p.parse_args()
+    SptmAgent = importlib.import_module("sptm_agent_2" if args.agent == 2 else "sptm_agent").SptmAgent
+    extra = {"seq_min": 20} if args.agent == 2 else {}
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     fields = ["seed", "descriptor", "points", "spl", "distance_m", "heading_deg", "steps", "gate", "seconds", "error",
@@ -65,7 +68,7 @@ def main() -> None:
             try:
                 data = cli.record_exploration_data(seed)
                 agent = SptmAgent(
-                    data, ClassicalScorer(Path("cache") / f"sptm-local-{seed}"), geo_min=22,
+                    data, ClassicalScorer(Path("cache") / f"sptm-local-{seed}"), geo_min=22, **extra,
                     burst=args.burst, budget=args.budget, log_dir=args.log_dir,
                 )
                 res = run(
