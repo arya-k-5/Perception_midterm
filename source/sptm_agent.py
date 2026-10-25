@@ -56,7 +56,7 @@ class SptmAgent(Agent):
         near_hops: int = 3,
         burst: int = 1,
         geo_min: int = 0,
-        scale_tol: float = 0.04,
+        scale_tol: float = 0.06,
         budget: int | None = None,
         log_dir: Path | None = None,
         verbose: bool = False,
@@ -158,6 +158,7 @@ class SptmAgent(Agent):
         self.t, self.node, self.hops, self.state, self.log = 0, -1, -1, "init", []
         self.prev_small, self.prev_act, self.stuck, self.queue, self.n_stuck = None, None, 0, [], 0
         self.appr_steps = 0
+        self.appr_on, self.appr_lost = False, 0
         self.prev_feat = None
         self.n_loops, self.best_hops, self.best_t = 0, 10**9, 0
 
@@ -230,6 +231,15 @@ class SptmAgent(Agent):
             self.node = -1  # forget where we thought we were
             return self._out((Action.BACKWARD, 4), "stuck")
 
+        if self.appr_on or 0 <= self.hops <= 40:  # near the goal: the goal photos beat the map
+            r = self._approach(obs)
+            if r is not None:
+                self.appr_on, self.appr_lost = True, 0
+                return r
+            self.appr_lost += 1
+            if self.appr_lost >= 3:
+                self.appr_on, self.appr_steps = False, 0
+
         q = np.asarray(self.scorer.embed([obs.image]), np.float32)[0]
         p = self._prob_to_all(q)
         node = -1
@@ -252,10 +262,12 @@ class SptmAgent(Agent):
             return self._escape_loop()
 
         if self.hops <= self.near_hops:
-            r = self._approach(obs)
+            r = self._approach(obs, weak=True)
             if r is not None:
+                self.appr_on, self.appr_lost = True, 0
                 return r
-        self.appr_steps = 0
+        if not self.appr_on:
+            self.appr_steps = 0
 
         l = None
         if hasattr(self.scorer, "pick_waypoint"):  # geometric visibility instead of R
@@ -296,7 +308,7 @@ class SptmAgent(Agent):
         print(f"[{self.t}] loop #{self.n_loops}: {len(zone)} nodes marked costly, turning away, {cut} false shortcuts removed")
         return self._out((Action.BACKWARD, 3), "loop-escape")
 
-    def _approach(self, obs: Observation):
+    def _approach(self, obs: Observation, weak: bool = False):
         feat = self.matcher.features(obs.image)
         best = None
         for k, tf in enumerate(self.tfeat):
@@ -304,7 +316,7 @@ class SptmAgent(Agent):
             if best is None or m.n > best[1].n:
                 best = (k, m)
         k, m = best
-        if m.n < 12:
+        if m.n < (12 if (self.appr_on or weak) else 25):  # entering needs a strong match, staying a weak one
             return None
         self.appr_steps += 1
         s = shift_deg(m, self.focal)
@@ -312,17 +324,17 @@ class SptmAgent(Agent):
         r = scale_ratio(m)
         self.state = f"approach view{k} n={m.n} left={left:+.1f} scale={r:.2f}"
         turn = Action.RIGHT if left > 0 else Action.LEFT
-        if k != 0 or abs(left) > 4:
+        if k != 0 or abs(left) > 6:
             if k != 0 and abs(left) > 20:
                 return self._out((turn, int(np.clip(round(abs(left) / TURN_DEG), 1, 8))), "approach-turn")
-            if abs(left) > 4:
+            if abs(left) > 6:
                 return self._out((turn, int(np.clip(round(abs(left) / TURN_DEG), 1, 3))), "approach-turn")
         tol = self.scale_tol if self.appr_steps <= 25 else 2 * self.scale_tol
         if r < 1 - tol:
             return self._out((Action.FORWARD, int(np.clip(round((1 / r - 1) * 12), 1, 3))), "approach-fwd")
         if r > 1 + tol:
             return self._out((Action.BACKWARD, int(np.clip(round((r - 1) * 12), 1, 2))), "approach-back")
-        if abs(left) <= 4 and (m.n >= 25 or self.appr_steps > 25):
+        if abs(left) <= 8 and (m.n >= 18 or self.appr_steps > 25):
             return self._out(Action.CHECKIN, "arrived")
         return self._out((Action.FORWARD, 1), "approach-nudge")
 
