@@ -85,3 +85,14 @@ def scale_ratio(m: Match, pairs: int = 300, seed: int = 0) -> float:
     db = np.linalg.norm(m.b[i] - m.b[j], axis=1)
     ok = da > 15
     return float(np.median(db[ok] / da[ok])) if ok.sum() >= 5 else 1.0
+
+
+def yaw_deg(m: Match, focal: float, cx: float = 160.0) -> float:
+    """Yaw from A to B as the median change of each matched point's bearing, atan((x - cx) / f).
+    Exact for a pure turn at any image position (shift_deg overstates a turn by ~25-45%, because points away
+    from the centre move further). Positive: B is turned left (counter-clockwise) of A. 0 when there is no match."""
+    if m.n < 6:
+        return 0.0
+    ya = np.arctan((m.a[:, 0] - cx) / focal)
+    yb = np.arctan((m.b[:, 0] - cx) / focal)
+    return math.degrees(float(np.median(yb - ya)))

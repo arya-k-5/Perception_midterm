@@ -26,12 +26,11 @@ import numpy as np
 from scipy.spatial import cKDTree
 
 import sptm_agent_4 as base
-from geometry import scale_ratio, shift_deg
+from geometry import scale_ratio, shift_deg, yaw_deg
 from metric_map import TICK_DEG, TICK_M, MetricMap, wrap
 from vis_nav_sdk import Action, Observation, SessionInfo
 
 D2R = math.pi / 180.0
-YAW_GAIN = 1.19  # the median horizontal shift overstates a pure turn (LEFT x6 = 20.6 deg showed as +23..26)
 
 
 class PathAgent(base.SptmAgent):
@@ -54,7 +53,7 @@ class PathAgent(base.SptmAgent):
         for i in pick:
             m = self.matcher.match(self._feat(int(i)), self._feat(int(i) + 1))
             if m.n >= 20:
-                sh.append(abs(shift_deg(m, self.focal)) / YAW_GAIN)
+                sh.append(abs(yaw_deg(m, self.focal)))
         if len(sh) < 10:
             return 3.0
         return float(max(1, round(float(np.median(sh)) / TICK_DEG)))
@@ -66,7 +65,7 @@ class PathAgent(base.SptmAgent):
         for i, j in self.shortcuts:
             m = self.matcher.match(self._feat(i), self._feat(j))
             if m.n >= 15:
-                loops.append((i, j, shift_deg(m, self.focal) / YAW_GAIN * D2R))
+                loops.append((i, j, yaw_deg(m, self.focal) * D2R))
         mm.integrate()
         odo = mm.P.copy()
         placed = mm.init_align(loops) if self.anchor_pos is None else len(self.bounds)
@@ -156,7 +155,7 @@ class PathAgent(base.SptmAgent):
         for c, m in ms:
             if m.n < 0.7 * best_n:
                 continue
-            sh = shift_deg(m, self.focal) / YAW_GAIN
+            sh = yaw_deg(m, self.focal)
             th_c = self.P[c, 2] + sh * D2R
             r = scale_ratio(m)
             delta = float(np.clip(self.scene_depth * (1.0 - 1.0 / r), -0.4, 0.4)) if abs(sh) < 30 else 0.0
