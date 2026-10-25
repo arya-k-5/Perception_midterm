@@ -319,6 +319,8 @@ def main() -> None:
     parser.add_argument("--l", type=Path, default=Path("models/sptm_l.pt"))
     parser.add_argument("--device", default=None)
     parser.add_argument("--classical", action="store_true", help="no trained networks: VLAD + feature matching")
+    parser.add_argument("--hybrid", action="store_true", help="VLAD and the trained R must agree (needs --r/--l)")
+    parser.add_argument("--no-l", action="store_true", help="with --hybrid: steer by feature matching, not by L")
     parser.add_argument("--geo-min", type=int, default=None, help="RANSAC inliers a shortcut must have")
     parser.add_argument("--burst", type=int, default=1)
     parser.add_argument("--budget", type=int, default=None)
@@ -333,11 +335,20 @@ def main() -> None:
         from classical_scorer import ClassicalScorer
 
         scorer = ClassicalScorer(Path("cache") / f"sptm-{Path(data).name}")
+    elif args.hybrid:
+        from classical_scorer import ClassicalScorer
+        from hybrid_scorer import HybridScorer
+        from sptm_models import TorchScorer
+
+        scorer = HybridScorer(
+            ClassicalScorer(Path("cache") / f"sptm-{Path(data).name}"),
+            TorchScorer(args.r, args.l, args.device), use_l=not args.no_l,
+        )
     else:
         from sptm_models import TorchScorer  # needs torch + torchvision
 
         scorer = TorchScorer(args.r, args.l, args.device)
-    geo = args.geo_min if args.geo_min is not None else (22 if args.classical else 0)
+    geo = args.geo_min if args.geo_min is not None else (22 if (args.classical or args.hybrid) else 0)
     agent = SptmAgent(
         data, scorer, geo_min=geo, burst=args.burst, budget=args.budget, s_local=args.s_local,
         s_reach=args.s_reach, s_shortcut=args.s_shortcut, log_dir=args.log_dir, verbose=args.verbose,
