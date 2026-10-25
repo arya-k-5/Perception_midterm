@@ -46,3 +46,12 @@ def test_false_shortcut_is_removed_and_route_goes_the_long_way():
     assert m.ban_shortcuts([4]) == 1
     assert m.hops[4] == 15  # no more jump: walk the drive
     assert m.path(4, limit=30)[1] == 5
+
+
+def test_reverse_driving_costs_more():
+    # drive 0-1-2-3-4-5-6-7 (frame i+1 is after frame i) plus a look-alike jump 7 -> 0; goal 1, start 3
+    edges = np.array([(i, i + 1) for i in range(7)] + [(0, 7)])
+    cheap = PlaceMemory(8, edges, goal=1, rev_cost=1.0)
+    assert cheap.path(3, limit=10)[1] == 2  # straight back along the drive
+    dear = PlaceMemory(8, edges, goal=1, rev_cost=4.0)
+    assert dear.path(3, limit=10)[1] == 4  # keep driving forward, around the loop

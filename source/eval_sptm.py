@@ -43,13 +43,13 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--seeds", default="7-16")
     p.add_argument("--burst", type=int, default=1)
-    p.add_argument("--agent", type=int, default=1, choices=[1, 2], help="1 = sptm_agent.py, 2 = sptm_agent_2.py (strict shortcuts)")
+    p.add_argument("--agent", type=int, default=1, choices=[1, 2, 3], help="1 = sptm_agent.py, 2 = sptm_agent_2.py (strict shortcuts)")
     p.add_argument("--budget", type=int, default=10000, help="agent's own tick cap (the real challenge: 10,000)")
     p.add_argument("--out", type=Path, default=Path("results/classical.csv"))
     p.add_argument("--log-dir", type=Path, default=None)
     args = p.parse_args()
-    SptmAgent = importlib.import_module("sptm_agent_2" if args.agent == 2 else "sptm_agent").SptmAgent
-    extra = {"seq_min": 20} if args.agent == 2 else {}
+    SptmAgent = importlib.import_module({1: "sptm_agent", 2: "sptm_agent_2", 3: "sptm_agent_3"}[args.agent]).SptmAgent
+    extra = {"seq_min": 20} if args.agent >= 2 else {}
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     fields = ["seed", "descriptor", "points", "spl", "distance_m", "heading_deg", "steps", "gate", "seconds", "error",

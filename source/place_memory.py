@@ -21,8 +21,12 @@ BUCKET = 5  # nodes this close count as "the same spot" for loop detection
 
 
 class PlaceMemory:
-    def __init__(self, n: int, edges: np.ndarray, goal: int = -1, window: int = 150, max_spots: int = 8):
+    def __init__(
+        self, n: int, edges: np.ndarray, goal: int = -1, window: int = 150, max_spots: int = 8, rev_cost: float = 1.0
+    ):
         self.n = n
+        self.rev = float(rev_cost)  # driving a recorded drive BACKWARDS costs this many times more
+        edges = np.sort(np.asarray(edges, dtype=np.int64), axis=1)  # u < v, so v-u==1 means a drive edge
         self.u, self.v = edges[:, 0].astype(np.int64), edges[:, 1].astype(np.int64)
         self.pen = np.zeros(n)
         self.visits = np.zeros(n, np.int32)
@@ -44,6 +48,15 @@ class PlaceMemory:
             w = 1.0 + 0.5 * (self.pen[self.u] + self.pen[self.v])
         else:
             w = np.ones(len(self.u))
+        if weighted and self.rev != 1.0:
+            # cost of moving a -> b is stored at [b, a] so one Dijkstra from the goal gives every
+            # node's cheapest way TO the goal. u < v on drive edges: u -> v is forward, v -> u is backwards.
+            fwd = (self.v - self.u) == 1
+            w_uv = w                       # u -> v
+            w_vu = np.where(fwd, w * self.rev, w)  # v -> u
+            rows = np.concatenate([self.v, self.u])
+            cols = np.concatenate([self.u, self.v])
+            return csr_matrix((np.concatenate([w_uv, w_vu]), (rows, cols)), shape=(self.n, self.n))
         rows = np.concatenate([self.u, self.v])
         cols = np.concatenate([self.v, self.u])
         return csr_matrix((np.concatenate([w, w]), (rows, cols)), shape=(self.n, self.n))
@@ -57,7 +70,7 @@ class PlaceMemory:
     def replan(self) -> None:
         if not self.dirty or self.goal < 0:
             return
-        d, p = dijkstra(self._matrix(True), directed=False, indices=self.goal, return_predecessors=True)
+        d, p = dijkstra(self._matrix(True), directed=self.rev != 1.0, indices=self.goal, return_predecessors=True)
         self.dist, self.pred = d, np.where(p < 0, -1, p)
         self.dirty = False
 
