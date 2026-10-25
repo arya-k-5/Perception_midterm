@@ -30,6 +30,7 @@ import networkx as nx
 import numpy as np
 from geometry import Matcher, scale_ratio, shift_deg
 from my_agent import TURN_DEG, VIEW_OFFSET, _intrinsic_focal
+from place_memory import PlaceMemory
 from vis_nav_sdk import Action, Agent, Observation, Result, SessionInfo, run
 from vlad import load_frames
 
@@ -83,6 +84,9 @@ class SptmAgent(Agent):
         self.shortcuts = self._shortcuts(shortcut_gap, shortcut_k, window, s_shortcut)
         self.G.add_edges_from(self.shortcuts)
         print(f"graph: {self.G.number_of_edges()} edges, {len(self.shortcuts)} verified shortcuts")
+        self.mem = PlaceMemory(self.n, np.array(list(self.G.edges()), dtype=np.int64))
+        marked = self.mem.mark_turnarounds([str(f.action) for f in self.frames], self.bounds)
+        print(f"memory: {marked} turn-around spots in the exploration drives marked as costly")
         self.h_min, self.h_max, self.s_local, self.s_reach = h_min, h_max, s_local, s_reach
         self.local_hops, self.near_hops, self.burst = local_hops, near_hops, burst
         self.scale_tol, self.budget = scale_tol, budget
@@ -155,6 +159,7 @@ class SptmAgent(Agent):
         self.prev_small, self.prev_act, self.stuck, self.queue, self.n_stuck = None, None, 0, [], 0
         self.appr_steps = 0
         self.prev_feat = None
+        self.n_loops, self.best_hops, self.best_t = 0, 10**9, 0
 
     def setup(self, info: SessionInfo) -> None:
         self._reset()
@@ -175,9 +180,8 @@ class SptmAgent(Agent):
                 if n > best[0]:
                     best = (n, int(i), k)
         self.goal = best[1] if best[0] >= 12 else fallback[1]
-        self.paths = nx.single_source_shortest_path(self.G, self.goal)  # goal -> node
-        self.reach = np.zeros(self.n, bool)
-        self.reach[list(self.paths.keys())] = True
+        self.mem.set_goal(self.goal)
+        self.reach = self.mem.reachable()
         print(f"goal: node {self.goal} (view {best[2]}, {best[0]} inliers; R-best {fallback[1]})")
 
     def finish(self, result: Result | None) -> None:
@@ -221,7 +225,8 @@ class SptmAgent(Agent):
         if self.stuck >= 2:
             self.stuck, self.n_stuck = 0, self.n_stuck + 1
             turn = Action.RIGHT if self.n_stuck % 2 else Action.LEFT
-            self.queue = [(turn, min(8 + 3 * (self.n_stuck % 4), 20))]
+            self.queue = [(turn, 26 + 6 * (self.n_stuck % 3))]  # a decisive 90-130 degree turn
+            self.mem.punish([self.node], 3.0, 3)  # remember: being here got us stuck
             self.node = -1  # forget where we thought we were
             return self._out((Action.BACKWARD, 4), "stuck")
 
@@ -238,8 +243,13 @@ class SptmAgent(Agent):
         if node < 0:  # global search
             node = int(np.argmax(np.where(self.reach, p, -1.0)))
         self.node = node
-        path = self.paths[node][::-1]  # node ... goal
-        self.hops = len(path) - 1
+        self.mem.arrive(node)
+        path = self.mem.path(node, limit=self.geo_hops + 2)  # node, then frames toward the goal
+        self.hops = int(self.mem.hops[node])
+        if self.hops < self.best_hops - 2:
+            self.best_hops, self.best_t = self.hops, self.t
+        if self.mem.stagnating() or self.t - self.best_t > 250:
+            return self._escape_loop()
 
         if self.hops <= self.near_hops:
             r = self._approach(obs)
@@ -249,12 +259,12 @@ class SptmAgent(Agent):
 
         l = None
         if hasattr(self.scorer, "pick_waypoint"):  # geometric visibility instead of R
-            top = min(self.geo_hops, self.hops)
+            top = min(self.geo_hops, self.hops, len(path) - 1)
             cands = [(k, path[k]) for k in range(top, self.h_min - 1, -1)]
             l = self.scorer.pick_waypoint(obs.image, cands, self._frame_img)
         if l is None:
-            top = min(self.h_max, self.hops)
-            l = self.h_min if self.hops >= self.h_min else 0
+            top = min(self.h_max, self.hops, len(path) - 1)
+            l = min(self.h_min, len(path) - 1) if self.hops >= self.h_min else 0
             for k in range(top, self.h_min - 1, -1):  # furthest waypoint still "reachable"
                 if p[path[k]] >= self.s_reach:
                     l = k
@@ -267,6 +277,19 @@ class SptmAgent(Agent):
         else:
             n = self.burst if name in ("FORWARD", "BACKWARD") else 1
         return self._out((Action[name], n), "follow")
+
+    def _escape_loop(self):
+        """Circling a small area, or no progress for a long time: remember the area as bad,
+        turn most of the way around, and let the planner choose another route."""
+        zone = self.mem.escape_zone()
+        self.mem.punish(zone, 6.0, 4)
+        self.n_loops += 1
+        self.best_t = self.t  # give the new route time before judging it
+        turn = Action.RIGHT if self.n_loops % 2 else Action.LEFT
+        self.queue = [(turn, 40)]  # about 138 degrees
+        self.node = -1
+        print(f"[{self.t}] loop #{self.n_loops}: {len(zone)} nodes marked costly, turning away")
+        return self._out((Action.BACKWARD, 3), "loop-escape")
 
     def _approach(self, obs: Observation):
         feat = self.matcher.features(obs.image)

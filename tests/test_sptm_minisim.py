@@ -39,4 +39,4 @@ def test_sptm_agent_runs_end_to_end(tmp_path):
     res = minisim.run_episode(agent, world, start, goal, max_steps=2500)
     print(res, "shortcuts", len(agent.shortcuts))
     assert res["steps"] > 0 and (res["checked_in"] or res["steps"] >= 2400)
-    assert agent.paths and agent.reach.any()
+    assert agent.mem.hops.max() > 0 and agent.reach.any()
