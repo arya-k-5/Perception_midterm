@@ -34,3 +34,15 @@ def test_turnaround_prior():
     m = PlaceMemory(50, np.array([(i, i + 1) for i in range(49)]), goal=49)
     assert m.mark_turnarounds(acts, [(0, 50)]) == 1
     assert m.pen[20] > 0 and m.pen[1] == 0
+
+
+def test_false_shortcut_is_removed_and_route_goes_the_long_way():
+    # a chain 0..19 with a look-alike jump 4 -> 15; the goal is node 19
+    n = 20
+    edges = [(i, i + 1) for i in range(n - 1)] + [(4, 15)]
+    m = PlaceMemory(n, np.array(edges), goal=19)
+    m.set_goal(19)
+    assert m.hops[4] == 5
+    assert m.ban_shortcuts([4]) == 1
+    assert m.hops[4] == 15  # no more jump: walk the drive
+    assert m.path(4, limit=30)[1] == 5

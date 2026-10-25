@@ -34,6 +34,7 @@ class PlaceMemory:
         self.pred = np.full(n, -1)
         self.dist = np.full(n, np.inf)
         self.hops = np.full(n, -1)
+        self.banned: list[tuple[int, int]] = []
         self.cap = 12.0  # one node never costs more than this extra
 
     # ---- planning
@@ -81,6 +82,24 @@ class PlaceMemory:
             lo, hi = max(0, c - radius), min(self.n, c + radius + 1)
             self.pen[lo:hi] = np.minimum(self.pen[lo:hi] + amount, self.cap)
         self.dirty = True
+
+    def ban_shortcuts(self, nodes, margin: int = 2) -> int:
+        """Delete the visual shortcuts (edges between non-consecutive frames) that touch the
+        given area. A shortcut that we walked up to and could not take was a look-alike, not
+        a door: the only edges left there are the ones the exploration drive really drove."""
+        zone = np.zeros(self.n, bool)
+        for c in set(int(x) for x in nodes if x >= 0):
+            zone[max(0, c - margin):c + margin + 1] = True
+        short = np.abs(self.u - self.v) > 1
+        drop = short & (zone[self.u] | zone[self.v])
+        if drop.any():
+            keep = ~drop
+            self.banned.extend(zip(self.u[drop].tolist(), self.v[drop].tolist()))
+            self.u, self.v = self.u[keep], self.v[keep]
+            if self.goal >= 0:
+                self.set_goal(self.goal)
+            self.dirty = True
+        return int(drop.sum())
 
     def arrive(self, node: int) -> None:
         """Call once per step with the current estimate."""

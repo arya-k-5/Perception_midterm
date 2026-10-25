@@ -84,7 +84,7 @@ class SptmAgent(Agent):
         self.shortcuts = self._shortcuts(shortcut_gap, shortcut_k, window, s_shortcut)
         self.G.add_edges_from(self.shortcuts)
         print(f"graph: {self.G.number_of_edges()} edges, {len(self.shortcuts)} verified shortcuts")
-        self.mem = PlaceMemory(self.n, np.array(list(self.G.edges()), dtype=np.int64))
+        self.mem = PlaceMemory(self.n, np.array(list(self.G.edges()), dtype=np.int64), window=100)
         marked = self.mem.mark_turnarounds([str(f.action) for f in self.frames], self.bounds)
         print(f"memory: {marked} turn-around spots in the exploration drives marked as costly")
         self.h_min, self.h_max, self.s_local, self.s_reach = h_min, h_max, s_local, s_reach
@@ -248,7 +248,7 @@ class SptmAgent(Agent):
         self.hops = int(self.mem.hops[node])
         if self.hops < self.best_hops - 2:
             self.best_hops, self.best_t = self.hops, self.t
-        if self.mem.stagnating() or self.t - self.best_t > 250:
+        if self.mem.stagnating() or self.t - self.best_t > 200:
             return self._escape_loop()
 
         if self.hops <= self.near_hops:
@@ -283,12 +283,17 @@ class SptmAgent(Agent):
         turn most of the way around, and let the planner choose another route."""
         zone = self.mem.escape_zone()
         self.mem.punish(zone, 6.0, 4)
+        cut = self.mem.ban_shortcuts(zone)  # the way out we believed in was a look-alike
+        if cut:
+            self.G.remove_edges_from(self.mem.banned[-cut:])
+            self.reach = self.mem.reachable()
+            self._local.clear()
         self.n_loops += 1
         self.best_t = self.t  # give the new route time before judging it
         turn = Action.RIGHT if self.n_loops % 2 else Action.LEFT
         self.queue = [(turn, 40)]  # about 138 degrees
         self.node = -1
-        print(f"[{self.t}] loop #{self.n_loops}: {len(zone)} nodes marked costly, turning away")
+        print(f"[{self.t}] loop #{self.n_loops}: {len(zone)} nodes marked costly, turning away, {cut} false shortcuts removed")
         return self._out((Action.BACKWARD, 3), "loop-escape")
 
     def _approach(self, obs: Observation):
