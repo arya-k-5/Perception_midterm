@@ -9,6 +9,12 @@ def test_wrapper_records_true_distance(monkeypatch):
         steps = 0
         oracle_steps = 100
 
+        grid = ["##", "#."]
+        target = (1.0, 2.0, 0.0)
+
+        def pose(self):
+            return (0.1 * self.steps, 0.0, 0.0)
+
         def distance_heading(self):
             return (3.0 - 0.1 * self.steps, 12.0)
 
@@ -34,3 +40,4 @@ def test_wrapper_records_true_distance(monkeypatch):
     out = groundtruth.summary()
     assert out["start_m"] == 2.8 and out["final_m"] == 2.0 and out["oracle_ticks"] == 100
     assert out["min_at_tick"] == 10
+    assert len(groundtruth.POSES) == 5 and groundtruth.MAZE["grid"] == ["##", "#."]

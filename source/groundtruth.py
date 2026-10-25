@@ -12,7 +12,9 @@ step. The agent never sees this; it is for us to measure. Does nothing on a serv
 from __future__ import annotations
 
 TRACE: list[tuple[int, float, float]] = []
+POSES: list[tuple[float, float, float]] = []
 ORACLE: list[int] = []
+MAZE: dict = {}
 
 
 def install() -> None:
@@ -26,8 +28,17 @@ def install() -> None:
         out = original(self, action, repeat, frames=frames)
         d, h = self.simulator.distance_heading()
         TRACE.append((self.simulator.steps, float(d), float(h)))
+        POSES.append(tuple(float(v) for v in self.simulator.pose()))
         if not ORACLE:
             ORACLE.append(int(self.simulator.oracle_steps))
+            sim = self.simulator
+            for key in ("grid", "spawn", "target", "cell_size", "spawn_cell", "target_cell"):
+                try:
+                    v = getattr(sim, key)
+                    v = v() if callable(v) else v
+                    MAZE[key] = list(v) if isinstance(v, tuple) else v
+                except Exception:  # an optional extra; never break a run for a plot
+                    pass
         return out
 
     local.LocalSession.step_all = step_all
@@ -36,7 +47,9 @@ def install() -> None:
 
 def reset() -> None:
     TRACE.clear()
+    POSES.clear()
     ORACLE.clear()
+    MAZE.clear()
 
 
 def summary() -> dict:
@@ -60,4 +73,4 @@ def dump(path) -> None:
     from pathlib import Path
 
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text(json.dumps({"summary": summary(), "trace": TRACE}))
+    Path(path).write_text(json.dumps({"summary": summary(), "trace": TRACE, "poses": POSES, "maze": MAZE}, default=str))
