@@ -1,3 +1,43 @@
+# USE THIS AGENT: `frozen_1820lg/my_agent_1820lg.py`
+
+**Results**
+- **Sample challenge (dry run, 2026-10-29): 7/10, perfect tier.** Distance 3, Heading 3, SPL 1. It checked in 0.05 m from the goal and 1.4 deg off heading, after 1,202 steps (SPL 0.63).
+- **Local maze 17: 6/10.** 0.02 m, 0.2 deg, 2,525 steps. Every earlier agent scored 0 there.
+
+**What it is:** Kartik's `my_agent_1820` ([kartikparameshwaran/vis_nav_player_work](https://github.com/kartikparameshwaran/vis_nav_player_work), commit `20e6de9`), plus two additions:
+1. **4-photo goal check** (`my_agent_2767g.py`): the goal place is chosen by how well all four goal photos match exploration frames within +-20 frames, not by one photo's best match.
+2. **SuperPoint + LightGlue instead of SuperGlue** for every match (`lg_matcher.py`).
+
+Every file is frozen as it ran; `frozen_1820lg/MD5SUMS.txt` has the checksums. Logs of both runs are in the folder.
+
+## Setup
+Do this inside a checkout of Kartik's repo, which has `models/`, `third_party/SuperGlue` and `source/`:
+```bash
+git clone https://github.com/kartikparameshwaran/vis_nav_player_work.git
+cd vis_nav_player_work
+cp -R /path/to/perception_midterm/frozen_1820lg .
+uv pip install git+https://github.com/cvg/LightGlue.git     # once; downloads weights on first use
+cp .env.example .env    # then set the API key and VIS_NAV_CHALLENGE
+```
+
+## Run
+```bash
+# local maze (free):
+python frozen_1820lg/my_agent_1820lg.py --local 17 --budget 4000
+# challenge in .env (spends an attempt after you answer y): NO "| tee", NO --yes
+python frozen_1820lg/my_agent_1820lg.py
+```
+On a new maze, Kartik's map step (`map: measuring traj_N ...`) runs with LightGlue and takes 10-40 min before the run starts. It is cached in `cache/odometry/`. No attempt is spent before the `Start attempt N of M?` question.
+
+**Known weaknesses** (local mazes 10 and 67 ran out of the 4,000-step budget with the goal correct):
+- Kartik's "reverse along a drive" rule.
+- Back-and-forth turning.
+- Swapping between the same spot on two drives.
+
+Work on those is in the private working copy (`my_agent_1820lg2.py`, not yet tested).
+
+---
+
 # Visual Navigation Challenge — starter kit
 
 NYU **ROB-UY 3203 Robot Vision** and **ROB-GY 6203 Robot Perception**, run by the
