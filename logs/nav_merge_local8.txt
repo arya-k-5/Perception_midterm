@@ -1,0 +1,2195 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-8_dinov2_vits14_k32_d256_2789.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2789 frames from 3 trajectories
+spawn join: drive starts 0 and 702 (71 inliers)
+spawn join: drive starts 0 and 1593 (150 inliers)
+sequence check: kept 291 of 1121 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 291 of 291 shortcuts, rejected 0 look-alikes
+sequence check: kept 291 of 291 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3078 edges, 291 verified shortcuts
+checking your agent on a sample frame...
+goal: node 2480 (view 0, 0 inliers; R-best 2480)
+[1] node 0 hops 311 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.51
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 8                                                                                                         │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=2623113588                                            │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:8")                                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+goal: node 488 (view 2, 82 inliers; R-best 60)
+[1] node 0 hops 371 steer-turn (<Action.LEFT: 4>, 5) wp +1 steer yaw=-17 n=97
+[2] node 0 hops 371 steer-turn (<Action.LEFT: 4>, 5) wp +2 steer yaw=-17 n=91
+[3] node 702 hops 370 steer-turn (<Action.LEFT: 4>, 3) wp +2 steer yaw=-11 n=94
+[4] node 702 hops 370 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-45 n=44
+[5] node 704 hops 368 steer-turn (<Action.LEFT: 4>, 4) wp +3 steer yaw=-14 n=57
+[6] node 704 hops 368 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-1 n=32 (hold)
+[7] node 704 hops 368 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-3 n=40
+[8] node 704 hops 368 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-1 n=62
+[9] node 704 hops 368 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-1 n=101
+[10] node 708 hops 364 steer-turn (<Action.LEFT: 4>, 4) wp +2 steer yaw=-14 n=37 (hold)
+[11] node 708 hops 364 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=30 (hold)
+[12] node 709 hops 363 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.87 best=1.00
+[13] node 709 hops 363 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[14] node 709 hops 363 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.85 best=1.00
+[15] node 709 hops 363 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[16] node 709 hops 363 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=53
+[17] node 709 hops 363 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-9 n=57
+[18] node 709 hops 363 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-1 n=55
+[19] node 711 hops 361 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=45
+[20] node 712 hops 360 steer-turn (<Action.RIGHT: 8>, 5) wp +2 steer yaw=+16 n=31 (hold)
+[21] node 714 hops 358 steer-turn (<Action.RIGHT: 8>, 3) wp +1 steer yaw=+10 n=58
+[22] node 714 hops 358 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+27 n=38 (hold)
+[23] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.83 best=1.00
+[24] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[25] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.85 best=1.00
+[26] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[27] node 715 hops 357 steer-turn (<Action.RIGHT: 8>, 6) wp +5 steer yaw=+20 n=51
+[28] node 716 hops 356 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-0 n=49
+[29] node 716 hops 356 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[30] node 716 hops 356 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+1 n=56
+[31] node 716 hops 356 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.97 best=1.00
+[32] node 716 hops 356 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-1 n=52
+[33] node 715 hops 357 follow (<Action.LEFT: 4>, 1) wp +6 p=0.83 best=1.00
+[34] node 715 hops 357 follow (<Action.LEFT: 4>, 1) wp +6 p=0.80 best=1.00
+[35] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[36] node 715 hops 357 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[37] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[38] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[39] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[40] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[41] node 721 hops 357 reverse (<Action.BACKWARD: 2>, 2) reverse 721->720: undo FORWARD
+[42] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[43] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[44] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[45] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[46] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[47] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[48] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[49] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (358 hops)
+[49] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[50] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[51] jump 720 -> 68: inliers old 0 new 20 -> rejected
+[51] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[52] jump 720 -> 66: inliers old 9 new 16 -> rejected
+[52] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[53] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[54] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[55] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[56] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[57] jump 720 -> 15: inliers old 0 new 30 -> rejected
+[57] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[58] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[59] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[60] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[61] node 720 hops 358 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[62] no progress for 150 steps at hops 358: detour around nodes 720..140, next node now 719 (360 hops)
+[62] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[63] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[64] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[65] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[66] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[67] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[68] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[69] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[70] jump 720 -> 94: inliers old 9 new 13 -> rejected
+[70] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[71] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[71] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[72] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[72] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[73] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[73] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[74] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[74] node 720 hops 360 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[75] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[75] no progress for 150 steps at hops 360: detour around nodes 720..138, next node now 719 (356 hops)
+[75] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[76] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[76] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[77] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[78] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[79] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[80] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[80] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[81] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[81] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[82] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[82] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[83] jump 720 -> 94: inliers old 10 new 17 -> rejected
+[83] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[84] jump 720 -> 94: inliers old 0 new 15 -> rejected
+[84] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[85] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[85] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[86] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[86] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[87] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[87] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[88] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[88] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[88] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[89] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[89] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[90] jump 720 -> 94: inliers old 10 new 16 -> rejected
+[90] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[91] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[91] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[92] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[92] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[93] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[93] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[94] jump 720 -> 92: inliers old 7 new 13 -> rejected
+[94] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[95] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[95] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[96] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[96] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[97] jump 720 -> 93: inliers old 9 new 23 -> rejected
+[97] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[98] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[98] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[99] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[99] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[100] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[100] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[101] jump 720 -> 94: inliers old 7 new 22 -> rejected
+[101] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[101] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[102] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[102] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[103] jump 720 -> 94: inliers old 6 new 18 -> rejected
+[103] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[104] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[105] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[106] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[107] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[107] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[108] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[108] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[109] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[109] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[110] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[110] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[111] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[111] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[112] jump 720 -> 94: inliers old 0 new 22 -> rejected
+[112] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[113] jump 720 -> 94: inliers old 7 new 24 -> rejected
+[113] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[114] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[114] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[114] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[115] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[115] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[116] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[116] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[117] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[117] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[118] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[118] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[119] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[119] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[120] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[120] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[121] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[121] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[122] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[122] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[123] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[123] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[124] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[124] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[125] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[125] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[126] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[127] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[127] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[128] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[129] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[129] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[130] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[130] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[131] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[131] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[132] jump 720 -> 94: inliers old 10 new 21 -> rejected
+[132] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[133] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[133] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[134] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[134] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[135] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[135] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[136] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[136] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[137] jump 720 -> 94: inliers old 0 new 23 -> rejected
+[137] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[138] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[138] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[139] jump 720 -> 94: inliers old 11 new 19 -> rejected
+[139] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[140] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[140] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[140] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[141] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[141] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[142] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[142] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[143] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[143] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[144] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[144] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[145] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[145] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[146] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[147] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[148] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[149] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[149] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[150] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[150] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[151] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[151] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[152] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[152] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[153] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[153] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[153] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[154] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[154] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[155] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[155] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[156] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[156] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[157] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[157] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[158] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[158] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[159] jump 720 -> 94: inliers old 0 new 22 -> rejected
+[159] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[160] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[160] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[161] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[161] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[162] jump 720 -> 94: inliers old 6 new 16 -> rejected
+[162] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[163] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[163] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[164] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[164] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[165] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[165] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[166] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[166] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[166] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[167] jump 720 -> 94: inliers old 0 new 15 -> rejected
+[167] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[168] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[168] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[169] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[169] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[170] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[170] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[171] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[171] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[172] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[172] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[173] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[173] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[174] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[174] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[175] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[175] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[176] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[176] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[177] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[177] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[178] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[178] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[179] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[179] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[179] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[180] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[180] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[181] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[181] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[182] jump 720 -> 94: inliers old 11 new 19 -> rejected
+[182] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[183] jump 720 -> 94: inliers old 10 new 17 -> rejected
+[183] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[184] jump 720 -> 94: inliers old 8 new 14 -> rejected
+[184] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[185] jump 720 -> 94: inliers old 9 new 15 -> rejected
+[185] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[186] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[186] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[187] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[187] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[188] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[188] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[188] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[189] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[189] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[190] jump 720 -> 95: inliers old 10 new 17 -> rejected
+[190] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[191] jump 720 -> 95: inliers old 7 new 18 -> rejected
+[191] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[192] jump 720 -> 95: inliers old 7 new 20 -> rejected
+[192] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[192] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[193] jump 720 -> 95: inliers old 9 new 18 -> rejected
+[193] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[194] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[194] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[195] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[195] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[196] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[196] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[197] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[197] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[198] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[198] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[199] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[199] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[200] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[200] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[201] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[201] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[202] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[202] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[203] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[203] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[204] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[204] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[205] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[205] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[205] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[206] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[206] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[207] jump 720 -> 94: inliers old 6 new 15 -> rejected
+[207] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[208] jump 720 -> 94: inliers old 7 new 13 -> rejected
+[208] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[209] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[209] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[210] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[210] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[211] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[211] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[212] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[212] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[213] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[213] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[214] jump 720 -> 94: inliers old 0 new 16 -> rejected
+[214] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[215] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[215] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[216] jump 720 -> 94: inliers old 0 new 16 -> rejected
+[216] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[217] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[217] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[218] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[218] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[218] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[219] jump 720 -> 94: inliers old 10 new 17 -> rejected
+[219] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[220] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[220] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[221] jump 720 -> 94: inliers old 9 new 15 -> rejected
+[221] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[222] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[222] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[223] jump 720 -> 94: inliers old 10 new 15 -> rejected
+[223] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[224] jump 720 -> 95: inliers old 8 new 16 -> rejected
+[224] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[225] jump 720 -> 95: inliers old 7 new 19 -> rejected
+[225] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[226] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[226] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[227] jump 720 -> 94: inliers old 8 new 14 -> rejected
+[227] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[228] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[228] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[229] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[229] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[230] jump 720 -> 94: inliers old 12 new 14 -> rejected
+[230] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[231] jump 720 -> 94: inliers old 11 new 15 -> rejected
+[231] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[231] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[232] jump 720 -> 95: inliers old 12 new 19 -> rejected
+[232] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[233] jump 720 -> 95: inliers old 8 new 17 -> rejected
+[233] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[234] jump 720 -> 95: inliers old 8 new 19 -> rejected
+[234] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[235] jump 720 -> 95: inliers old 10 new 16 -> rejected
+[235] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[236] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[236] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[237] jump 720 -> 95: inliers old 8 new 15 -> rejected
+[237] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[238] jump 720 -> 95: inliers old 12 new 18 -> rejected
+[238] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[239] jump 720 -> 95: inliers old 8 new 16 -> rejected
+[239] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[240] jump 720 -> 95: inliers old 7 new 15 -> rejected
+[240] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[241] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[242] node 720 hops 356 recover (<Action.RIGHT: 8>, 11) reverse 720->719: undo FORWARD
+[243] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[243] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[243] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[244] jump 720 -> 95: inliers old 10 new 17 -> rejected
+[244] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[245] jump 720 -> 95: inliers old 0 new 18 -> rejected
+[245] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[246] jump 720 -> 95: inliers old 0 new 19 -> rejected
+[246] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[247] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[247] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[248] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[248] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[249] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[249] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[250] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[250] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[251] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[251] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[252] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[252] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[253] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[253] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[254] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[254] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[255] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[255] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[256] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[256] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[256] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[257] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[257] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[258] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[258] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[259] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[259] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[260] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[260] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[261] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[261] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[262] jump 720 -> 94: inliers old 7 new 22 -> rejected
+[262] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[263] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[263] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[264] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[264] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[265] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[265] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[266] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[266] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[267] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[267] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[268] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[268] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[269] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[269] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[269] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[270] jump 720 -> 94: inliers old 11 new 21 -> rejected
+[270] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[271] jump 720 -> 94: inliers old 10 new 21 -> rejected
+[271] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[272] jump 720 -> 93: inliers old 8 new 26 -> rejected
+[272] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[273] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[273] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[274] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[274] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[275] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[275] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[276] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[276] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[277] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[277] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[278] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[279] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[280] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[281] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[282] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[282] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[283] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[284] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[285] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[286] jump 720 -> 11: inliers old 9 new 17 -> rejected
+[286] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[287] jump 720 -> 11: inliers old 9 new 16 -> rejected
+[287] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[288] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[289] node 720 hops 356 recover (<Action.LEFT: 4>, 14) reverse 720->719: undo FORWARD
+[290] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[290] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[291] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[292] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[293] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[294] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[295] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[296] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[297] jump 720 -> 113: inliers old 13 new 18 -> rejected
+[297] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[298] jump 720 -> 112: inliers old 10 new 14 -> rejected
+[298] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[299] jump 720 -> 112: inliers old 13 new 15 -> rejected
+[299] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[300] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[301] node 720 hops 356 recover (<Action.RIGHT: 8>, 17) reverse 720->719: undo FORWARD
+[302] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[302] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[303] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[304] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[305] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[306] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[307] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[308] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[309] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[309] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[310] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[310] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[311] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[312] node 720 hops 356 recover (<Action.LEFT: 4>, 8) reverse 720->719: undo FORWARD
+[313] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[313] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[313] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[314] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[315] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[316] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[317] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[318] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[318] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[319] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[319] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[320] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[321] node 720 hops 356 recover (<Action.RIGHT: 8>, 11) reverse 720->719: undo FORWARD
+[322] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[322] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[323] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[324] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[325] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[326] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[327] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[328] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[329] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[330] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[331] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[332] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[333] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[334] jump 720 -> 454: inliers old 13 new 0 -> rejected
+[334] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[335] jump 720 -> 454: inliers old 13 new 11 -> rejected
+[335] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[335] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[336] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[337] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[338] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[339] jump 720 -> 454: inliers old 10 new 8 -> rejected
+[339] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[339] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[340] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[341] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[342] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[343] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[344] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[345] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[346] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[347] jump 720 -> 20: inliers old 13 new 19 -> rejected
+[347] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[348] jump 720 -> 20: inliers old 8 new 14 -> rejected
+[348] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[348] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[349] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[350] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[351] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[352] jump 720 -> 20: inliers old 16 new 15 -> rejected
+[352] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[353] jump 720 -> 20: inliers old 8 new 16 -> rejected
+[353] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[354] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[355] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[356] jump 720 -> 95: inliers old 11 new 18 -> rejected
+[356] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[357] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[358] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[359] jump 720 -> 20: inliers old 0 new 8 -> rejected
+[359] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[360] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[361] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[361] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[362] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[363] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[364] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[365] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[366] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[367] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[368] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[369] jump 720 -> 16: inliers old 9 new 10 -> rejected
+[369] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[370] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[371] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[372] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[373] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[374] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[374] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[374] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[375] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[375] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[376] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[376] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[377] jump 720 -> 94: inliers old 0 new 16 -> rejected
+[377] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[378] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[378] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[379] jump 720 -> 94: inliers old 7 new 15 -> rejected
+[379] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[380] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[380] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[381] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[381] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[382] jump 720 -> 94: inliers old 0 new 22 -> rejected
+[382] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[383] jump 720 -> 95: inliers old 0 new 17 -> rejected
+[383] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[384] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[384] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[385] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[385] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[386] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[386] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[387] jump 720 -> 94: inliers old 7 new 15 -> rejected
+[387] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[387] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[388] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[388] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[389] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[389] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[390] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[390] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[391] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[391] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[392] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[392] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[393] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[393] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[394] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[394] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[395] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[395] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[396] jump 720 -> 94: inliers old 7 new 23 -> rejected
+[396] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[397] jump 720 -> 94: inliers old 9 new 20 -> rejected
+[397] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[398] jump 720 -> 94: inliers old 10 new 22 -> rejected
+[398] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[399] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[399] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[400] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[400] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[400] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[401] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[401] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[402] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[402] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[403] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[403] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[404] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[404] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[405] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[405] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[406] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[406] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[407] jump 720 -> 94: inliers old 6 new 23 -> rejected
+[407] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[408] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[408] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[409] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[409] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[410] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[410] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[411] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[411] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[412] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[412] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[413] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[413] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[413] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[414] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[414] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[415] jump 720 -> 94: inliers old 8 new 26 -> rejected
+[415] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[416] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[416] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[417] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[417] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[418] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[418] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[419] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[419] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[420] jump 720 -> 94: inliers old 7 new 23 -> rejected
+[420] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[421] jump 720 -> 93: inliers old 8 new 23 -> rejected
+[421] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[422] jump 720 -> 94: inliers old 7 new 25 -> rejected
+[422] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[423] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[423] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[424] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[424] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[425] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[426] node 720 hops 356 recover (<Action.LEFT: 4>, 14) reverse 720->719: undo FORWARD
+[427] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[427] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[428] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[429] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[430] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[431] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[432] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[433] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[434] jump 720 -> 112: inliers old 15 new 17 -> rejected
+[434] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[435] jump 720 -> 112: inliers old 16 new 17 -> rejected
+[435] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[436] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[437] node 720 hops 356 recover (<Action.RIGHT: 8>, 17) reverse 720->719: undo FORWARD
+[438] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[438] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[439] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[440] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[441] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[442] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[443] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[444] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[445] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[446] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[447] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[448] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[449] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[449] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[450] jump 720 -> 94: inliers old 9 new 15 -> rejected
+[450] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[451] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[451] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[451] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[452] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[452] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[453] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[453] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[454] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[454] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[455] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[455] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[456] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[456] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[457] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[457] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[458] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[458] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[459] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[459] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[460] jump 720 -> 94: inliers old 11 new 17 -> rejected
+[460] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[461] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[461] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[462] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[462] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[463] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[463] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[464] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[464] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[464] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[465] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[465] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[466] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[466] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[467] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[467] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[468] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[468] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[469] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[469] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[470] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[470] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[471] jump 720 -> 94: inliers old 6 new 19 -> rejected
+[471] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[472] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[472] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[473] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[473] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[474] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[474] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[475] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[475] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[476] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[476] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[477] jump 720 -> 94: inliers old 10 new 24 -> rejected
+[477] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[477] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[478] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[478] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[479] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[479] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[480] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[480] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[481] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[481] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[482] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[482] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[483] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[483] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[484] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[484] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[485] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[485] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[486] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[486] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[487] jump 720 -> 93: inliers old 8 new 25 -> rejected
+[487] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[488] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[488] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[489] jump 720 -> 94: inliers old 9 new 20 -> rejected
+[489] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[490] jump 720 -> 94: inliers old 11 new 22 -> rejected
+[490] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[490] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[490] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[491] jump 720 -> 94: inliers old 10 new 21 -> rejected
+[491] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[492] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[492] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[493] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[493] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[494] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[494] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[495] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[495] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[496] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[496] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[497] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[497] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[498] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[498] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[499] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[499] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[500] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[500] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[501] jump 720 -> 94: inliers old 9 new 15 -> rejected
+[501] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[502] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[502] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[503] jump 720 -> 94: inliers old 7 new 23 -> rejected
+[503] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[503] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[504] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[504] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[505] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[505] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[506] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[506] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[507] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[507] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[508] jump 720 -> 93: inliers old 9 new 26 -> rejected
+[508] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[509] jump 720 -> 93: inliers old 10 new 21 -> rejected
+[509] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[510] jump 720 -> 94: inliers old 9 new 22 -> rejected
+[510] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[511] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[511] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[512] jump 720 -> 94: inliers old 9 new 22 -> rejected
+[512] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[513] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[514] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[515] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[516] jump 720 -> 94: inliers old 7 new 25 -> rejected
+[516] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[516] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[517] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[517] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[518] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[518] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[519] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[519] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[520] jump 720 -> 94: inliers old 9 new 20 -> rejected
+[520] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[521] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[521] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[522] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[522] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[523] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[523] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[524] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[524] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[525] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[525] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[526] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[526] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[527] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[527] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[528] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[528] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[529] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[529] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[529] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[530] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[530] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[531] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[531] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[532] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[532] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[533] jump 720 -> 94: inliers old 0 new 23 -> rejected
+[533] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[534] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[534] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[535] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[535] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[536] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[536] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[537] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[537] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[538] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[538] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[539] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[539] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[540] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[540] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[541] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[541] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[542] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[542] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[542] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[543] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[544] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[545] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[546] jump 720 -> 94: inliers old 6 new 15 -> rejected
+[546] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[547] jump 720 -> 94: inliers old 6 new 17 -> rejected
+[547] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[548] jump 720 -> 94: inliers old 0 new 15 -> rejected
+[548] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[549] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[549] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[550] jump 720 -> 94: inliers old 11 new 18 -> rejected
+[550] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[551] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[551] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[552] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[552] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[553] jump 720 -> 94: inliers old 10 new 14 -> rejected
+[553] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[554] jump 720 -> 94: inliers old 10 new 17 -> rejected
+[554] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[555] jump 720 -> 94: inliers old 10 new 15 -> rejected
+[555] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[555] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[556] jump 720 -> 95: inliers old 10 new 16 -> rejected
+[556] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[557] jump 720 -> 95: inliers old 10 new 16 -> rejected
+[557] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[558] jump 720 -> 95: inliers old 9 new 17 -> rejected
+[558] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[559] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[560] node 720 hops 356 recover (<Action.LEFT: 4>, 8) reverse 720->719: undo FORWARD
+[561] jump 720 -> 94: inliers old 10 new 22 -> rejected
+[561] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[561] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[562] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[562] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[563] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[564] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[565] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[566] jump 720 -> 94: inliers old 11 new 18 -> rejected
+[566] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[567] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[567] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[568] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[568] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[569] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[569] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[570] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[570] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[571] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[571] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[572] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[572] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[573] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[573] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[574] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[574] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[574] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[575] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[575] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[576] jump 720 -> 94: inliers old 8 new 15 -> rejected
+[576] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[577] jump 720 -> 94: inliers old 6 new 20 -> rejected
+[577] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[578] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[578] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[579] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[579] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[580] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[580] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[581] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[581] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[582] jump 720 -> 94: inliers old 8 new 15 -> rejected
+[582] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[583] jump 720 -> 94: inliers old 9 new 15 -> rejected
+[583] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[584] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[584] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[585] jump 720 -> 94: inliers old 9 new 14 -> rejected
+[585] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[586] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[586] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[587] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[587] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[587] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[588] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[588] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[589] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[589] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[590] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[590] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[591] jump 720 -> 94: inliers old 0 new 16 -> rejected
+[591] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[592] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[592] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[593] jump 720 -> 94: inliers old 9 new 22 -> rejected
+[593] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[594] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[594] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[595] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[595] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[596] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[596] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[597] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[597] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[598] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[598] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[599] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[599] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[600] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[600] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[600] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[601] jump 720 -> 94: inliers old 8 new 15 -> rejected
+[601] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[602] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[602] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[603] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[603] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[604] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[604] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[605] jump 720 -> 94: inliers old 10 new 17 -> rejected
+[605] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[606] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[606] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[607] jump 720 -> 94: inliers old 6 new 23 -> rejected
+[607] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[608] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[608] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[609] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[609] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[610] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[610] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[611] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[611] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[612] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[612] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[613] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[613] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[613] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[614] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[614] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[615] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[615] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[616] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[616] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[617] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[617] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[618] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[618] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[619] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[619] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[620] jump 720 -> 94: inliers old 8 new 15 -> rejected
+[620] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[621] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[621] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[622] jump 720 -> 94: inliers old 6 new 19 -> rejected
+[622] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[623] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[623] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[624] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[624] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[625] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[625] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[626] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[626] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[626] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[627] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[627] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[628] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[628] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[629] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[629] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[630] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[630] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[631] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[631] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[632] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[632] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[633] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[633] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[634] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[634] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[635] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[635] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[636] jump 720 -> 92: inliers old 0 new 16 -> rejected
+[636] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[637] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[637] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[638] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[638] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[639] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[639] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[639] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[640] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[640] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[641] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[641] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[641] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[642] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[642] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[643] jump 720 -> 94: inliers old 0 new 21 -> rejected
+[643] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[644] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[644] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[645] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[645] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[646] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[646] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[647] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[647] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[648] jump 720 -> 94: inliers old 7 new 22 -> rejected
+[648] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[649] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[649] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[650] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[650] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[651] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[651] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[652] jump 720 -> 94: inliers old 8 new 16 -> rejected
+[652] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[652] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[653] jump 720 -> 94: inliers old 7 new 17 -> rejected
+[653] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[654] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[654] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[655] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[655] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[656] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[656] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[657] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[657] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[658] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[658] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[659] jump 720 -> 94: inliers old 8 new 17 -> rejected
+[659] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[660] jump 720 -> 94: inliers old 9 new 17 -> rejected
+[660] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[661] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[661] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[662] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[662] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[663] jump 720 -> 94: inliers old 11 new 20 -> rejected
+[663] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[664] jump 720 -> 94: inliers old 8 new 20 -> rejected
+[664] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[665] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[665] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[665] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[666] jump 720 -> 94: inliers old 7 new 20 -> rejected
+[666] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[667] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[667] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[668] jump 720 -> 94: inliers old 0 new 20 -> rejected
+[668] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[669] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[670] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[671] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[672] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[673] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[674] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[674] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[675] jump 720 -> 94: inliers old 7 new 21 -> rejected
+[675] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[676] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[676] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[677] jump 720 -> 94: inliers old 8 new 25 -> rejected
+[677] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[678] jump 720 -> 94: inliers old 9 new 23 -> rejected
+[678] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[678] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[679] jump 720 -> 94: inliers old 8 new 18 -> rejected
+[679] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[680] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[680] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[681] jump 720 -> 94: inliers old 10 new 19 -> rejected
+[681] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[682] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[682] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[683] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[683] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[684] jump 720 -> 94: inliers old 8 new 21 -> rejected
+[684] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[685] jump 720 -> 94: inliers old 8 new 26 -> rejected
+[685] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[686] jump 720 -> 94: inliers old 9 new 22 -> rejected
+[686] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[687] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[688] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[689] jump 720 -> 11: inliers old 7 new 16 -> rejected
+[689] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[690] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[691] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[691] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[692] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[692] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[693] jump 720 -> 94: inliers old 9 new 24 -> rejected
+[693] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[694] jump 720 -> 94: inliers old 10 new 21 -> rejected
+[694] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[695] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[695] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[696] jump 720 -> 94: inliers old 8 new 24 -> rejected
+[696] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[697] jump 720 -> 94: inliers old 7 new 22 -> rejected
+[697] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[698] jump 720 -> 94: inliers old 9 new 20 -> rejected
+[698] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[699] jump 720 -> 94: inliers old 6 new 20 -> rejected
+[699] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[700] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[700] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[701] jump 720 -> 94: inliers old 11 new 21 -> rejected
+[701] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[702] jump 720 -> 94: inliers old 10 new 18 -> rejected
+[702] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[703] jump 720 -> 94: inliers old 10 new 20 -> rejected
+[703] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[704] jump 720 -> 94: inliers old 9 new 21 -> rejected
+[704] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[704] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[705] jump 720 -> 94: inliers old 9 new 19 -> rejected
+[705] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[706] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[707] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[708] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[709] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[710] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[710] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[711] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[712] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[713] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[714] jump 720 -> 94: inliers old 0 new 18 -> rejected
+[714] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[715] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[715] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[716] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[716] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[717] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[717] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[717] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[718] jump 720 -> 94: inliers old 7 new 16 -> rejected
+[718] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[719] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[719] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[720] jump 720 -> 94: inliers old 9 new 20 -> rejected
+[720] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[721] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[722] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[723] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[724] jump 720 -> 94: inliers old 11 new 17 -> rejected
+[724] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[725] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[725] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[726] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[726] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[727] jump 720 -> 94: inliers old 0 new 17 -> rejected
+[727] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[728] jump 720 -> 94: inliers old 0 new 19 -> rejected
+[728] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[729] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[729] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[730] jump 720 -> 94: inliers old 0 new 24 -> rejected
+[730] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[730] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[731] jump 720 -> 94: inliers old 8 new 22 -> rejected
+[731] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[732] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[732] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[733] jump 720 -> 94: inliers old 0 new 22 -> rejected
+[733] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[734] jump 720 -> 94: inliers old 8 new 19 -> rejected
+[734] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[735] jump 720 -> 94: inliers old 9 new 18 -> rejected
+[735] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[736] jump 720 -> 94: inliers old 7 new 18 -> rejected
+[736] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[737] jump 720 -> 94: inliers old 7 new 19 -> rejected
+[737] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[738] jump 720 -> 94: inliers old 7 new 14 -> rejected
+[738] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[739] jump 720 -> 95: inliers old 8 new 17 -> rejected
+[739] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[740] jump 720 -> 94: inliers old 9 new 16 -> rejected
+[740] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[741] jump 720 -> 94: inliers old 8 new 14 -> rejected
+[741] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[742] jump 720 -> 95: inliers old 8 new 18 -> rejected
+[742] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[743] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[744] node 720 hops 356 recover (<Action.RIGHT: 8>, 11) reverse 720->719: undo FORWARD
+[745] jump 720 -> 95: inliers old 10 new 18 -> rejected
+[745] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[745] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[746] jump 720 -> 95: inliers old 9 new 20 -> rejected
+[746] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[747] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[748] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[749] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[750] jump 720 -> 118: inliers old 8 new 20 -> rejected
+[750] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[751] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[752] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[753] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[754] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[755] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[756] jump 720 -> 11: inliers old 15 new 20 -> rejected
+[756] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[757] jump 720 -> 11: inliers old 13 new 24 -> rejected
+[757] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[758] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[758] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[759] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[760] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[761] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[762] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[763] jump 720 -> 11: inliers old 13 new 22 -> rejected
+[763] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[764] jump 720 -> 11: inliers old 11 new 24 -> rejected
+[764] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[765] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[766] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[767] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[768] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[769] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[770] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[771] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[771] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[772] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[773] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[774] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[775] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[776] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[777] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[778] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[779] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[780] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[781] jump 720 -> 472: inliers old 20 new 18 -> rejected
+[781] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[782] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[783] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[784] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[784] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[785] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[786] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[787] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[788] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[789] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[790] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[791] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[792] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[792] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[793] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[794] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[795] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[796] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[797] jump 720 -> 97: inliers old 9 new 16 -> rejected
+[797] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[797] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[798] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[799] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[800] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[801] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[802] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[803] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[804] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[805] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[806] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[807] node 720 hops 356 recover (<Action.LEFT: 4>, 14) reverse 720->719: undo FORWARD
+[808] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[808] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[809] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[810] jump 720 -> 11: inliers old 10 new 23 -> rejected
+[810] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[811] jump 720 -> 11: inliers old 0 new 15 -> rejected
+[811] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[812] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[813] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[814] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[815] jump 720 -> 11: inliers old 0 new 16 -> rejected
+[815] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[816] jump 720 -> 11: inliers old 7 new 15 -> rejected
+[816] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[817] jump 720 -> 11: inliers old 0 new 16 -> rejected
+[817] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[818] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[819] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[820] node 720 hops 356 recover (<Action.RIGHT: 8>, 17) reverse 720->719: undo FORWARD
+[821] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[821] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[822] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[823] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[824] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[825] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[826] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[827] jump 720 -> 95: inliers old 11 new 10 -> rejected
+[827] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[828] jump 720 -> 95: inliers old 0 new 9 -> rejected
+[828] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[829] jump 720 -> 95: inliers old 8 new 9 -> rejected
+[829] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[830] jump 720 -> 95: inliers old 0 new 9 -> rejected
+[830] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[831] jump 720 -> 95: inliers old 8 new 9 -> rejected
+[831] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[832] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[832] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[833] jump 720 -> 95: inliers old 7 new 10 -> rejected
+[833] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[834] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[834] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[834] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[835] jump 720 -> 95: inliers old 0 new 10 -> rejected
+[835] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[836] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[836] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[837] jump 720 -> 95: inliers old 0 new 10 -> rejected
+[837] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[838] jump 720 -> 95: inliers old 7 new 11 -> rejected
+[838] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[839] jump 720 -> 95: inliers old 0 new 11 -> rejected
+[839] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[840] jump 720 -> 95: inliers old 8 new 10 -> rejected
+[840] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[841] jump 720 -> 95: inliers old 0 new 10 -> rejected
+[841] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[842] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[842] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[843] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[843] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[844] jump 720 -> 95: inliers old 0 new 11 -> rejected
+[844] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[845] jump 720 -> 95: inliers old 0 new 10 -> rejected
+[845] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[846] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[846] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[847] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[847] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[847] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[848] jump 720 -> 95: inliers old 7 new 13 -> rejected
+[848] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[849] jump 720 -> 95: inliers old 0 new 9 -> rejected
+[849] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[850] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[850] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[851] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[852] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[853] jump 720 -> 112: inliers old 0 new 31 -> rejected
+[853] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[854] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[855] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[856] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[856] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[857] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[857] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[858] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[858] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[859] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[859] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[860] jump 720 -> 95: inliers old 0 new 18 -> rejected
+[860] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[860] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[861] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[861] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[862] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[863] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[864] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[865] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[866] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[867] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[868] jump 720 -> 95: inliers old 8 new 18 -> rejected
+[868] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[869] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[869] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[870] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[870] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[871] jump 720 -> 95: inliers old 0 new 16 -> rejected
+[871] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[872] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[872] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[873] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[873] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[874] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[875] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[876] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[876] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[877] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[877] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[878] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[878] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[879] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[879] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[880] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[880] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[881] jump 720 -> 95: inliers old 0 new 10 -> rejected
+[881] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[882] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[883] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[884] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[885] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[886] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[886] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[887] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[888] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[889] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[890] jump 720 -> 11: inliers old 0 new 21 -> rejected
+[890] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[891] jump 720 -> 11: inliers old 0 new 24 -> rejected
+[891] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[892] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[893] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[894] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[895] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[896] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[896] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[897] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[898] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[899] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[899] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[900] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[901] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[902] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[903] jump 720 -> 95: inliers old 0 new 17 -> rejected
+[903] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[904] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[904] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[905] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[905] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[906] jump 720 -> 95: inliers old 0 new 15 -> rejected
+[906] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[907] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[907] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[908] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[908] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[909] jump 720 -> 95: inliers old 0 new 12 -> rejected
+[909] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[910] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[910] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[911] jump 720 -> 95: inliers old 0 new 14 -> rejected
+[911] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[912] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[912] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[913] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[914] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[915] jump 720 -> 95: inliers old 10 new 12 -> rejected
+[915] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[916] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[916] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[917] jump 720 -> 95: inliers old 0 new 13 -> rejected
+[917] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[918] jump 720 -> 95: inliers old 7 new 12 -> rejected
+[918] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[919] jump 720 -> 95: inliers old 6 new 11 -> rejected
+[919] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[920] jump 720 -> 95: inliers old 7 new 9 -> rejected
+[920] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[921] jump 720 -> 95: inliers old 7 new 8 -> rejected
+[921] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[922] jump 720 -> 95: inliers old 9 new 9 -> rejected
+[922] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[923] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[924] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[925] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[925] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[926] node 720 hops 356 stuck (<Action.FORWARD: 1>, 4) reverse 720->719: undo FORWARD
+[927] node 720 hops 356 recover (<Action.LEFT: 4>, 8) reverse 720->719: undo FORWARD
+[928] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[929] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[930] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[931] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[932] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[933] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[934] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[935] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[936] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[937] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[938] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[939] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[940] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[940] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[941] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[942] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[943] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[943] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[944] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[945] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[946] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[947] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[948] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[949] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[950] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[951] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[952] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[953] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[953] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[954] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[955] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[956] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[957] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[958] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[959] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[960] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[961] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[962] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[963] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[964] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[965] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[966] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[966] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[967] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[968] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[969] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[970] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[971] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[972] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[973] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[974] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[975] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[976] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[977] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[978] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[979] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[979] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[980] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[981] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[982] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[983] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[984] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[985] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[986] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[987] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[988] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[989] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[990] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[991] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[992] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[992] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[993] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[994] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[995] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[996] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[997] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[998] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[999] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1000] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1001] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1002] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1003] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1004] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1005] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1005] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1006] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1007] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1008] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1009] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1010] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1011] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1012] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1013] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1014] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1015] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1016] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1017] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1018] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1018] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1019] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1020] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1021] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1022] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1023] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1024] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1025] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1026] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1027] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1028] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1029] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1030] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1031] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1031] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1032] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1033] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1034] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1035] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1036] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1037] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1038] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1039] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1040] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1041] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1042] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1043] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1044] jump 720 -> 11: inliers old 11 new 23 -> rejected
+[1044] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1044] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1045] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1046] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1047] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1048] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1049] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1050] jump 720 -> 118: inliers old 0 new 22 -> rejected
+[1050] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1051] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1052] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1053] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1054] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1055] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1056] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1057] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1057] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1058] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1059] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1060] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1061] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1062] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1063] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1064] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1065] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1066] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1067] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1068] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1069] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1070] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1070] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1071] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1072] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1073] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1074] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1075] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1076] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1077] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1078] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1079] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1080] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1081] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1082] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1083] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1083] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1084] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1085] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1086] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1087] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1088] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1089] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1090] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1091] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1092] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1093] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1094] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1094] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1095] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1096] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1096] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1097] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1098] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1099] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1100] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1101] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1102] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1103] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1104] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1105] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1106] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1107] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1108] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1109] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1109] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1110] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1111] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1112] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1113] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1114] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1115] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1116] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1117] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1118] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1119] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1120] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1121] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1122] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1122] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1123] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1124] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1125] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1126] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1127] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1128] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1129] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1130] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1131] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1132] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1133] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1134] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1135] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1135] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1136] jump 720 -> 118: inliers old 0 new 17 -> rejected
+[1136] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1137] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1138] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1139] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1140] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1141] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1142] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1143] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1144] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1145] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1146] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1147] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1148] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1148] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1149] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1150] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1151] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1152] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1153] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1154] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1155] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1156] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1157] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1158] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1159] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1160] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1161] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1161] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1162] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1163] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1164] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1165] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1166] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1167] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1168] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1169] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1170] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1171] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1172] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1173] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1174] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1174] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1175] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1176] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1177] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1178] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1179] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1180] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1181] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1182] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1183] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1184] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1185] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1186] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1187] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1187] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1188] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1189] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1190] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1191] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1192] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1193] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1194] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1195] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1196] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1197] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1198] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1199] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1200] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1200] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1201] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1202] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1203] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1204] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1205] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1206] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1207] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1208] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1209] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1210] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1211] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1212] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1213] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1213] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1214] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1215] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1216] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1217] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1218] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1219] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1220] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1221] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1222] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1223] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1224] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1225] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1226] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1226] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1227] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1228] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1229] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1230] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1231] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1232] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1233] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1234] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1235] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1236] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1237] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1238] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1239] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1239] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1240] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1241] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1242] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1243] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1244] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1245] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1245] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1246] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1247] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1248] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1249] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1250] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1251] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1252] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1252] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1253] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1254] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1255] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1256] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1257] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1258] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1259] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1260] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1261] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1262] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1263] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1264] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1265] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1265] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1266] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1267] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1268] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1269] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1270] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1271] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1272] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1273] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1274] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1275] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1276] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1277] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1278] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1278] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1279] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1280] jump 720 -> 11: inliers old 9 new 21 -> rejected
+[1280] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1281] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1282] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1283] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1284] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1285] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1286] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1287] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1288] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1289] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1290] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1291] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1291] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1292] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1293] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1294] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1295] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1296] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1297] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1298] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1299] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1300] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1301] jump 720 -> 11: inliers old 11 new 21 -> rejected
+[1301] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1302] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1303] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1304] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1304] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1305] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1306] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1307] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1308] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1309] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1310] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1311] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1312] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1313] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1314] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1315] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1316] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1317] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1317] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1318] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1319] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1320] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1321] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1322] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1323] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1324] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1325] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1326] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1327] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1328] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1329] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1330] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1330] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1331] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1332] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1333] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1334] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1335] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1336] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1337] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1338] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1339] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1340] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1341] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1342] jump 720 -> 11: inliers old 10 new 23 -> rejected
+[1342] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1343] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1343] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1344] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1345] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1346] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1347] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1348] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1349] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1350] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1351] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1352] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1353] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1354] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1355] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1356] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1356] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1357] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1358] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1359] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1360] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1361] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1362] jump 720 -> 11: inliers old 17 new 24 -> rejected
+[1362] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1363] jump 720 -> 11: inliers old 13 new 20 -> rejected
+[1363] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1364] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1365] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1366] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1367] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1368] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1369] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1369] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1370] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1371] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1372] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1373] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1374] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1375] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1376] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1377] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1378] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1379] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1380] jump 720 -> 12: inliers old 14 new 22 -> rejected
+[1380] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1381] jump 720 -> 11: inliers old 13 new 23 -> rejected
+[1381] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1382] jump 720 -> 11: inliers old 15 new 24 -> rejected
+[1382] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1382] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1383] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1384] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1385] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1386] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1387] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1388] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1389] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1390] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1391] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1392] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1393] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1394] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1395] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1395] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1396] jump 720 -> 3: inliers old 6 new 14 -> rejected
+[1396] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1396] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1397] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1398] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1399] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1400] jump 720 -> 11: inliers old 13 new 23 -> rejected
+[1400] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1401] jump 720 -> 11: inliers old 11 new 16 -> rejected
+[1401] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1402] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1403] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1404] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1405] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1406] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1407] jump 720 -> 565: inliers old 0 new 21 -> rejected
+[1407] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1408] no progress for 150 steps at hops 356: detour around nodes 720..142, next node now 719 (356 hops)
+[1408] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1409] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1410] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1411] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1412] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1413] node 720 hops 356 reverse (<Action.BACKWARD: 2>, 2) reverse 720->719: undo FORWARD
+[1414] node 720 hops 356 budget 16 reverse 720->719: undo FORWARD
+╭─ result ─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                                                                  │
+│ 2,989 steps · SPL 0.00                                                                                               │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+1,413 round trips · median 0.8 ms (server 0.8 ms, network 0.0 ms) · your code 24.2 ms per step
+jitter: 0 turn reversals; 0 reversals suppressed by the damper
+ticks asked: turning 203, forward 84, backward 2702
+result: Result(goal_tier='failed', nav_steps=2989, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-8-13588', session_id='local-8', arrival=None, think={'steps': 1413, 'ticks': 2989, 'payload_bytes': 325555200, 'rtt_ms_p50': 0.83175, 'server_ms_p50': 0.83175, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 24.160833, 'steps_per_second': 11.253606109421687}, attempts_used=0, attempts_allowed=None)

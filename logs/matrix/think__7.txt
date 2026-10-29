@@ -1,0 +1,1674 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-7_dinov2_vits14_k32_d256_2404.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2404 frames from 3 trajectories
+spawn join: drive starts 0 and 621 (37 inliers)
+spawn join: drive starts 0 and 1248 (157 inliers)
+sequence check: kept 289 of 955 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 286 of 289 shortcuts, rejected 3 look-alikes
+sequence check: kept 272 of 286 shortcuts (runs of >= 8 pairs)
+bearing check: 19/20 forward pairs point ahead -> sign OK
+graph: 2674 edges, 272 verified shortcuts
+checking your agent on a sample frame...
+goal: node 2157 (view 0, 0 inliers; R-best 2157)
+[1] node 0 hops 155 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.27
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────╮
+│ Local maze 7                                                                 │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=1916531601    │
+│                                                                              │
+│ same maze anywhere:  run(agent, "local:7")                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+goal: node 1570 (view 3, 37 inliers; R-best 1188)
+[1] node 0 hops 240 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[2] node 0 hops 240 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[3] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[4] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[5] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.46 best=1.00
+[6] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.62 best=1.00
+[7] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.96 best=1.00
+[8] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[9] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[10] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[11] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +3 p=0.87 best=1.00
+[12] node 0 hops 240 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[13] node 1 hops 239 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[14] node 1 hops 239 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[15] node 1 hops 239 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[16] node 1 hops 239 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[17] node 1 hops 239 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[18] node 2 hops 238 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[19] node 2 hops 238 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.97 best=1.00
+[20] node 2 hops 238 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=40
+[21] node 2 hops 238 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+26 n=34 (hold)
+[22] node 3 hops 237 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+5 n=36 (hold)
+[23] node 3 hops 237 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-1 n=36 (hold)
+[24] node 1251 hops 238 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-0 n=42
+[25] node 1254 hops 235 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-7 n=34 (hold)
+[26] node 1254 hops 235 steer-turn (<Action.LEFT: 4>, 3) wp +3 steer yaw=-11 n=47
+[27] node 1254 hops 235 steer-turn (<Action.LEFT: 4>, 5) wp +4 steer yaw=-16 n=39 (hold)
+[28] node 9 hops 231 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=0.96 best=1.00
+[29] node 9 hops 231 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[30] node 9 hops 231 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[31] node 9 hops 231 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[32] node 9 hops 231 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[33] node 9 hops 231 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+0 n=49
+[34] node 9 hops 231 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-5 n=54
+[35] node 9 hops 231 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-6 n=55
+[36] jump 9 -> 16: inliers old 13 new 49 -> accepted
+[36] node 16 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[37] node 16 hops 224 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[38] node 16 hops 224 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[39] node 16 hops 224 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[40] node 16 hops 224 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[41] node 17 hops 223 follow (<Action.RIGHT: 8>, 1) wp +5 p=1.00 best=1.00
+[42] node 17 hops 223 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.89 best=1.00
+[43] node 17 hops 223 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[44] node 17 hops 223 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[45] node 18 hops 222 steer-turn (<Action.RIGHT: 8>, 6) wp +4 steer yaw=+19 n=45
+[46] node 18 hops 222 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+5 n=38 (hold)
+[47] node 18 hops 222 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-1 n=57
+[48] node 19 hops 221 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-1 n=64
+[49] node 19 hops 221 steer-fwd (<Action.FORWARD: 1>, 2) wp +5 steer yaw=-2 n=36 (hold)
+[50] node 21 hops 219 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[51] node 23 hops 217 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=52
+[52] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.92 best=1.00
+[53] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +3 p=0.89 best=1.00
+[54] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +4 p=0.86 best=1.00
+[55] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[56] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[57] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[58] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[59] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[60] node 24 hops 216 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[61] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[62] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[63] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[64] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[65] node 24 hops 216 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.84 best=1.00
+[66] node 26 hops 214 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[67] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=43
+[68] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=58
+[69] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=60
+[70] node 27 hops 213 steer-turn (<Action.RIGHT: 8>, 3) wp +7 steer yaw=+12 n=56
+[71] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+0 n=91
+[72] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-3 n=64
+[73] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+2 n=55
+[74] node 27 hops 213 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=44
+[75] node 26 hops 214 steer-fwd (<Action.FORWARD: 1>, 2) wp +8 steer yaw=+1 n=33 (hold)
+[76] node 26 hops 214 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[77] node 26 hops 214 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[78] node 26 hops 214 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[79] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[80] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[81] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[82] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[83] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[84] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[85] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[86] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[87] node 26 hops 214 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[88] lost at node 26 (0 inliers): relocalised to 1226 (26 inliers)
+[88] node 1226 hops 476 reverse (<Action.RIGHT: 8>, 2) reverse 1226->1225: undo LEFT
+[89] node 1226 hops 476 reverse (<Action.RIGHT: 8>, 2) reverse 1226->1225: undo LEFT
+[90] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[91] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[92] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[93] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[94] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[95] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[96] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[97] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[98] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[99] node 1227 hops 477 reverse (<Action.RIGHT: 8>, 2) reverse 1227->1226: undo LEFT
+[100] jump 1227 -> 1025: inliers old 0 new 48 -> accepted
+[100] node 1025 hops 275 reverse (<Action.BACKWARD: 2>, 2) reverse 1025->1024: undo FORWARD
+[101] node 1022 hops 272 reverse (<Action.RIGHT: 8>, 2) reverse 1022->1021: undo LEFT
+[102] node 1022 hops 272 reverse (<Action.RIGHT: 8>, 2) reverse 1022->1021: undo LEFT
+[103] node 1021 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 1021->1020: undo LEFT
+[104] node 1021 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 1021->1020: undo LEFT
+[105] node 1021 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 1021->1020: undo LEFT
+[106] node 1021 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 1021->1020: undo LEFT
+[107] node 1021 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 1021->1020: undo LEFT
+[108] node 1020 hops 270 reverse (<Action.RIGHT: 8>, 2) reverse 1020->1019: undo LEFT
+[109] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[110] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[111] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[112] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[113] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[114] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[115] node 1019 hops 269 reverse (<Action.BACKWARD: 2>, 2) reverse 1019->1018: undo FORWARD
+[116] node 1018 hops 268 reverse (<Action.BACKWARD: 2>, 2) reverse 1018->1017: undo FORWARD
+[117] node 1016 hops 266 reverse (<Action.BACKWARD: 2>, 2) reverse 1016->1015: undo FORWARD
+[118] node 1016 hops 266 reverse (<Action.BACKWARD: 2>, 2) reverse 1016->1015: undo FORWARD
+[119] node 1016 hops 266 reverse (<Action.BACKWARD: 2>, 2) reverse 1016->1015: undo FORWARD
+[120] node 1016 hops 266 reverse (<Action.BACKWARD: 2>, 2) reverse 1016->1015: undo FORWARD
+[121] node 1016 hops 266 reverse (<Action.BACKWARD: 2>, 2) reverse 1016->1015: undo FORWARD
+[122] node 1015 hops 265 reverse (<Action.RIGHT: 8>, 2) reverse 1015->1014: undo LEFT
+[123] node 1015 hops 265 reverse (<Action.RIGHT: 8>, 2) reverse 1015->1014: undo LEFT
+[124] node 1015 hops 265 reverse (<Action.RIGHT: 8>, 2) reverse 1015->1014: undo LEFT
+[125] node 1015 hops 265 reverse (<Action.RIGHT: 8>, 2) reverse 1015->1014: undo LEFT
+[126] node 1015 hops 265 reverse (<Action.RIGHT: 8>, 2) reverse 1015->1014: undo LEFT
+[127] node 1014 hops 264 reverse (<Action.RIGHT: 8>, 2) reverse 1014->1013: undo LEFT
+[128] node 1012 hops 262 reverse (<Action.RIGHT: 8>, 2) reverse 1012->1011: undo LEFT
+[129] node 1011 hops 261 reverse (<Action.RIGHT: 8>, 2) reverse 1011->1010: undo LEFT
+[130] node 1011 hops 261 reverse (<Action.RIGHT: 8>, 2) reverse 1011->1010: undo LEFT
+[131] node 1011 hops 261 reverse (<Action.RIGHT: 8>, 2) reverse 1011->1010: undo LEFT
+[132] node 1011 hops 261 reverse (<Action.RIGHT: 8>, 2) reverse 1011->1010: undo LEFT
+[133] node 1010 hops 260 reverse (<Action.RIGHT: 8>, 2) reverse 1010->1009: undo LEFT
+[134] node 1010 hops 260 reverse (<Action.RIGHT: 8>, 2) reverse 1010->1009: undo LEFT
+[135] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[136] node 1008 hops 258 reverse (<Action.LEFT: 4>, 2) reverse 1008->1007: undo RIGHT
+[137] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[138] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[139] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[140] node 1007 hops 257 reverse (<Action.BACKWARD: 2>, 2) reverse 1007->1006: undo FORWARD
+[141] node 1007 hops 257 reverse (<Action.BACKWARD: 2>, 2) reverse 1007->1006: undo FORWARD
+[142] node 1006 hops 256 reverse (<Action.LEFT: 4>, 2) reverse 1006->1005: undo RIGHT
+[143] node 1006 hops 256 reverse (<Action.LEFT: 4>, 2) reverse 1006->1005: undo RIGHT
+[144] node 1006 hops 256 reverse (<Action.LEFT: 4>, 2) reverse 1006->1005: undo RIGHT
+[145] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[146] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[147] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[148] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[149] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[150] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[151] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[152] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[153] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[154] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[155] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[156] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[157] no progress for 150 steps at hops 255: detour around nodes 1005..995, next node now 1004 (255 hops)
+[157] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[158] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[159] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[160] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[161] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[162] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[163] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[164] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[165] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[166] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[167] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[168] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[169] node 1009 hops 259 reverse (<Action.BACKWARD: 2>, 2) reverse 1009->1008: undo FORWARD
+[170] no progress for 150 steps at hops 255: detour around nodes 1005..995, next node now 1004 (255 hops)
+[170] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[171] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[172] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[173] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[174] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[175] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[176] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[177] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[178] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[179] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[180] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[181] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[182] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[183] no progress for 150 steps at hops 255: detour around nodes 1005..995, next node now 1004 (255 hops)
+[183] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[184] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[185] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[186] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[187] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[188] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[189] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[190] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[191] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[192] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[193] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[194] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[195] node 1007 hops 257 reverse (<Action.BACKWARD: 2>, 2) reverse 1007->1006: undo FORWARD
+[196] no progress for 150 steps at hops 257: detour around nodes 1007..997, next node now 1006 (257 hops)
+[196] node 1007 hops 257 reverse (<Action.BACKWARD: 2>, 2) reverse 1007->1006: undo FORWARD
+[197] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[198] node 1006 hops 256 reverse (<Action.LEFT: 4>, 2) reverse 1006->1005: undo RIGHT
+[199] node 1006 hops 256 reverse (<Action.LEFT: 4>, 2) reverse 1006->1005: undo RIGHT
+[200] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[201] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[202] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[203] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[204] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[205] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[206] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[207] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[208] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[209] no progress for 150 steps at hops 255: detour around nodes 1005..995, next node now 1004 (255 hops)
+[209] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[210] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[211] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[212] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[213] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[214] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[215] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[216] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[217] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[218] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[219] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[220] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[221] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[222] no progress for 150 steps at hops 255: detour around nodes 1005..995, next node now 1004 (255 hops)
+[222] node 1005 hops 255 reverse (<Action.LEFT: 4>, 2) reverse 1005->1004: undo RIGHT
+[223] lost at node 1005 (0 inliers): relocalised to 1398 (112 inliers)
+[223] node 1398 hops 172 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-25 n=86
+[224] node 1398 hops 172 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=87
+[225] node 1398 hops 172 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 steer yaw=+10 n=65
+[226] node 1398 hops 172 steer-turn (<Action.RIGHT: 8>, 5) wp +1 steer yaw=+17 n=44
+[227] node 1398 hops 172 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.03 best=0.95
+[228] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[229] jump 1398 -> 1949: inliers old 19 new 11 -> rejected
+[229] node 1398 hops 172 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/60 ticks) p=0.22
+[230] jump 1398 -> 1948: inliers old 24 new 13 -> rejected
+[230] node 1398 hops 172 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/60 ticks) p=0.19
+[231] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.59 best=0.95
+[232] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.14 best=1.00
+[233] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.93
+[234] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.72
+[235] node 1398 hops 172 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.81
+[236] node 1398 hops 172 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/60 ticks) p=0.21
+[237] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[238] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +6 p=0.81 best=1.00
+[239] node 1400 hops 170 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-6 n=50
+[240] node 1400 hops 170 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-44 n=33 (hold)
+[241] node 1398 hops 172 steer-turn (<Action.LEFT: 4>, 6) wp +4 steer yaw=-37 n=40
+[242] node 1400 hops 170 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-25 n=45
+[243] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[244] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[245] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[246] node 1400 hops 170 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[247] node 1401 hops 169 follow (<Action.LEFT: 4>, 1) wp +6 p=0.94 best=1.00
+[248] node 1401 hops 169 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[249] node 1401 hops 169 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[250] node 1401 hops 169 follow (<Action.LEFT: 4>, 1) wp +6 p=0.85 best=1.00
+[251] node 1402 hops 168 follow (<Action.LEFT: 4>, 1) wp +5 p=0.83 best=1.00
+[252] node 1402 hops 168 follow (<Action.LEFT: 4>, 1) wp +5 p=0.81 best=1.00
+[253] node 1402 hops 168 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[254] node 1402 hops 168 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[255] node 1402 hops 168 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[256] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[257] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[258] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[259] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[260] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[261] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[262] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[263] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.92 best=1.00
+[264] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[265] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[266] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[267] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[268] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[269] node 1403 hops 167 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[270] node 1403 hops 167 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-2 n=53
+[271] node 1403 hops 167 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+0 n=64
+[272] node 1406 hops 164 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=49
+[273] node 1407 hops 163 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=74
+[274] node 1408 hops 162 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=44
+[275] node 1408 hops 162 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=69
+[276] node 1409 hops 161 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=42
+[277] node 1409 hops 161 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-2 n=53
+[278] node 1410 hops 160 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+0 n=49
+[279] node 1410 hops 160 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-4 n=48
+[280] node 1410 hops 160 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-0 n=61
+[281] node 1410 hops 160 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=76
+[282] node 1411 hops 159 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=86
+[283] node 1412 hops 158 steer-turn (<Action.LEFT: 4>, 4) wp +1 steer yaw=-13 n=42
+[284] node 1412 hops 158 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+14 n=51
+[285] node 1413 hops 157 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=68
+[286] node 1413 hops 157 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[287] node 1413 hops 157 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[288] node 1414 hops 156 steer-turn (<Action.LEFT: 4>, 5) wp +7 steer yaw=-17 n=66
+[289] node 1414 hops 156 steer-turn (<Action.LEFT: 4>, 5) wp +7 steer yaw=-18 n=77
+[290] node 1414 hops 156 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-5 n=109
+[291] node 1415 hops 155 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 steer yaw=+19 n=81
+[292] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+9 n=109
+[293] node 1419 hops 151 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-23 n=55
+[294] node 1419 hops 151 steer-turn (<Action.LEFT: 4>, 6) wp +7 steer yaw=-20 n=40
+[295] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+0 n=42
+[296] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+2 n=48
+[297] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+3 n=49
+[298] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+4 n=33 (hold)
+[299] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+3 n=31 (hold)
+[300] node 1419 hops 151 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+7 n=32 (hold)
+[301] node 1419 hops 151 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[302] node 1419 hops 151 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[303] node 1419 hops 151 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[304] node 1419 hops 151 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[305] jump 1419 -> 197: inliers old 12 new 7 -> rejected
+[305] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/60 ticks) p=0.00
+[306] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/60 ticks) p=0.00
+[307] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/60 ticks) p=0.00
+[308] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/60 ticks) p=0.00
+[309] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/60 ticks) p=0.00
+[310] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/60 ticks) p=0.00
+[311] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/60 ticks) p=0.00
+[312] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/60 ticks) p=0.00
+[313] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/60 ticks) p=0.00
+[314] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/60 ticks) p=0.00
+[315] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/60 ticks) p=0.00
+[316] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/60 ticks) p=0.00
+[317] node 1419 hops 151 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/60 ticks) p=0.00
+[318] lost at node 1419 (0 inliers): relocalised to 1597 (45 inliers)
+[318] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[319] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[320] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[321] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[322] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[323] jump 1597 -> 25: inliers old 31 new 16 -> rejected
+[323] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[324] node 1597 hops 27 stuck (<Action.FORWARD: 1>, 4) reverse 1597->1596: undo FORWARD
+[325] node 1597 hops 27 recover (<Action.RIGHT: 8>, 11) reverse 1597->1596: undo FORWARD
+[326] no progress for 150 steps at hops 27: detour around nodes 1597..1587, next node now 1596 (27 hops)
+[326] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[327] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[328] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[329] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[330] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[331] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[332] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[333] jump 1597 -> 25: inliers old 35 new 11 -> rejected
+[333] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[334] node 1597 hops 27 stuck (<Action.FORWARD: 1>, 4) reverse 1597->1596: undo FORWARD
+[335] node 1597 hops 27 recover (<Action.LEFT: 4>, 14) reverse 1597->1596: undo FORWARD
+[336] no progress for 150 steps at hops 27: detour around nodes 1597..1587, next node now 1596 (27 hops)
+[336] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[337] node 1597 hops 27 reverse (<Action.BACKWARD: 2>, 2) reverse 1597->1596: undo FORWARD
+[338] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[339] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[340] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[341] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[342] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[343] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[344] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[345] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[346] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[347] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[348] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[349] no progress for 150 steps at hops 28: detour around nodes 1598..1588, next node now 1597 (28 hops)
+[349] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[350] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[351] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[352] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[353] node 1598 hops 28 reverse (<Action.LEFT: 4>, 2) reverse 1598->1597: undo RIGHT
+[354] lost at node 1598 (0 inliers): relocalised to 1653 (25 inliers)
+[354] node 1653 hops 83 reverse (<Action.LEFT: 4>, 2) reverse 1653->1652: undo RIGHT
+[355] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[356] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[357] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[358] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[359] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[360] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[361] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[362] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[363] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[364] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[365] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[366] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[367] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[367] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[368] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[369] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[370] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[371] jump 1652 -> 197: inliers old 21 new 0 -> rejected
+[371] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[372] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[373] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[374] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[375] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[376] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[377] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[378] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[379] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[380] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[380] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[381] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[382] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[383] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[384] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[385] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[386] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[387] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[388] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[389] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[390] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[391] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[392] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[393] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[393] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[394] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[395] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[396] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[397] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[398] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[399] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[400] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[401] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[402] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[403] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[404] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[405] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[406] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[406] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[407] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[408] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[409] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[410] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[411] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[412] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[413] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[414] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[415] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[416] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[417] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[418] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[419] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[419] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[420] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[421] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[422] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[423] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[424] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[425] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[426] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[427] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[428] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[429] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[430] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[431] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[432] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[432] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[433] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[434] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[435] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[436] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[437] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[438] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[439] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[440] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[441] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[442] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[443] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[444] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[445] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[445] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[446] jump 1652 -> 6: inliers old 16 new 16 -> rejected
+[446] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[447] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[448] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[449] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[450] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[451] jump 1652 -> 143: inliers old 7 new 30 -> rejected
+[451] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[452] jump 1652 -> 143: inliers old 18 new 23 -> rejected
+[452] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[453] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[454] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[455] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[456] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[457] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[458] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[458] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[459] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[460] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[461] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[462] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[463] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[464] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[465] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[466] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[467] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[468] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[469] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[470] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[471] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[471] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[472] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[473] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[474] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[475] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[476] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[477] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[478] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[479] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[480] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[481] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[482] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[483] jump 1652 -> 193: inliers old 29 new 30 -> rejected
+[483] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[484] jump 1652 -> 194: inliers old 35 new 25 -> rejected
+[484] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[484] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[485] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[486] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[487] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[488] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[489] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[490] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[491] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[492] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[493] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[494] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[495] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[496] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[497] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[497] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[498] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[499] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[500] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[501] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[502] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[503] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[504] jump 1652 -> 143: inliers old 21 new 23 -> rejected
+[504] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[505] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[505] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[506] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[507] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[508] jump 1652 -> 1528: inliers old 21 new 16 -> rejected
+[508] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[509] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[510] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[510] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[511] node 1653 hops 83 reverse (<Action.LEFT: 4>, 2) reverse 1653->1652: undo RIGHT
+[512] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[513] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[514] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[515] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[516] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[517] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[518] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[519] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[520] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[521] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[522] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[523] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[524] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[524] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[525] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[526] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[527] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[528] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[529] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[530] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[531] jump 1652 -> 586: inliers old 23 new 17 -> rejected
+[531] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[532] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[533] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[534] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[535] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[536] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[537] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[537] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[538] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[539] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[540] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[541] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[542] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[543] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[544] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[545] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[546] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[547] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[548] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[549] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[550] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[550] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[551] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[552] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[553] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[554] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[555] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[556] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[557] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[558] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[559] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[560] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[561] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[562] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[563] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[563] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[564] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[565] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[566] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[567] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[568] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[569] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[570] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[571] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[572] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[573] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[574] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[575] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[576] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[576] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[577] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[578] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[579] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[580] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[581] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[582] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[583] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[584] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[585] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[586] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[587] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[588] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[589] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[589] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[590] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[591] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[592] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[593] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[594] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[595] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[596] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[597] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[598] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[599] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[600] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[601] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[602] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[602] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[603] jump 1652 -> 6: inliers old 12 new 17 -> rejected
+[603] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[604] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[605] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[606] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[607] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[608] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[609] jump 1652 -> 141: inliers old 21 new 20 -> rejected
+[609] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[610] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[611] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[612] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[613] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[614] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[615] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[615] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[616] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[617] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[618] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[619] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[620] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[621] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[622] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[623] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[624] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[625] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[626] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[627] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[628] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[628] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[629] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[630] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[631] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[632] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[633] jump 1652 -> 197: inliers old 20 new 0 -> rejected
+[633] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[634] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[635] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[636] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[637] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[638] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[639] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[640] jump 1652 -> 194: inliers old 25 new 24 -> rejected
+[640] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[641] jump 1652 -> 194: inliers old 27 new 19 -> rejected
+[641] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[641] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[642] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[643] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[644] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[645] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[646] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[647] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[648] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[649] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[650] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[651] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[652] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[653] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[654] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[654] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[655] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[656] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[656] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[657] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[658] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[659] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[660] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[661] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[662] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[663] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[664] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[665] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[666] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[667] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[667] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[668] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[669] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[670] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[671] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[672] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[673] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[674] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[675] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[676] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[677] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[678] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[679] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[680] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[680] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[681] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[682] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[683] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[684] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[685] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[686] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[687] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[688] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[689] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[690] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[691] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[692] jump 1652 -> 194: inliers old 23 new 22 -> rejected
+[692] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[693] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[693] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[694] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[695] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[696] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[697] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[698] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[699] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[700] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[701] jump 1652 -> 130: inliers old 8 new 23 -> rejected
+[701] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[702] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[703] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[704] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[705] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[706] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[706] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[707] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[708] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[709] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[710] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[711] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[712] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[713] jump 1652 -> 143: inliers old 16 new 28 -> rejected
+[713] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[714] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[715] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[716] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[717] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[718] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[719] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[719] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[720] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[721] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[722] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[723] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[724] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[725] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[726] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[727] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[728] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[729] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[730] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[731] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[732] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[732] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[733] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[734] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[735] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[736] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[737] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[738] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[739] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[740] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[741] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[742] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[743] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[744] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[745] jump 1652 -> 194: inliers old 26 new 23 -> rejected
+[745] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[745] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[746] jump 1652 -> 194: inliers old 31 new 22 -> rejected
+[746] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[747] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[748] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[749] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[750] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[751] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[752] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[753] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[754] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[755] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[756] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[757] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[758] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[758] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[759] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[760] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[761] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[762] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[763] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[764] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[765] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[766] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[767] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[768] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[769] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[770] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[771] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[771] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[772] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[773] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[774] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[775] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[776] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[777] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[778] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[779] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[780] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[781] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[782] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[783] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[784] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[784] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[785] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[786] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[787] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[788] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[789] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[790] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[791] jump 1652 -> 197: inliers old 21 new 9 -> rejected
+[791] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[792] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[793] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[794] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[795] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[796] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[797] jump 1652 -> 192: inliers old 25 new 34 -> rejected
+[797] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[797] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[798] jump 1652 -> 194: inliers old 26 new 27 -> rejected
+[798] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[799] jump 1652 -> 194: inliers old 28 new 31 -> rejected
+[799] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[800] jump 1652 -> 194: inliers old 27 new 36 -> rejected
+[800] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[801] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[802] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[803] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[804] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[805] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[806] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[807] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[807] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[808] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[809] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[810] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[810] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[811] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[812] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[813] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[814] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[815] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[816] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[817] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[818] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[819] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[820] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[821] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[822] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[823] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[823] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[824] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[825] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[826] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[827] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[828] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[829] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[830] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[831] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[832] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[833] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[834] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[835] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[836] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[836] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[837] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[838] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[839] jump 1652 -> 206: inliers old 19 new 12 -> rejected
+[839] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[840] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[841] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[842] jump 1652 -> 197: inliers old 19 new 0 -> rejected
+[842] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[843] jump 1652 -> 197: inliers old 22 new 6 -> rejected
+[843] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[844] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[845] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[846] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[847] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[848] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[849] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[849] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[850] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[851] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[852] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[853] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[854] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[855] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[856] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[857] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[858] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[859] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[860] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[861] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[862] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[862] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[863] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[864] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[865] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[866] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[867] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[868] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[869] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[870] jump 1652 -> 143: inliers old 14 new 26 -> rejected
+[870] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[871] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[872] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[873] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[874] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[875] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[875] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[876] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[877] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[878] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[879] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[880] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[881] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[882] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[883] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[884] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[885] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[886] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[887] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[888] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[888] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[889] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[890] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[891] jump 1652 -> 205: inliers old 14 new 15 -> rejected
+[891] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[892] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[893] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[894] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[895] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[896] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[897] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[898] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[899] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[900] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[901] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[901] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[902] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[903] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[904] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[905] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[906] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[907] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[908] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[909] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[910] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[911] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[912] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[913] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[914] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[914] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[915] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[916] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[917] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[918] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[919] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[920] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[921] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[922] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[923] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[924] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[925] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[926] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[927] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[927] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[928] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[929] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[930] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[931] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[932] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[933] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[934] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[935] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[936] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[937] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[938] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[939] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[940] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[940] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[941] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[942] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[943] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[944] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[945] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[946] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[947] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[948] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[949] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[950] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[951] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[952] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[953] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[953] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[954] jump 1652 -> 194: inliers old 21 new 21 -> rejected
+[954] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[955] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[956] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[957] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[958] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[958] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[959] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[960] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[961] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[962] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[963] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[964] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[965] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[966] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[966] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[967] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[968] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[969] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[970] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[971] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[972] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[973] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[974] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[975] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[976] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[977] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[978] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[979] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[979] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[980] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[981] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[982] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[983] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[984] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[985] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[986] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[987] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[988] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[989] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[990] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[991] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[992] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[992] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[993] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[994] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[995] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[996] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[997] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[998] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[999] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1000] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1001] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1002] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1003] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1004] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1005] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1005] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1006] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1007] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1008] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1009] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1010] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1011] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1012] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1013] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1014] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1015] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1016] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1017] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1018] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1018] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1019] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1020] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1021] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1022] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1023] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1024] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1025] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1026] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1027] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1028] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1029] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1030] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1031] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1031] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1032] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1033] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1034] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1035] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1036] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1037] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1038] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1039] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1040] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1041] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1042] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1043] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1044] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1044] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1045] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1046] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1047] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1048] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1049] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1050] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1051] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1052] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1053] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1054] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1055] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1056] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1057] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1057] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1058] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1059] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1060] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1061] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1062] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1063] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1064] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1065] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1066] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1067] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1068] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1069] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1070] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1070] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1071] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1072] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1073] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1074] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1075] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1076] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1077] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1078] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1079] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1080] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1081] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1082] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1083] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1083] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1084] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1085] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1086] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1087] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1088] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1089] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1090] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1091] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1092] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1093] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1094] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1095] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1096] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1096] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1097] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1098] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1099] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1100] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1101] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1102] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1103] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1104] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1105] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1106] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1107] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1108] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1109] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1109] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1109] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1110] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1111] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1112] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1113] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1114] jump 1652 -> 136: inliers old 30 new 9 -> rejected
+[1114] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1115] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1116] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1117] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1118] jump 1651 -> 25: inliers old 29 new 13 -> rejected
+[1118] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1119] jump 1651 -> 25: inliers old 25 new 13 -> rejected
+[1119] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1120] jump 1651 -> 25: inliers old 30 new 17 -> rejected
+[1120] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1121] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1122] node 1651 hops 81 recover (<Action.RIGHT: 8>, 17) reverse 1651->1650: undo FORWARD
+[1123] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1123] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1124] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1125] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1126] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1127] jump 1651 -> 183: inliers old 25 new 26 -> rejected
+[1127] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1128] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1129] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1130] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1131] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1132] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1133] jump 1651 -> 234: inliers old 13 new 26 -> rejected
+[1133] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1134] jump 1651 -> 234: inliers old 13 new 25 -> rejected
+[1134] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1135] jump 1651 -> 234: inliers old 16 new 26 -> rejected
+[1135] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1136] jump 1651 -> 234: inliers old 14 new 27 -> rejected
+[1136] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1136] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1137] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1138] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1139] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1140] jump 1651 -> 189: inliers old 11 new 25 -> rejected
+[1140] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1141] jump 1651 -> 189: inliers old 15 new 22 -> rejected
+[1141] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1142] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1143] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1144] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1145] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1146] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1147] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1148] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1149] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1149] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1150] jump 1651 -> 234: inliers old 16 new 25 -> rejected
+[1150] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1151] jump 1651 -> 234: inliers old 12 new 29 -> rejected
+[1151] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1152] jump 1651 -> 234: inliers old 16 new 22 -> rejected
+[1152] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1153] jump 1651 -> 234: inliers old 14 new 20 -> rejected
+[1153] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1154] jump 1651 -> 234: inliers old 18 new 23 -> rejected
+[1154] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1155] jump 1651 -> 234: inliers old 16 new 29 -> rejected
+[1155] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1156] jump 1651 -> 234: inliers old 15 new 23 -> rejected
+[1156] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1157] jump 1651 -> 234: inliers old 18 new 28 -> rejected
+[1157] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1158] jump 1651 -> 234: inliers old 14 new 26 -> rejected
+[1158] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1159] jump 1651 -> 234: inliers old 13 new 23 -> rejected
+[1159] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1160] jump 1651 -> 234: inliers old 14 new 20 -> rejected
+[1160] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1161] jump 1651 -> 234: inliers old 15 new 23 -> rejected
+[1161] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1162] jump 1651 -> 234: inliers old 14 new 20 -> rejected
+[1162] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1162] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1163] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1164] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1165] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1166] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1167] jump 1651 -> 234: inliers old 11 new 20 -> rejected
+[1167] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1168] jump 1651 -> 234: inliers old 17 new 22 -> rejected
+[1168] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1169] jump 1651 -> 234: inliers old 18 new 17 -> rejected
+[1169] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1170] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1171] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1172] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1173] jump 1651 -> 234: inliers old 12 new 29 -> rejected
+[1173] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1174] jump 1651 -> 234: inliers old 16 new 20 -> rejected
+[1174] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1175] jump 1651 -> 234: inliers old 15 new 24 -> rejected
+[1175] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1175] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1176] jump 1651 -> 234: inliers old 12 new 20 -> rejected
+[1176] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1177] jump 1651 -> 234: inliers old 13 new 25 -> rejected
+[1177] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1178] jump 1651 -> 234: inliers old 15 new 26 -> rejected
+[1178] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1179] jump 1651 -> 234: inliers old 17 new 23 -> rejected
+[1179] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1180] jump 1651 -> 234: inliers old 12 new 22 -> rejected
+[1180] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1181] jump 1651 -> 234: inliers old 11 new 23 -> rejected
+[1181] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1182] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1183] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1184] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1185] node 1651 hops 81 recover (<Action.LEFT: 4>, 8) reverse 1651->1650: undo FORWARD
+[1186] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1186] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1187] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1188] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1189] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1190] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1191] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1192] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1193] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1194] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1195] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1196] jump 1652 -> 19: inliers old 18 new 18 -> rejected
+[1196] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1197] jump 1652 -> 1286: inliers old 21 new 17 -> rejected
+[1197] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1198] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1199] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1199] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1200] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1201] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1202] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1203] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1204] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1205] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1206] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1207] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1208] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1209] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1210] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1211] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1212] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1213] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1214] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1215] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1216] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1217] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1218] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1219] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1220] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1221] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1222] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1223] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1224] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1225] node 1650 hops 80 stuck (<Action.FORWARD: 1>, 4) reverse 1650->1649: undo FORWARD
+[1226] node 1650 hops 80 recover (<Action.RIGHT: 8>, 11) reverse 1650->1649: undo FORWARD
+[1227] no progress for 150 steps at hops 80: detour around nodes 1650..1640, next node now 1649 (80 hops)
+[1227] node 1650 hops 80 reverse (<Action.BACKWARD: 2>, 2) reverse 1650->1649: undo FORWARD
+[1228] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1229] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1230] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1231] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1232] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1233] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1234] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1235] jump 1651 -> 25: inliers old 34 new 0 -> rejected
+[1235] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1236] jump 1651 -> 25: inliers old 36 new 0 -> rejected
+[1236] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1237] jump 1651 -> 25: inliers old 35 new 0 -> rejected
+[1237] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1238] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1239] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1240] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1241] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1242] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1242] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1243] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1244] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1245] jump 1651 -> 25: inliers old 30 new 0 -> rejected
+[1245] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1246] jump 1651 -> 25: inliers old 40 new 0 -> rejected
+[1246] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1247] jump 1651 -> 25: inliers old 37 new 0 -> rejected
+[1247] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1248] jump 1651 -> 25: inliers old 31 new 0 -> rejected
+[1248] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1249] jump 1651 -> 25: inliers old 36 new 0 -> rejected
+[1249] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1250] jump 1651 -> 25: inliers old 38 new 0 -> rejected
+[1250] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1251] jump 1651 -> 25: inliers old 34 new 0 -> rejected
+[1251] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1252] jump 1651 -> 25: inliers old 31 new 0 -> rejected
+[1252] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1253] jump 1651 -> 25: inliers old 37 new 0 -> rejected
+[1253] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1254] jump 1651 -> 25: inliers old 33 new 0 -> rejected
+[1254] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1255] jump 1651 -> 25: inliers old 35 new 0 -> rejected
+[1255] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1255] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1256] jump 1651 -> 25: inliers old 39 new 0 -> rejected
+[1256] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1257] jump 1651 -> 25: inliers old 34 new 0 -> rejected
+[1257] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1258] jump 1651 -> 25: inliers old 35 new 0 -> rejected
+[1258] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1259] jump 1651 -> 25: inliers old 35 new 0 -> rejected
+[1259] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1260] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1261] node 1651 hops 81 recover (<Action.LEFT: 4>, 14) reverse 1651->1650: undo FORWARD
+[1262] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1262] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1263] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1264] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1265] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1266] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1267] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1268] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1269] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1270] jump 1651 -> 25: inliers old 32 new 0 -> rejected
+[1270] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1271] jump 1651 -> 25: inliers old 36 new 0 -> rejected
+[1271] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1272] jump 1651 -> 25: inliers old 34 new 0 -> rejected
+[1272] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1273] jump 1651 -> 25: inliers old 31 new 0 -> rejected
+[1273] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1274] jump 1651 -> 25: inliers old 31 new 0 -> rejected
+[1274] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1275] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1276] node 1651 hops 81 recover (<Action.RIGHT: 8>, 17) reverse 1651->1650: undo FORWARD
+[1277] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1277] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1278] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1279] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1280] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1281] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1282] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1283] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1284] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1285] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1286] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1287] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1288] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1289] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1290] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1291] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1292] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1293] jump 1651 -> 25: inliers old 40 new 0 -> rejected
+[1293] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1293] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1294] jump 1651 -> 25: inliers old 36 new 0 -> rejected
+[1294] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1295] jump 1651 -> 25: inliers old 39 new 0 -> rejected
+[1295] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1296] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1297] node 1651 hops 81 recover (<Action.LEFT: 4>, 8) reverse 1651->1650: undo FORWARD
+[1298] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1298] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1299] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1300] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1301] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1302] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1303] jump 1651 -> 25: inliers old 32 new 0 -> rejected
+[1303] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1304] jump 1651 -> 25: inliers old 32 new 0 -> rejected
+[1304] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1305] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1306] node 1651 hops 81 recover (<Action.RIGHT: 8>, 11) reverse 1651->1650: undo FORWARD
+[1307] no progress for 150 steps at hops 82: detour around nodes 1652..1642, next node now 1651 (82 hops)
+[1307] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1308] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1309] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1310] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1311] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1312] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1313] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1314] jump 1652 -> 31: inliers old 29 new 15 -> rejected
+[1314] node 1652 hops 82 reverse (<Action.LEFT: 4>, 2) reverse 1652->1651: undo RIGHT
+[1315] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1316] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1317] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1318] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1319] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1320] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1321] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1322] node 1651 hops 81 recover (<Action.LEFT: 4>, 14) reverse 1651->1650: undo FORWARD
+[1323] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1323] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1324] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1325] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1326] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1327] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1328] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1329] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1330] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1331] jump 1651 -> 101: inliers old 34 new 0 -> rejected
+[1331] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1332] jump 1651 -> 101: inliers old 34 new 0 -> rejected
+[1332] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1333] node 1651 hops 81 stuck (<Action.FORWARD: 1>, 4) reverse 1651->1650: undo FORWARD
+[1334] node 1651 hops 81 recover (<Action.RIGHT: 8>, 17) reverse 1651->1650: undo FORWARD
+[1335] no progress for 150 steps at hops 81: detour around nodes 1651..1641, next node now 1650 (81 hops)
+[1335] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1336] node 1651 hops 81 reverse (<Action.BACKWARD: 2>, 2) reverse 1651->1650: undo FORWARD
+[1337] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1338] node 1647 hops 77 reverse (<Action.BACKWARD: 2>, 2) reverse 1647->1646: undo FORWARD
+[1339] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1340] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1341] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1342] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1343] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1344] jump 1643 -> 1076: inliers old 14 new 9 -> rejected
+[1344] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1345] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1346] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1347] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1348] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1349] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1350] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1351] no progress for 150 steps at hops 73: detour around nodes 1643..1633, next node now 1642 (73 hops)
+[1351] node 1643 hops 73 reverse (<Action.RIGHT: 8>, 2) reverse 1643->1642: undo LEFT
+[1352] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1353] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1354] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1355] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1356] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1357] jump 1646 -> 65: inliers old 15 new 18 -> rejected
+[1357] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1358] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1359] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1360] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1361] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1362] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1363] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1364] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1364] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1365] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1366] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1367] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1368] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1369] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1370] jump 1646 -> 971: inliers old 14 new 16 -> rejected
+[1370] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1371] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1372] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1373] node 1646 hops 76 stuck (<Action.FORWARD: 1>, 4) reverse 1646->1645: undo FORWARD
+[1374] node 1646 hops 76 recover (<Action.LEFT: 4>, 8) reverse 1646->1645: undo FORWARD
+[1375] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1375] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1376] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1377] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1378] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1379] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1380] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1381] node 1646 hops 76 stuck (<Action.FORWARD: 1>, 4) reverse 1646->1645: undo FORWARD
+[1382] node 1646 hops 76 recover (<Action.RIGHT: 8>, 11) reverse 1646->1645: undo FORWARD
+[1383] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1383] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1384] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1385] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1386] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1387] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1388] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1389] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1390] node 1646 hops 76 stuck (<Action.FORWARD: 1>, 4) reverse 1646->1645: undo FORWARD
+[1391] node 1646 hops 76 recover (<Action.LEFT: 4>, 14) reverse 1646->1645: undo FORWARD
+[1392] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1392] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1393] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1394] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1395] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1396] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1397] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1398] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1399] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1400] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1401] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1402] node 1646 hops 76 stuck (<Action.FORWARD: 1>, 4) reverse 1646->1645: undo FORWARD
+[1403] node 1646 hops 76 recover (<Action.RIGHT: 8>, 17) reverse 1646->1645: undo FORWARD
+[1404] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1404] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1405] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1406] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1407] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1408] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1409] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1410] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1411] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1412] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1413] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1414] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1415] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1416] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1417] jump 1646 -> 994: inliers old 9 new 23 -> rejected
+[1417] no progress for 150 steps at hops 76: detour around nodes 1646..1636, next node now 1645 (76 hops)
+[1417] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1418] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1419] node 1646 hops 76 reverse (<Action.BACKWARD: 2>, 2) reverse 1646->1645: undo FORWARD
+[1420] node 1646 hops 76 budget 16 reverse 1646->1645: undo FORWARD
+╭─ result ─────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                          │
+│ 2,989 steps · SPL 0.00                                                       │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+1,419 round trips · median 1.0 ms (server 1.0 ms, network 0.0 ms) · your code 
+251.8 ms per step
+think: target kept (differs from the base's pick) in 10 decisions
+jitter: 6 turn reversals; 5 reversals suppressed by the damper
+ticks by reason: reverse 2414, recover 192, follow 100, steer-fwd 92, steer-turn 78, stuck 60, wp-search 48, damp-fwd 5, budget 1
+lost detector: 4 relocalisations
+ticks asked: turning 2250, forward 197, backward 542
+result: Result(goal_tier='failed', nav_steps=2989, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-7-31601', session_id='local-7', arrival=None, think={'steps': 1419, 'ticks': 2989, 'payload_bytes': 326937600, 'rtt_ms_p50': 0.991458, 'server_ms_p50': 0.991458, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 251.811917, 'steps_per_second': 3.3964870454326372}, attempts_used=0, attempts_allowed=None)

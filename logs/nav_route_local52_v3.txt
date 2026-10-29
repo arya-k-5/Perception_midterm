@@ -1,0 +1,2119 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-52_dinov2_vits14_k32_d256_2754.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2754 frames from 3 trajectories
+spawn join: drive starts 0 and 640 (54 inliers)
+spawn join: drive starts 0 and 1438 (55 inliers)
+sequence check: kept 621 of 1817 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 616 of 621 shortcuts, rejected 5 look-alikes
+sequence check: kept 613 of 616 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3366 edges, 613 verified shortcuts
+checking your agent on a sample frame...
+goal: node 1118 (view 0, 0 inliers; R-best 1118)
+MAP: 2754 photos, 3366 edges. ROUTE from spawn photo 0: 127 hops (~381 ticks), 3 drive switches (~8 ticks of turning at them), 11 hops driven in reverse
+map planning took 1.0 s
+[1] node 0 hops 127 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.44
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 52                                                                                                        │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=43249385                                              │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:52")                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+goal: node 1340 (view 2, 64 inliers; R-best 266)
+MAP: 2754 photos, 3366 edges. ROUTE from spawn photo 0: 327 hops (~981 ticks), 3 drive switches (~8 ticks of turning at them), 0 hops driven in reverse
+map planning took 0.1 s
+[1] node 641 hops 329 reverse (<Action.BACKWARD: 2>, 2) reverse 641->640: undo FORWARD
+[2] node 641 hops 329 reverse (<Action.BACKWARD: 2>, 2) reverse 641->640: undo FORWARD
+[3] node 641 hops 329 reverse (<Action.BACKWARD: 2>, 2) reverse 641->640: undo FORWARD
+[4] node 641 hops 329 reverse (<Action.BACKWARD: 2>, 2) reverse 641->640: undo FORWARD
+[5] node 641 hops 329 reverse (<Action.BACKWARD: 2>, 2) reverse 641->640: undo FORWARD
+[6] node 641 hops 329 stuck (<Action.FORWARD: 1>, 4) reverse 641->640: undo FORWARD
+[7] node 641 hops 329 recover (<Action.RIGHT: 8>, 11) reverse 641->640: undo FORWARD
+[8] no progress for 150 steps at hops 329: detour around nodes 641..8, next node now 642 (341 hops)
+[8] node 641 hops 341 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[9] node 641 hops 341 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[10] node 641 hops 341 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[11] node 641 hops 341 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[12] node 641 hops 341 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-58 n=45
+[13] node 641 hops 341 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-31 n=31 (hold)
+[14] jump 641 -> 203: inliers old 43 new 29 -> rejected
+[14] node 641 hops 341 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-19 n=33 (hold)
+[15] node 0 hops 327 steer-turn (<Action.LEFT: 4>, 4) wp +1 steer yaw=-14 n=78
+[16] node 0 hops 327 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-33 n=56
+[17] node 1 hops 326 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-9 n=72
+[18] node 1 hops 326 steer-turn (<Action.LEFT: 4>, 3) wp +3 steer yaw=-12 n=52
+[19] node 1 hops 326 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-3 n=44
+[20] node 3 hops 324 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[21] node 3 hops 324 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[22] node 3 hops 324 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-0 n=42
+[23] node 4 hops 323 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-31 n=39 (hold)
+[24] node 5 hops 322 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[25] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[26] node 5 hops 322 follow (<Action.LEFT: 4>, 1) wp +7 p=0.81 best=1.00
+[27] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[28] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[29] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[30] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[31] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[32] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[33] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[34] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[35] node 6 hops 321 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[36] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[37] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[38] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[39] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[40] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[41] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[42] node 5 hops 322 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[43] node 5 hops 322 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[44] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[45] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[46] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[47] node 5 hops 322 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[48] node 4 hops 323 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[49] node 4 hops 323 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[50] node 7 hops 320 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=40
+[51] node 7 hops 320 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+9 n=30 (hold)
+[52] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[53] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[54] node 7 hops 320 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[55] node 9 hops 318 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[56] node 10 hops 317 steer-turn (<Action.RIGHT: 8>, 4) wp +7 steer yaw=+15 n=56
+[57] node 9 hops 318 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[58] node 9 hops 318 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[59] node 9 hops 318 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[60] node 16 hops 311 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[61] node 17 hops 310 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.91 best=1.00
+[62] node 17 hops 310 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=87
+[63] node 17 hops 310 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[64] node 18 hops 309 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[65] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.96 best=1.00
+[66] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.91 best=1.00
+[67] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[68] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.87 best=1.00
+[69] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.88 best=1.00
+[70] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.89 best=1.00
+[71] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[72] node 19 hops 308 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[73] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[74] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[75] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[76] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[77] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[78] node 21 hops 306 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.82 best=1.00
+[79] node 21 hops 306 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.92 best=1.00
+[80] node 21 hops 306 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.96 best=1.00
+[81] node 21 hops 306 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[82] node 21 hops 306 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[83] node 21 hops 306 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=42
+[84] node 20 hops 307 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[85] node 20 hops 307 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+1 n=77
+[86] node 20 hops 307 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+2 n=40
+[87] node 21 hops 306 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+2 n=50
+[88] node 24 hops 303 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+0 n=50
+[89] node 24 hops 303 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=63
+[90] node 25 hops 302 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-0 n=40
+[91] node 25 hops 302 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=60
+[92] node 26 hops 301 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+21 n=66
+[93] node 26 hops 301 steer-turn (<Action.RIGHT: 8>, 6) wp +4 steer yaw=+39 n=32 (hold)
+[94] node 27 hops 300 steer-turn (<Action.RIGHT: 8>, 4) wp +3 steer yaw=+15 n=49
+[95] node 25 hops 302 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-7 n=71
+[96] node 29 hops 298 steer-turn (<Action.RIGHT: 8>, 5) wp +2 steer yaw=+18 n=43
+[97] node 29 hops 298 steer-turn (<Action.RIGHT: 8>, 3) wp +3 steer yaw=+10 n=36 (hold)
+[98] node 29 hops 298 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.92
+[99] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[100] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[101] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[102] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.88 best=1.00
+[103] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[104] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[105] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[106] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.92 best=1.00
+[107] node 31 hops 296 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[108] node 33 hops 294 follow (<Action.LEFT: 4>, 1) wp +5 p=0.83 best=1.00
+[109] node 34 hops 293 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-25 n=56
+[110] node 35 hops 292 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-21 n=58
+[111] node 36 hops 291 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-0 n=73
+[112] node 36 hops 291 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-1 n=99
+[113] node 36 hops 291 steer-turn (<Action.LEFT: 4>, 3) wp +3 steer yaw=-10 n=97
+[114] node 37 hops 290 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+1 n=92
+[115] node 39 hops 288 follow (<Action.LEFT: 4>, 1) wp +6 p=0.89 best=1.00
+[116] node 39 hops 288 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-6 n=83
+[117] node 39 hops 288 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-8 n=90
+[118] node 39 hops 288 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-10 n=85
+[119] node 40 hops 287 steer-turn (<Action.LEFT: 4>, 3) wp +1 steer yaw=-11 n=76
+[120] node 41 hops 286 steer-turn (<Action.LEFT: 4>, 3) wp +1 steer yaw=-12 n=92
+[121] node 41 hops 286 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=77
+[122] node 41 hops 286 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-0 n=114
+[123] node 41 hops 286 steer-turn (<Action.LEFT: 4>, 4) wp +2 steer yaw=-15 n=92
+[124] node 41 hops 286 steer-turn (<Action.LEFT: 4>, 6) wp +7 steer yaw=-32 n=61
+[125] node 43 hops 284 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[126] node 43 hops 284 damp-fwd (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[127] node 43 hops 284 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[128] node 43 hops 284 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[129] node 43 hops 284 damp-fwd (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[130] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[131] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[132] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[133] node 45 hops 282 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[134] node 45 hops 282 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[135] node 45 hops 282 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[136] node 45 hops 282 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+1 n=48
+[137] node 45 hops 282 steer-turn (<Action.RIGHT: 8>, 5) wp +4 steer yaw=+17 n=41
+[138] node 44 hops 283 damp-fwd (<Action.FORWARD: 1>, 1) wp +5 p=0.97 best=1.00
+[139] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.87
+[140] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.67
+[141] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.65
+[142] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.62 best=1.00
+[143] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +1 p=0.48 best=0.83
+[144] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=0.93 best=1.00
+[145] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[146] node 43 hops 284 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[147] node 45 hops 282 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[148] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[149] node 44 hops 283 directed (<Action.FORWARD: 1>, 2) directed here=+39 planned=+31 need=-8 n=35
+[150] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.77
+[151] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.94
+[152] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.68
+[153] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=0.75
+[154] node 42 hops 285 directed (<Action.LEFT: 4>, 6) directed here=+12 planned=+31 need=+19 n=24
+[155] node 43 hops 284 directed (<Action.RIGHT: 8>, 5) directed here=+49 planned=+31 need=-19 n=26
+[156] node 43 hops 284 directed (<Action.LEFT: 4>, 6) directed here=-12 planned=+31 need=+43 n=23
+[157] node 44 hops 283 directed (<Action.LEFT: 4>, 6) directed here=-8 planned=+31 need=+39 n=22
+[158] node 44 hops 283 directed (<Action.LEFT: 4>, 6) directed here=+3 planned=+31 need=+28 n=28
+[159] node 44 hops 283 directed (<Action.LEFT: 4>, 4) directed here=+17 planned=+31 need=+14 n=31
+[160] node 45 hops 282 directed (<Action.FORWARD: 1>, 2) directed here=+14 planned=+10 need=-4 n=30
+[161] node 45 hops 282 directed (<Action.FORWARD: 1>, 2) directed here=+17 planned=+10 need=-7 n=23
+[162] node 43 hops 284 directed (<Action.LEFT: 4>, 6) directed here=+5 planned=+31 need=+25 n=22
+[163] node 43 hops 284 directed (<Action.RIGHT: 8>, 6) directed here=+71 planned=+31 need=-40 n=23
+[164] node 41 hops 286 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.61 best=1.00
+[165] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.67 best=0.99
+[166] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.79 best=1.00
+[167] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.64 best=0.92
+[168] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.59 best=1.00
+[169] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.49 best=0.55
+[170] node 41 hops 286 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.74
+[171] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[172] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[173] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.93
+[174] node 44 hops 283 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[175] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +5 p=0.83 best=1.00
+[176] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[177] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[178] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[179] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[180] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[181] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[182] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=0.88 best=1.00
+[183] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=0.69 best=1.00
+[184] node 48 hops 279 follow (<Action.LEFT: 4>, 1) wp +1 p=0.24 best=0.99
+[185] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=0.73
+[186] node 48 hops 279 directed (<Action.RIGHT: 8>, 6) directed here=+7 planned=-31 need=-38 n=29
+[187] node 48 hops 279 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[188] node 44 hops 283 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[189] node 49 hops 278 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+24 n=47
+[190] node 50 hops 277 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.18 best=1.00
+[191] node 50 hops 277 spin-break (<Action.FORWARD: 1>, 3) wp +1 p=0.00 best=0.40
+[192] node 50 hops 277 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.27
+[193] jump 50 -> 50: inliers old 28 new 28 -> rejected
+[193] node 50 hops 277 directed (<Action.RIGHT: 8>, 6) directed here=+60 planned=-31 need=-91 n=28
+[194] node 51 hops 276 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.36 best=0.73
+[195] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.02
+[196] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.11
+[197] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.19
+[198] node 50 hops 277 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.32 best=0.76
+[199] node 50 hops 277 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.46 best=0.62
+[200] node 50 hops 277 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.46 best=0.46
+[201] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.02 best=0.70
+[202] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.65
+[203] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.10 best=0.91
+[204] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.31 best=1.00
+[205] node 51 hops 276 directed (<Action.RIGHT: 8>, 6) directed here=+0 planned=-31 need=-31 n=38
+[206] node 51 hops 276 directed (<Action.RIGHT: 8>, 6) directed here=-7 planned=-31 need=-24 n=47
+[207] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) directed here=+68 planned=-21 need=-89 n=34
+[208] node 53 hops 274 directed (<Action.RIGHT: 8>, 6) directed here=+10 planned=-21 need=-31 n=40
+[209] node 54 hops 273 directed (<Action.RIGHT: 8>, 5) directed here=+8 planned=-10 need=-18 n=33
+[210] node 54 hops 273 directed (<Action.RIGHT: 8>, 4) directed here=+4 planned=-10 need=-15 n=39
+[211] node 54 hops 273 directed (<Action.FORWARD: 1>, 2) directed here=-10 planned=-10 need=-1 n=42
+[212] node 52 hops 275 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.88 best=1.00
+[213] node 52 hops 275 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[214] node 52 hops 275 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[215] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[216] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[217] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+3 n=40
+[218] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[219] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.98 best=1.00
+[220] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[221] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[222] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[223] node 53 hops 274 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[224] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=40
+[225] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+22 n=31 (hold)
+[226] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+6 n=41
+[227] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+45 n=34 (hold)
+[228] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+6 n=43
+[229] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+44 n=41
+[230] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 4) wp +1 steer yaw=+12 n=51
+[231] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-2 n=58
+[232] node 53 hops 274 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+7 n=48
+[233] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.62 best=1.00
+[234] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.46 best=1.00
+[235] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.42 best=1.00
+[236] node 51 hops 276 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[237] node 52 hops 275 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.72 best=1.00
+[238] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+30 n=45
+[239] node 53 hops 274 steer-turn (<Action.RIGHT: 8>, 4) wp +1 steer yaw=+15 n=45
+[240] node 54 hops 273 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[241] node 54 hops 273 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.27 best=1.00
+[242] node 54 hops 273 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[243] node 54 hops 273 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[244] node 54 hops 273 directed (<Action.FORWARD: 1>, 2) directed here=-4 planned=-10 need=-7 n=61
+[245] node 54 hops 273 directed (<Action.RIGHT: 8>, 5) directed here=+7 planned=-10 need=-18 n=41
+[246] node 54 hops 273 steer-turn (<Action.RIGHT: 8>, 3) wp +1 steer yaw=+11 n=47
+[247] node 54 hops 273 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=56
+[248] node 54 hops 273 steer-turn (<Action.RIGHT: 8>, 4) wp +3 steer yaw=+13 n=40
+[249] node 55 hops 272 directed (<Action.FORWARD: 1>, 2) directed here=-15 planned=-10 need=+5 n=66
+[250] node 55 hops 272 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[251] node 55 hops 272 steer-turn (<Action.RIGHT: 8>, 6) wp +4 steer yaw=+22 n=41
+[252] node 55 hops 272 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.27 best=1.00
+[253] node 56 hops 271 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[254] node 59 hops 268 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+22 n=40
+[255] node 60 hops 267 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[256] node 60 hops 267 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[257] node 60 hops 267 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.20 best=1.00
+[258] node 60 hops 267 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.13 best=1.00
+[259] node 60 hops 267 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[260] node 60 hops 267 steer-turn (<Action.RIGHT: 8>, 5) wp +1 steer yaw=+19 n=41
+[261] node 1579 hops 264 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[262] node 61 hops 266 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.87 best=1.00
+[263] node 61 hops 266 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.83 best=1.00
+[264] node 61 hops 266 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[265] node 61 hops 266 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[266] node 61 hops 266 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+9 n=46
+[267] node 62 hops 265 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+8 n=80
+[268] node 62 hops 265 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+7 n=34 (hold)
+[269] node 62 hops 265 steer-turn (<Action.RIGHT: 8>, 3) wp +2 steer yaw=+12 n=49
+[270] node 62 hops 265 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-1 n=51
+[271] node 62 hops 265 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=81
+[272] node 1580 hops 263 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+9 n=46
+[273] node 1580 hops 263 steer-turn (<Action.RIGHT: 8>, 3) wp +2 steer yaw=+10 n=45
+[274] node 1580 hops 263 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+6 n=53
+[275] node 1580 hops 263 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+8 n=51
+[276] node 1581 hops 262 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+8 n=69
+[277] node 1583 hops 260 steer-turn (<Action.RIGHT: 8>, 3) wp +1 steer yaw=+12 n=63
+[278] node 1583 hops 260 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=51
+[279] node 1583 hops 260 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=66
+[280] node 1583 hops 260 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=84
+[281] node 1583 hops 260 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=76
+[282] node 1584 hops 259 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=39 (hold)
+[283] node 1584 hops 259 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+2 n=53
+[284] node 1586 hops 257 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[285] node 1586 hops 257 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[286] node 1586 hops 257 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.15 best=1.00
+[287] node 1586 hops 257 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.05 best=1.00
+[288] node 1586 hops 257 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.77 best=1.00
+[289] node 1586 hops 257 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-4 n=40
+[290] node 1586 hops 257 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+4 n=50
+[291] node 1587 hops 256 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=42
+[292] node 1588 hops 255 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-9 n=45
+[293] node 1588 hops 255 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-8 n=48
+[294] node 1589 hops 254 steer-turn (<Action.LEFT: 4>, 3) wp +1 steer yaw=-10 n=54
+[295] node 1589 hops 254 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=51
+[296] node 1589 hops 254 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=81
+[297] node 1590 hops 253 steer-turn (<Action.LEFT: 4>, 4) wp +1 steer yaw=-13 n=84
+[298] node 1591 hops 252 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-41 n=45
+[299] node 1591 hops 252 steer-turn (<Action.LEFT: 4>, 6) wp +4 steer yaw=-20 n=43
+[300] node 100 hops 249 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-4 n=56
+[301] node 100 hops 249 steer-turn (<Action.LEFT: 4>, 3) wp +3 steer yaw=-12 n=42
+[302] node 100 hops 249 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+6 n=72
+[303] node 101 hops 248 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-1 n=52
+[304] node 101 hops 248 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-19 n=30 (hold)
+[305] node 104 hops 245 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+4 n=35 (hold)
+[306] node 104 hops 245 steer-turn (<Action.RIGHT: 8>, 4) wp +1 steer yaw=+12 n=34 (hold)
+[307] node 104 hops 245 steer-fwd (<Action.FORWARD: 1>, 2) wp +6 steer yaw=+9 n=33 (hold)
+[308] node 104 hops 245 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[309] node 104 hops 245 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[310] node 104 hops 245 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[311] node 104 hops 245 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[312] node 104 hops 245 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[313] node 105 hops 244 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[314] node 105 hops 244 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.82 best=1.00
+[315] node 105 hops 244 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.85 best=1.00
+[316] node 105 hops 244 follow (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[317] node 105 hops 244 steer-turn (<Action.RIGHT: 8>, 5) wp +5 steer yaw=+17 n=43
+[318] node 105 hops 244 steer-turn (<Action.RIGHT: 8>, 6) wp +7 steer yaw=+22 n=36 (hold)
+[319] node 105 hops 244 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+1 n=57
+[320] node 107 hops 242 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 steer yaw=-12 n=30 (hold)
+[321] node 107 hops 242 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[322] node 107 hops 242 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[323] node 110 hops 239 follow (<Action.RIGHT: 8>, 1) wp +6 p=0.97 best=1.00
+[324] node 110 hops 239 follow (<Action.RIGHT: 8>, 1) wp +4 p=1.00 best=1.00
+[325] node 110 hops 239 follow (<Action.RIGHT: 8>, 1) wp +6 p=0.85 best=1.00
+[326] node 111 hops 238 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.08 best=1.00
+[327] node 113 hops 236 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.85 best=1.00
+[328] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[329] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[330] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[331] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[332] node 114 hops 235 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[333] node 114 hops 235 directed (<Action.LEFT: 4>, 6) directed here=-58 planned=+21 need=+79 n=20
+[334] node 112 hops 237 directed (<Action.LEFT: 4>, 6) directed here=-14 planned=+31 need=+45 n=38
+[335] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[336] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[337] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[338] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +7 p=0.88 best=1.00
+[339] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[340] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[341] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[342] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[343] node 114 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[344] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.01 best=1.00
+[345] node 112 hops 237 directed (<Action.LEFT: 4>, 6) directed here=-39 planned=+31 need=+70 n=25
+[346] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[347] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +6 p=0.84 best=1.00
+[348] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.35 best=1.00
+[349] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.25 best=1.00
+[350] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[351] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.09 best=1.00
+[352] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.91 best=1.00
+[353] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[354] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[355] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.16 best=1.00
+[356] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[357] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +2 p=0.90 best=1.00
+[358] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.12 best=1.00
+[359] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.21 best=1.00
+[360] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.17 best=1.00
+[361] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[362] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.91 best=1.00
+[363] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.07 best=1.00
+[364] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.24 best=1.00
+[365] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.48 best=1.00
+[366] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.32 best=1.00
+[367] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.13 best=1.00
+[368] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.29 best=1.00
+[369] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.03 best=1.00
+[370] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.03 best=1.00
+[371] node 112 hops 237 directed (<Action.LEFT: 4>, 6) directed here=-17 planned=+31 need=+48 n=38
+[372] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +4 p=0.81 best=1.00
+[373] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[374] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.95 best=1.00
+[375] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +6 p=0.83 best=1.00
+[376] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[377] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.51 best=1.00
+[378] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.30 best=1.00
+[379] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.87 best=1.00
+[380] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.29 best=1.00
+[381] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[382] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[383] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.27 best=1.00
+[384] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=1.00
+[385] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.87 best=1.00
+[386] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.31 best=1.00
+[387] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.03 best=1.00
+[388] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[389] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +1 p=0.38 best=1.00
+[390] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[391] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.22 best=1.00
+[392] node 114 hops 235 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[393] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.34 best=1.00
+[394] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[395] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.96 best=1.00
+[396] node 1607 hops 241 reverse (<Action.LEFT: 4>, 2) reverse 1607->1606: undo RIGHT
+[397] node 1607 hops 241 reverse (<Action.LEFT: 4>, 2) reverse 1607->1606: undo RIGHT
+[398] node 114 hops 235 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[399] node 114 hops 235 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[400] node 114 hops 235 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[401] node 114 hops 235 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[402] node 114 hops 235 directed (<Action.LEFT: 4>, 6) directed here=-77 planned=+21 need=+98 n=22
+[403] node 114 hops 235 directed (<Action.LEFT: 4>, 6) directed here=-62 planned=+21 need=+82 n=25
+[404] node 114 hops 235 wp-search (<Action.LEFT: 4>, 3) directed here=-53 planned=+21 need=+73 n=21
+[405] node 114 hops 235 directed (<Action.LEFT: 4>, 6) directed here=-50 planned=+21 need=+70 n=25
+[406] node 112 hops 237 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-25 n=42
+[407] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[408] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[409] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[410] node 112 hops 237 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[411] node 112 hops 237 steer-turn (<Action.LEFT: 4>, 4) wp +3 steer yaw=-15 n=52
+[412] node 112 hops 237 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=0.90 best=1.00
+[413] node 112 hops 237 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[414] node 112 hops 237 steer-turn (<Action.LEFT: 4>, 4) wp +4 steer yaw=-12 n=48
+[415] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[416] node 112 hops 237 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[417] node 111 hops 238 steer-fwd (<Action.FORWARD: 1>, 2) wp +6 steer yaw=-9 n=56
+[418] node 110 hops 239 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-9 n=60
+[419] node 110 hops 239 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[420] node 110 hops 239 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[421] node 117 hops 232 follow (<Action.LEFT: 4>, 1) wp +1 p=0.38 best=1.00
+[422] node 117 hops 232 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-31 n=46
+[423] node 116 hops 233 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-6 n=34 (hold)
+[424] node 114 hops 235 follow (<Action.LEFT: 4>, 1) wp +6 p=0.86 best=1.00
+[425] node 114 hops 235 follow (<Action.LEFT: 4>, 1) wp +6 p=0.93 best=1.00
+[426] node 114 hops 235 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[427] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +6 p=0.84 best=1.00
+[428] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.57 best=1.00
+[429] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[430] node 124 hops 225 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.78 best=1.00
+[431] node 124 hops 225 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[432] node 124 hops 225 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[433] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[434] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[435] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[436] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[437] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.85 best=1.00
+[438] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[439] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[440] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[441] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[442] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[443] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[444] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[445] node 123 hops 226 damp-fwd (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[446] node 123 hops 226 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[447] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[448] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[449] node 123 hops 226 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[450] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[451] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[452] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +7 p=0.83 best=1.00
+[453] node 123 hops 226 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[454] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[455] node 126 hops 223 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.87 best=1.00
+[456] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[457] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.84 best=1.00
+[458] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[459] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[460] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[461] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.11 best=1.00
+[462] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[463] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[464] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[465] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[466] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[467] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[468] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[469] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[470] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.84 best=1.00
+[471] node 126 hops 223 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.37 best=1.00
+[472] node 126 hops 223 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.15 best=1.00
+[473] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.87 best=1.00
+[474] node 126 hops 223 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[475] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.25 best=1.00
+[476] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.41
+[477] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.80
+[478] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[479] node 125 hops 224 directed (<Action.RIGHT: 8>, 6) directed here=+77 planned=-31 need=-108 n=20
+[480] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[481] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[482] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[483] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[484] node 125 hops 224 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[485] jump 125 -> 844: inliers old 17 new 106 -> accepted
+[485] linked 125 <-> 844: both seen as this place (17 and 106 inliers)
+[485] node 844 hops 225 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[486] node 844 hops 225 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (27/45 ticks) p=0.00
+[487] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.80 best=1.00
+[488] node 845 hops 226 reverse (<Action.LEFT: 4>, 2) reverse 845->844: undo RIGHT
+[489] node 845 hops 226 reverse (<Action.LEFT: 4>, 2) reverse 845->844: undo RIGHT
+[490] node 845 hops 226 reverse (<Action.LEFT: 4>, 2) reverse 845->844: undo RIGHT
+[491] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[492] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[493] node 843 hops 226 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+6 n=70
+[494] node 843 hops 226 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=34 (hold)
+[495] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[496] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[497] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[498] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[499] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[500] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[501] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.66 best=1.00
+[502] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=1.00
+[503] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.58 best=1.00
+[504] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.49 best=1.00
+[505] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[506] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[507] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[508] node 843 hops 226 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[509] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.56 best=1.00
+[510] node 842 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.20 best=1.00
+[511] node 842 hops 227 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[512] node 842 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.65
+[513] node 842 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[514] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[515] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[516] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.19
+[517] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.19
+[518] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[519] node 842 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[520] node 843 hops 226 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[521] node 843 hops 226 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[522] node 847 hops 228 reverse (<Action.BACKWARD: 2>, 2) reverse 847->846: undo FORWARD
+[523] node 847 hops 228 reverse (<Action.BACKWARD: 2>, 2) reverse 847->846: undo FORWARD
+[524] node 847 hops 228 reverse (<Action.BACKWARD: 2>, 2) reverse 847->846: undo FORWARD
+[525] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.93 best=1.00
+[526] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[527] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[528] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[529] node 844 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[530] node 844 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[531] node 843 hops 226 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+24 n=59
+[532] node 843 hops 226 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=102
+[533] node 844 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[534] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[535] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[536] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[537] node 843 hops 226 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[538] node 842 hops 227 follow (<Action.LEFT: 4>, 1) wp +1 p=0.76 best=1.00
+[539] node 842 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.48 best=1.00
+[540] node 842 hops 227 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.29 best=1.00
+[541] node 842 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[542] node 842 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[543] node 842 hops 227 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[544] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[545] jump 842 -> 177: inliers old 22 new 9 -> rejected
+[545] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[546] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[547] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[548] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[549] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[550] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[551] jump 842 -> 40: inliers old 8 new 33 -> rejected
+[551] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[552] jump 842 -> 42: inliers old 0 new 14 -> rejected
+[552] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[553] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[554] node 842 hops 227 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[555] node 123 hops 226 follow (<Action.LEFT: 4>, 1) wp +5 p=0.88 best=1.00
+[556] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[557] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[558] node 128 hops 221 follow (<Action.LEFT: 4>, 1) wp +4 p=0.87 best=1.00
+[559] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[560] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[561] node 128 hops 221 follow (<Action.LEFT: 4>, 1) wp +1 p=0.04 best=1.00
+[562] node 128 hops 221 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[563] node 125 hops 224 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[564] node 128 hops 221 follow (<Action.LEFT: 4>, 1) wp +3 p=0.85 best=1.00
+[565] node 124 hops 225 follow (<Action.LEFT: 4>, 1) wp +1 p=0.98 best=1.00
+[566] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.09 best=1.00
+[567] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.46 best=1.00
+[568] node 126 hops 223 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[569] node 126 hops 223 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[570] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.90 best=1.00
+[571] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[572] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[573] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[574] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[575] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.94 best=1.00
+[576] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[577] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[578] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[579] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[580] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[581] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[582] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[583] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[584] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=0.80 best=1.00
+[585] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[586] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[587] node 125 hops 224 follow (<Action.RIGHT: 8>, 1) wp +7 p=1.00 best=1.00
+[588] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[589] node 844 hops 225 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[590] node 130 hops 219 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[591] node 130 hops 219 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.85 best=1.00
+[592] node 130 hops 219 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[593] node 130 hops 219 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.84 best=1.00
+[594] node 126 hops 223 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[595] node 126 hops 223 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[596] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.85 best=1.00
+[597] node 128 hops 221 follow (<Action.FORWARD: 1>, 1) wp +5 p=0.82 best=1.00
+[598] node 125 hops 224 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.48 best=1.00
+[599] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.24 best=1.00
+[600] node 125 hops 224 follow (<Action.LEFT: 4>, 1) wp +1 p=0.21 best=1.00
+[601] node 841 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[602] node 839 hops 230 follow (<Action.LEFT: 4>, 1) wp +6 p=0.93 best=1.00
+[603] node 840 hops 229 follow (<Action.LEFT: 4>, 1) wp +1 p=0.06 best=1.00
+[604] node 840 hops 229 follow (<Action.LEFT: 4>, 1) wp +1 p=0.48 best=1.00
+[605] node 840 hops 229 follow (<Action.LEFT: 4>, 1) wp +1 p=0.37 best=1.00
+[606] node 840 hops 229 follow (<Action.LEFT: 4>, 1) wp +1 p=0.60 best=1.00
+[607] node 840 hops 229 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.52 best=1.00
+[608] node 840 hops 229 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[609] node 1132 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.79 best=1.00
+[610] node 139 hops 210 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.58 best=1.00
+[611] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.51 best=1.00
+[612] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.52 best=1.00
+[613] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.29 best=1.00
+[614] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[615] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[616] node 141 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[617] node 141 hops 208 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[618] node 141 hops 208 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[619] node 141 hops 208 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[620] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[621] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[622] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[623] jump 142 -> 85: inliers old 0 new 20 -> rejected
+[623] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[624] jump 142 -> 84: inliers old 7 new 13 -> rejected
+[624] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[625] jump 142 -> 84: inliers old 15 new 12 -> rejected
+[625] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[626] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[627] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[628] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[629] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[630] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[631] node 142 hops 207 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[632] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[633] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[634] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[635] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[636] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[637] jump 142 -> 87: inliers old 17 new 15 -> rejected
+[637] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[638] jump 142 -> 87: inliers old 13 new 12 -> rejected
+[638] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[639] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[640] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[641] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[642] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[643] node 142 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[644] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.07 best=1.00
+[645] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[646] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[647] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[648] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[649] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[650] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[651] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[652] node 144 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[653] node 144 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[654] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[655] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[656] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[657] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[658] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[659] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[660] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[661] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[662] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[663] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[664] node 1133 hops 207 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[665] node 1133 hops 207 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[666] node 1133 hops 207 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[667] jump 1133 -> 840: inliers old 0 new 37 -> rejected
+[667] node 1133 hops 207 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[668] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.76 best=1.00
+[669] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[670] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.99
+[671] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[672] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[673] node 144 hops 205 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[674] node 144 hops 205 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[675] node 144 hops 205 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[676] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[677] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[678] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[679] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[680] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[681] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[682] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[683] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[684] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[685] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[686] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[687] node 147 hops 208 reverse (<Action.LEFT: 4>, 2) reverse 147->146: undo RIGHT
+[688] no progress for 150 steps at hops 208: detour around nodes 147..1142, next node now 148 (228 hops)
+[688] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[689] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[690] node 147 hops 228 directed (<Action.RIGHT: 8>, 4) directed here=-6 planned=-21 need=-14 n=22
+[691] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[692] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[693] node 147 hops 228 directed (<Action.LEFT: 4>, 6) directed here=-66 planned=-21 need=+45 n=20
+[694] node 147 hops 228 directed (<Action.FORWARD: 1>, 2) directed here=-26 planned=-21 need=+5 n=22
+[695] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (33/45 ticks) p=0.00
+[696] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (36/45 ticks) p=0.00
+[697] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (39/45 ticks) p=0.00
+[698] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (42/45 ticks) p=0.00
+[699] node 147 hops 228 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (45/45 ticks) p=0.00
+[700] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.25 best=1.00
+[701] node 147 hops 228 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[702] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.97
+[703] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.17 best=0.99
+[704] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.19 best=1.00
+[705] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.01 best=1.00
+[706] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[707] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.78
+[708] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.31 best=1.00
+[709] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.27 best=1.00
+[710] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[711] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[712] jump 147 -> 843: inliers old 0 new 29 -> rejected
+[712] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.95
+[713] node 147 hops 228 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.95
+[714] node 147 hops 228 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.95
+[715] node 147 hops 228 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[716] node 147 hops 228 recover (<Action.LEFT: 4>, 6) look for wp +1 (3/45 ticks) p=0.00
+[717] node 147 hops 228 recover (<Action.LEFT: 4>, 6) look for wp +1 (3/45 ticks) p=0.00
+[718] node 147 hops 228 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[719] node 147 hops 228 directed (<Action.FORWARD: 1>, 2) directed here=-27 planned=-21 need=+7 n=23
+[720] node 147 hops 228 directed (<Action.FORWARD: 1>, 2) directed here=-25 planned=-21 need=+4 n=24
+[721] node 147 hops 228 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[722] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.07
+[723] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[724] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[725] node 1135 hops 205 directed (<Action.LEFT: 4>, 6) directed here=-55 planned=+10 need=+65 n=20
+[726] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[727] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[728] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[729] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[730] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[731] node 1135 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[732] node 1135 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[733] node 1135 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[734] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[735] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[736] node 1135 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[737] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[738] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[739] node 1135 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[740] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[741] node 1135 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[742] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[743] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[744] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[745] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[746] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[747] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[748] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[749] jump 144 -> 175: inliers old 12 new 20 -> rejected
+[749] node 144 hops 207 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[750] node 144 hops 207 stuck (<Action.FORWARD: 1>, 4) reverse 144->143: undo FORWARD
+[751] node 144 hops 207 recover (<Action.LEFT: 4>, 14) reverse 144->143: undo FORWARD
+[752] no progress for 150 steps at hops 207: detour around nodes 144..1143, next node now 143 (209 hops)
+[752] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[753] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[754] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[755] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[756] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[757] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[758] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[759] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[760] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[761] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[762] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[763] jump 144 -> 1546: inliers old 0 new 0 -> rejected
+[763] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[764] node 144 hops 209 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[765] no progress for 150 steps at hops 209: detour around nodes 144..1141, next node now 1136 (205 hops)
+[765] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[766] node 144 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[767] node 144 hops 205 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[768] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[769] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[770] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.17 best=1.00
+[771] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[772] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[773] jump 144 -> 85: inliers old 11 new 10 -> rejected
+[773] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[774] jump 144 -> 87: inliers old 9 new 16 -> rejected
+[774] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[775] node 144 hops 205 follow (<Action.LEFT: 4>, 1) wp +1 p=0.29 best=1.00
+[776] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[777] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[778] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[779] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[780] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[781] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[782] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[783] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[784] jump 140 -> 216: inliers old 24 new 19 -> rejected
+[784] node 140 hops 209 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.07 best=1.00
+[785] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.12 best=1.00
+[786] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[787] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[788] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[789] node 1133 hops 207 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[790] node 139 hops 210 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.74 best=1.00
+[791] node 139 hops 210 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.44 best=1.00
+[792] node 139 hops 210 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[793] node 1135 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.59 best=1.00
+[794] node 1135 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.54 best=1.00
+[795] node 1135 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.06 best=1.00
+[796] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[797] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.67 best=1.00
+[798] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.59 best=1.00
+[799] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[800] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.15 best=1.00
+[801] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.12 best=1.00
+[802] node 144 hops 205 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.24 best=1.00
+[803] node 144 hops 205 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[804] node 1136 hops 204 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[805] node 1136 hops 204 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[806] no progress for 150 steps at hops 205: dropped shortcut 144-1136, now 211 hops
+[806] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[807] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[808] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[809] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[810] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[811] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[812] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[813] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[814] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[815] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[816] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[817] jump 144 -> 112: inliers old 12 new 26 -> rejected
+[817] node 144 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 144->143: undo FORWARD
+[818] no progress for 150 steps at hops 211: detour around nodes 144..1139, next node now 145 (231 hops)
+[818] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[819] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[820] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[821] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[822] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[823] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[824] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[825] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[826] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[827] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[828] jump 144 -> 84: inliers old 9 new 0 -> rejected
+[828] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[829] node 144 hops 231 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[830] node 144 hops 231 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[831] node 144 hops 231 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[832] jump 144 -> 84: inliers old 13 new 7 -> rejected
+[832] node 144 hops 231 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[833] node 144 hops 231 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[834] node 144 hops 231 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[835] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.55 best=1.00
+[836] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.52 best=1.00
+[837] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[838] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.74 best=1.00
+[839] node 147 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[840] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[841] jump 147 -> 109: inliers old 16 new 38 -> rejected
+[841] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[842] jump 147 -> 108: inliers old 12 new 25 -> rejected
+[842] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[843] jump 147 -> 108: inliers old 11 new 24 -> rejected
+[843] node 147 hops 228 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[844] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.44 best=1.00
+[845] node 148 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[846] node 148 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[847] node 148 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[848] node 148 hops 227 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[849] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[850] node 1136 hops 204 directed (<Action.FORWARD: 1>, 2) directed here=+7 planned=+0 need=-7 n=21
+[851] node 144 hops 231 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[852] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[853] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[854] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[855] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[856] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[857] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (27/45 ticks) p=0.00
+[858] node 147 hops 228 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.70 best=1.00
+[859] node 147 hops 228 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.55 best=1.00
+[860] node 148 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.47 best=1.00
+[861] node 148 hops 227 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.49 best=1.00
+[862] node 148 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[863] node 148 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[864] node 148 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[865] node 148 hops 227 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[866] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[867] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[868] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[869] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[870] node 148 hops 227 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[871] node 148 hops 227 recover (<Action.LEFT: 4>, 6) look for wp +1 (15/45 ticks) p=0.00
+[872] node 148 hops 227 recover (<Action.LEFT: 4>, 6) look for wp +1 (15/45 ticks) p=0.00
+[873] lost at node 148 (0 inliers): relocalised to 1125 (54 inliers)
+[873] node 1125 hops 215 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.73 best=1.00
+[874] node 1125 hops 215 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=42
+[875] node 1126 hops 214 steer-turn (<Action.LEFT: 4>, 5) wp +1 steer yaw=-15 n=40
+[876] node 1125 hops 215 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[877] node 1125 hops 215 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.49 best=1.00
+[878] node 1126 hops 214 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.34 best=1.00
+[879] node 1126 hops 214 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[880] node 1127 hops 213 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.81 best=1.00
+[881] node 1127 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[882] node 1127 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[883] node 1127 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[884] node 1127 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[885] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[886] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[887] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[888] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[889] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[890] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[891] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[892] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[893] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[894] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (15/45 ticks) p=0.00
+[895] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (15/45 ticks) p=0.00
+[896] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[897] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (18/45 ticks) p=0.00
+[898] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (18/45 ticks) p=0.00
+[899] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[900] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[901] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[902] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[903] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[904] jump 1149 -> 84: inliers old 0 new 10 -> rejected
+[904] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[905] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[906] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[907] node 1149 hops 191 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[908] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (45/45 ticks) p=0.00
+[909] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (45/45 ticks) p=0.00
+[910] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.99
+[911] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[912] jump 1149 -> 254: inliers old 16 new 8 -> rejected
+[912] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[913] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[914] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[915] jump 1149 -> 472: inliers old 15 new 0 -> rejected
+[915] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[916] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[917] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[918] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[919] jump 1149 -> 473: inliers old 14 new 8 -> rejected
+[919] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[920] jump 1149 -> 473: inliers old 16 new 0 -> rejected
+[920] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[921] jump 1149 -> 473: inliers old 12 new 8 -> rejected
+[921] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[922] jump 1149 -> 473: inliers old 11 new 0 -> rejected
+[922] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[923] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[924] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[925] jump 1149 -> 186: inliers old 0 new 20 -> rejected
+[925] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[926] jump 1149 -> 186: inliers old 0 new 21 -> rejected
+[926] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[927] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[928] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[929] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[930] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +7 p=1.00 best=1.00
+[931] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +7 p=1.00 best=1.00
+[932] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[933] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[934] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[935] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[936] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[937] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[938] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[939] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[940] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[941] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[942] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[943] jump 1149 -> 84: inliers old 0 new 12 -> rejected
+[943] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[944] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[945] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[946] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[947] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[948] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[949] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[950] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (27/45 ticks) p=0.00
+[951] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (27/45 ticks) p=0.00
+[952] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (27/45 ticks) p=0.00
+[953] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (30/45 ticks) p=0.00
+[954] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (30/45 ticks) p=0.00
+[955] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (30/45 ticks) p=0.00
+[956] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (33/45 ticks) p=0.00
+[957] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (33/45 ticks) p=0.00
+[958] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (33/45 ticks) p=0.00
+[959] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (36/45 ticks) p=0.00
+[960] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (36/45 ticks) p=0.00
+[961] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (36/45 ticks) p=0.00
+[962] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (39/45 ticks) p=0.00
+[963] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (39/45 ticks) p=0.00
+[964] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (39/45 ticks) p=0.00
+[965] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (42/45 ticks) p=0.00
+[966] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (42/45 ticks) p=0.00
+[967] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) look for wp +1 (42/45 ticks) p=0.00
+[968] node 1149 hops 191 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (45/45 ticks) p=0.00
+[969] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[970] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[971] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[972] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[973] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[974] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[975] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[976] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[977] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[978] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[979] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[980] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[981] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[982] node 1149 hops 191 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[983] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[984] jump 1149 -> 40: inliers old 9 new 0 -> rejected
+[984] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[985] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[986] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[987] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[988] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[989] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[990] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[991] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[992] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[993] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[994] node 1149 hops 191 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[995] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[996] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[997] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[998] jump 1149 -> 40: inliers old 13 new 0 -> rejected
+[998] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[999] jump 1149 -> 41: inliers old 10 new 0 -> rejected
+[999] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1000] jump 1149 -> 41: inliers old 9 new 0 -> rejected
+[1000] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1001] jump 1149 -> 41: inliers old 8 new 0 -> rejected
+[1001] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1002] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1003] node 1149 hops 191 spin-break (<Action.FORWARD: 1>, 3) wp +1 p=0.00 best=0.76
+[1004] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1005] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1006] node 1149 hops 191 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1007] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1008] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1009] node 1149 hops 191 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.79
+[1010] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.79
+[1011] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.79
+[1012] node 1149 hops 191 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.84
+[1013] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.84
+[1014] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.84
+[1015] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.48
+[1016] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.48
+[1017] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.48
+[1018] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.97
+[1019] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.97
+[1020] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=0.97
+[1021] node 1149 hops 191 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1022] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1023] node 1149 hops 191 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1024] lost at node 1149 (0 inliers): relocalised to 1129 (90 inliers)
+[1024] node 1129 hops 211 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-37 n=62
+[1025] node 1130 hops 210 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-9 n=30 (hold)
+[1026] node 1130 hops 210 steer-turn (<Action.LEFT: 4>, 5) wp +3 steer yaw=-16 n=33 (hold)
+[1027] node 1131 hops 209 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+1 n=31 (hold)
+[1028] node 1131 hops 209 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1029] node 1131 hops 209 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1030] node 1131 hops 209 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[1031] node 1131 hops 209 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1032] node 1131 hops 209 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1033] node 1131 hops 209 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[1034] node 1131 hops 209 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+6 n=51
+[1035] node 1133 hops 207 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-8 n=49
+[1036] node 1133 hops 207 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-4 n=53
+[1037] node 1134 hops 206 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-21 n=33 (hold)
+[1038] node 1134 hops 206 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-10 n=47
+[1039] node 142 hops 211 reverse (<Action.BACKWARD: 2>, 2) reverse 142->141: undo FORWARD
+[1040] node 1134 hops 206 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.51 best=1.00
+[1041] node 1134 hops 206 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1042] node 1134 hops 206 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1043] node 1134 hops 206 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1044] node 1134 hops 206 steer-turn (<Action.LEFT: 4>, 6) wp +1 steer yaw=-23 n=45
+[1045] node 1134 hops 206 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+8 n=39 (hold)
+[1046] node 1134 hops 206 steer-turn (<Action.LEFT: 4>, 3) wp +2 steer yaw=-11 n=35 (hold)
+[1047] node 1134 hops 206 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+10 n=32 (hold)
+[1048] node 1134 hops 206 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+2 n=51
+[1049] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1050] node 1136 hops 204 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1051] node 1136 hops 204 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=43
+[1052] node 1136 hops 204 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=45
+[1053] node 1137 hops 203 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1054] node 1137 hops 203 directed (<Action.FORWARD: 1>, 2) directed here=+2 planned=+0 need=-2 n=69
+[1055] node 1137 hops 203 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+0 n=45
+[1056] node 1137 hops 203 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=63
+[1057] node 1138 hops 202 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+2 n=41
+[1058] node 1138 hops 202 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=63
+[1059] node 1139 hops 201 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+27 n=31 (hold)
+[1060] node 1139 hops 201 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.88 best=1.00
+[1061] node 1140 hops 200 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.93 best=1.00
+[1062] node 1139 hops 201 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1063] node 1141 hops 199 follow (<Action.FORWARD: 1>, 1) wp +4 p=0.81 best=1.00
+[1064] node 1141 hops 199 damp-fwd (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1065] node 1141 hops 199 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[1066] node 1141 hops 199 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1067] node 1141 hops 199 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1068] node 1141 hops 199 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1069] node 1141 hops 199 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.84 best=1.00
+[1070] node 1141 hops 199 damp-fwd (<Action.FORWARD: 1>, 1) wp +2 p=0.93 best=1.00
+[1071] node 1141 hops 199 steer-turn (<Action.RIGHT: 8>, 6) wp +2 steer yaw=+32 n=65
+[1072] node 1141 hops 199 steer-turn (<Action.RIGHT: 8>, 3) wp +2 steer yaw=+10 n=64
+[1073] node 1140 hops 200 steer-fwd (<Action.FORWARD: 1>, 2) wp +5 steer yaw=+3 n=89
+[1074] node 1140 hops 200 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1075] node 1140 hops 200 steer-turn (<Action.RIGHT: 8>, 6) wp +7 steer yaw=+36 n=44
+[1076] node 1140 hops 200 steer-turn (<Action.RIGHT: 8>, 4) wp +7 steer yaw=+13 n=66
+[1077] node 1140 hops 200 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+0 n=108
+[1078] jump 1140 -> 1147: inliers old 0 new 54 -> accepted
+[1078] node 1147 hops 193 follow (<Action.RIGHT: 8>, 1) wp +5 p=0.93 best=1.00
+[1079] node 1147 hops 193 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-2 n=86
+[1080] node 1148 hops 192 steer-turn (<Action.LEFT: 4>, 5) wp +2 steer yaw=-18 n=47
+[1081] node 1148 hops 192 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.36 best=1.00
+[1082] node 1149 hops 191 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[1083] node 1150 hops 190 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1084] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1085] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1086] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1087] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1088] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +6 p=0.84 best=1.00
+[1089] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1090] node 1150 hops 190 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1091] node 1150 hops 190 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[1092] node 1150 hops 190 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-23 n=58
+[1093] node 1152 hops 188 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+2 n=50
+[1094] node 1153 hops 187 steer-turn (<Action.LEFT: 4>, 4) wp +4 steer yaw=-15 n=38 (hold)
+[1095] node 1153 hops 187 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[1096] node 1154 hops 186 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.79 best=1.00
+[1097] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1098] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1099] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1100] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1101] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1102] node 1154 hops 186 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1103] node 1154 hops 186 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1104] node 1154 hops 186 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1105] node 1156 hops 184 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[1106] node 1156 hops 184 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-7 n=79
+[1107] node 1156 hops 184 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=36 (hold)
+[1108] node 1156 hops 184 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.22
+[1109] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.23
+[1110] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.34
+[1111] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.25
+[1112] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.02
+[1113] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1114] node 1157 hops 183 directed (<Action.FORWARD: 1>, 2) directed here=+22 planned=+31 need=+9 n=22
+[1115] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1116] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[1117] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[1118] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[1119] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.94 best=1.00
+[1120] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1121] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=1.00
+[1122] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.74
+[1123] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1124] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.13 best=1.00
+[1125] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.12 best=0.76
+[1126] node 1157 hops 183 directed (<Action.RIGHT: 8>, 4) directed here=+45 planned=+31 need=-14 n=33
+[1127] node 1156 hops 184 directed (<Action.RIGHT: 8>, 5) directed here=+39 planned=+21 need=-18 n=30
+[1128] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+16 planned=+21 need=+5 n=26
+[1129] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1130] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[1131] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[1132] node 1157 hops 183 directed (<Action.LEFT: 4>, 5) directed here=+13 planned=+31 need=+18 n=21
+[1133] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=0.84
+[1134] node 1156 hops 184 steer-turn (<Action.RIGHT: 8>, 5) wp +1 steer yaw=+17 n=44
+[1135] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.84
+[1136] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.23
+[1137] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.14
+[1138] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.32
+[1139] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.16
+[1140] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.59 best=0.64
+[1141] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.53 best=0.64
+[1142] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.75
+[1143] jump 1157 -> 1157: inliers old 24 new 24 -> rejected
+[1143] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.68
+[1144] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.62
+[1145] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.61 best=0.85
+[1146] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.94 best=1.00
+[1147] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.70 best=0.98
+[1148] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1149] node 1156 hops 184 steer-turn (<Action.RIGHT: 8>, 4) wp +1 steer yaw=+15 n=43
+[1150] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.62 best=1.00
+[1151] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.24
+[1152] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.21
+[1153] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.21
+[1154] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=0.67
+[1155] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.73
+[1156] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.56
+[1157] node 1157 hops 183 spin-break (<Action.FORWARD: 1>, 3) wp +1 p=0.00 best=0.62
+[1158] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.26
+[1159] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1160] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1161] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1162] node 1157 hops 183 directed (<Action.LEFT: 4>, 6) directed here=+10 planned=+31 need=+21 n=22
+[1163] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.51 best=0.97
+[1164] node 1156 hops 184 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+21 n=41
+[1165] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.41 best=0.59
+[1166] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.04 best=0.38
+[1167] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.19 best=0.19
+[1168] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.18
+[1169] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.33 best=0.43
+[1170] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.67 best=0.67
+[1171] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.78
+[1172] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.85
+[1173] jump 1157 -> 1157: inliers old 22 new 22 -> rejected
+[1173] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.66
+[1174] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.68
+[1175] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.57 best=0.74
+[1176] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+18 planned=+21 need=+3 n=23
+[1177] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+30 planned=+21 need=-9 n=20
+[1178] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.08
+[1179] node 1156 hops 184 directed (<Action.RIGHT: 8>, 3) directed here=+32 planned=+21 need=-11 n=20
+[1180] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.14 best=0.55
+[1181] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1182] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.08
+[1183] node 1157 hops 183 directed (<Action.LEFT: 4>, 6) directed here=-9 planned=+31 need=+40 n=20
+[1184] node 1157 hops 183 directed (<Action.LEFT: 4>, 6) directed here=+7 planned=+31 need=+24 n=27
+[1185] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.70 best=1.00
+[1186] node 1157 hops 183 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+4 n=43
+[1187] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.51
+[1188] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.79
+[1189] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.81
+[1190] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.78 best=0.79
+[1191] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.91
+[1192] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1193] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.99 best=1.00
+[1194] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.94 best=1.00
+[1195] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.46 best=0.76
+[1196] jump 1156 -> 1156: inliers old 40 new 40 -> rejected
+[1196] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.58 best=0.69
+[1197] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.76 best=1.00
+[1198] node 1156 hops 184 directed (<Action.RIGHT: 8>, 5) directed here=+39 planned=+21 need=-18 n=34
+[1199] node 1156 hops 184 directed (<Action.LEFT: 4>, 4) directed here=+7 planned=+21 need=+13 n=24
+[1200] node 1156 hops 184 directed (<Action.RIGHT: 8>, 6) directed here=+46 planned=+21 need=-25 n=43
+[1201] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+28 planned=+21 need=-7 n=24
+[1202] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.30
+[1203] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.39
+[1204] node 1156 hops 184 directed (<Action.LEFT: 4>, 3) directed here=+9 planned=+21 need=+12 n=20
+[1205] node 1156 hops 184 directed (<Action.LEFT: 4>, 5) directed here=+3 planned=+21 need=+18 n=20
+[1206] node 1156 hops 184 directed (<Action.LEFT: 4>, 4) directed here=+7 planned=+21 need=+14 n=20
+[1207] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+28 planned=+21 need=-7 n=29
+[1208] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.17
+[1209] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.21
+[1210] node 1156 hops 184 directed (<Action.RIGHT: 8>, 6) directed here=+49 planned=+21 need=-28 n=20
+[1211] node 1156 hops 184 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.46
+[1212] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1213] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.69 best=0.69
+[1214] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.70 best=0.70
+[1215] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.71
+[1216] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.83
+[1217] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.53
+[1218] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.59
+[1219] node 1157 hops 183 directed (<Action.FORWARD: 1>, 2) directed here=+31 planned=+31 need=+0 n=20
+[1220] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1221] node 1157 hops 183 directed (<Action.LEFT: 4>, 6) directed here=-3 planned=+31 need=+34 n=20
+[1222] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.56 best=0.76
+[1223] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.60 best=0.67
+[1224] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.95 best=1.00
+[1225] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=1.00
+[1226] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.72 best=0.93
+[1227] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.56 best=0.97
+[1228] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1229] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.95
+[1230] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1231] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1232] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1233] node 1157 hops 183 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+5 n=49
+[1234] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.70 best=0.73
+[1235] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.62 best=0.73
+[1236] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.95 best=0.98
+[1237] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.62 best=0.69
+[1238] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.84 best=0.91
+[1239] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=0.72
+[1240] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.68 best=1.00
+[1241] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.40 best=0.63
+[1242] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.34 best=0.54
+[1243] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.15 best=0.70
+[1244] node 1158 hops 182 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=40
+[1245] node 1158 hops 182 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.81
+[1246] node 1158 hops 182 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.78
+[1247] node 1158 hops 182 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.90
+[1248] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.54 best=1.00
+[1249] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.77 best=1.00
+[1250] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.44 best=0.83
+[1251] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.34 best=1.00
+[1252] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.77
+[1253] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.08 best=0.96
+[1254] jump 1156 -> 1156: inliers old 35 new 35 -> rejected
+[1254] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.25 best=0.70
+[1255] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.48 best=1.00
+[1256] node 1156 hops 184 directed (<Action.RIGHT: 8>, 5) directed here=+37 planned=+21 need=-16 n=38
+[1257] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+20 planned=+21 need=+1 n=23
+[1258] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.52
+[1259] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.49
+[1260] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.50
+[1261] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.20
+[1262] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1263] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.44 best=0.85
+[1264] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.80
+[1265] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.48 best=1.00
+[1266] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.49 best=0.94
+[1267] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.52 best=0.88
+[1268] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.72 best=1.00
+[1269] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.61 best=0.92
+[1270] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.86
+[1271] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.40 best=0.89
+[1272] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.21 best=0.55
+[1273] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.09 best=0.52
+[1274] node 1156 hops 184 directed (<Action.RIGHT: 8>, 6) directed here=+51 planned=+21 need=-31 n=35
+[1275] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+17 planned=+21 need=+4 n=21
+[1276] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.29
+[1277] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.32
+[1278] jump 1156 -> 1547: inliers old 12 new 0 -> rejected
+[1278] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.39
+[1279] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.42
+[1280] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1281] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.65 best=0.79
+[1282] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.97
+[1283] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.80
+[1284] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.67
+[1285] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.50 best=0.72
+[1286] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.88 best=0.91
+[1287] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.58 best=0.83
+[1288] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.50 best=0.62
+[1289] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.67 best=0.93
+[1290] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.43 best=0.56
+[1291] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.37 best=0.75
+[1292] node 1156 hops 184 directed (<Action.FORWARD: 1>, 2) directed here=+30 planned=+21 need=-9 n=38
+[1293] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.27
+[1294] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.31
+[1295] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.40
+[1296] jump 1156 -> 1547: inliers old 9 new 7 -> rejected
+[1296] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1297] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.10
+[1298] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.43 best=0.81
+[1299] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.65 best=1.00
+[1300] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.60 best=1.00
+[1301] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.08 best=0.99
+[1302] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.28 best=0.76
+[1303] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.57 best=1.00
+[1304] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.34 best=0.83
+[1305] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1306] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=1.00
+[1307] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.31 best=0.96
+[1308] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.44 best=0.67
+[1309] node 1156 hops 184 directed (<Action.RIGHT: 8>, 4) directed here=+35 planned=+21 need=-14 n=29
+[1310] node 1156 hops 184 directed (<Action.RIGHT: 8>, 6) directed here=+49 planned=+21 need=-28 n=38
+[1311] node 1156 hops 184 directed (<Action.LEFT: 4>, 5) directed here=+4 planned=+21 need=+17 n=31
+[1312] node 1156 hops 184 directed (<Action.RIGHT: 8>, 5) directed here=+38 planned=+21 need=-17 n=23
+[1313] node 1156 hops 184 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.01 best=1.00
+[1314] node 1156 hops 184 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.27 best=1.00
+[1315] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.01 best=0.52
+[1316] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.32 best=1.00
+[1317] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.39 best=0.98
+[1318] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.41 best=1.00
+[1319] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.61 best=0.68
+[1320] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.78
+[1321] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.55
+[1322] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.77
+[1323] jump 1157 -> 1157: inliers old 17 new 17 -> rejected
+[1323] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.66
+[1324] node 1157 hops 183 directed (<Action.LEFT: 4>, 4) directed here=+17 planned=+31 need=+14 n=20
+[1325] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.95 best=1.00
+[1326] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=0.87
+[1327] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.66 best=0.82
+[1328] node 1156 hops 184 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+31 n=44
+[1329] node 1157 hops 183 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.80
+[1330] node 1157 hops 183 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.34
+[1331] node 1157 hops 183 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.30
+[1332] node 1157 hops 183 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.17
+[1333] node 1157 hops 183 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1334] node 1157 hops 183 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1335] node 1157 hops 183 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1336] node 1157 hops 183 directed (<Action.LEFT: 4>, 6) directed here=-10 planned=+31 need=+41 n=24
+[1337] node 1156 hops 184 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.85 best=0.98
+[1338] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.30
+[1339] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.35
+[1340] jump 1156 -> 1547: inliers old 18 new 0 -> rejected
+[1340] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.19
+[1341] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.41
+[1342] node 1156 hops 184 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.19
+[1343] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1344] node 1157 hops 183 directed (<Action.LEFT: 4>, 4) directed here=+18 planned=+31 need=+12 n=21
+[1345] node 1157 hops 183 directed (<Action.FORWARD: 1>, 2) directed here=+30 planned=+31 need=+1 n=31
+[1346] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[1347] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[1348] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[1349] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[1350] node 1157 hops 183 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[1351] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.60 best=1.00
+[1352] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.77 best=1.00
+[1353] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.42 best=0.74
+[1354] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.54 best=0.95
+[1355] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.72
+[1356] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.28 best=0.85
+[1357] jump 1156 -> 1156: inliers old 35 new 35 -> rejected
+[1357] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.42 best=0.69
+[1358] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.14 best=0.51
+[1359] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.22 best=0.73
+[1360] node 1156 hops 184 follow (<Action.LEFT: 4>, 1) wp +1 p=0.25 best=0.61
+[1361] node 1158 hops 182 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.85
+[1362] node 1158 hops 182 directed (<Action.LEFT: 4>, 6) directed here=+7 planned=+31 need=+24 n=41
+[1363] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +2 p=0.90 best=1.00
+[1364] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1365] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1366] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1367] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1368] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1369] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +2 p=0.84 best=1.00
+[1370] node 1161 hops 179 follow (<Action.LEFT: 4>, 1) wp +2 p=0.98 best=1.00
+[1371] node 1162 hops 178 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1372] node 1162 hops 178 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1373] node 1162 hops 178 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1374] node 1162 hops 178 directed (<Action.FORWARD: 1>, 2) directed here=+2 planned=+10 need=+8 n=76
+[1375] node 1162 hops 178 directed (<Action.LEFT: 4>, 3) directed here=-0 planned=+10 need=+11 n=66
+[1376] node 1162 hops 178 directed (<Action.FORWARD: 1>, 2) directed here=+8 planned=+10 need=+2 n=74
+[1377] node 1162 hops 178 directed (<Action.FORWARD: 1>, 2) directed here=+10 planned=+10 need=-0 n=51
+[1378] node 1162 hops 178 directed (<Action.FORWARD: 1>, 2) directed here=+12 planned=+10 need=-2 n=55
+[1379] node 1163 hops 177 directed (<Action.LEFT: 4>, 4) directed here=-2 planned=+10 need=+12 n=74
+[1380] node 1163 hops 177 directed (<Action.FORWARD: 1>, 2) directed here=+11 planned=+10 need=-1 n=83
+[1381] node 1163 hops 177 directed (<Action.FORWARD: 1>, 2) directed here=+12 planned=+10 need=-2 n=83
+[1382] node 1163 hops 177 steer-turn (<Action.RIGHT: 8>, 6) wp +6 steer yaw=+28 n=42
+[1383] node 1164 hops 176 steer-turn (<Action.RIGHT: 8>, 6) wp +5 steer yaw=+19 n=68
+[1384] node 1168 hops 172 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+30 n=47
+[1385] node 1169 hops 171 damp-fwd (<Action.FORWARD: 1>, 1) wp +5 p=1.00 best=1.00
+[1386] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1387] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1388] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1389] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1390] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1391] node 1170 hops 170 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1392] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1393] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1394] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1395] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1396] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[1397] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.84 best=1.00
+[1398] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.92 best=1.00
+[1399] node 1170 hops 170 follow (<Action.FORWARD: 1>, 1) wp +6 p=1.00 best=1.00
+[1400] node 1168 hops 172 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1401] node 1168 hops 172 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1402] node 1168 hops 172 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1403] node 1168 hops 172 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1404] node 1168 hops 172 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1405] node 1168 hops 172 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1406] node 1168 hops 172 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1407] node 1168 hops 172 follow (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1408] node 1168 hops 172 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1409] node 1168 hops 172 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1410] node 1172 hops 168 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1411] node 1172 hops 168 steer-turn (<Action.LEFT: 4>, 6) wp +7 steer yaw=-29 n=57
+[1412] node 1175 hops 165 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+7 n=47
+[1413] node 1175 hops 165 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-2 n=78
+[1414] node 1175 hops 165 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-9 n=79
+[1415] node 1176 hops 164 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+2 n=90
+[1416] node 1175 hops 165 steer-turn (<Action.LEFT: 4>, 3) wp +4 steer yaw=-12 n=49
+[1417] node 1175 hops 165 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=+4 n=72
+[1418] node 1175 hops 165 steer-fwd (<Action.FORWARD: 1>, 2) wp +4 steer yaw=-5 n=35 (hold)
+[1419] node 1175 hops 165 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.33
+[1420] node 1175 hops 165 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.56
+[1421] node 1175 hops 165 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.69
+[1422] node 1175 hops 165 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.64
+[1423] node 1175 hops 165 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1424] node 1179 hops 161 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.06
+[1425] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +2 p=0.99 best=1.00
+[1426] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.76 best=0.86
+[1427] node 1181 hops 159 follow (<Action.LEFT: 4>, 1) wp +1 p=0.35 best=1.00
+[1428] node 1181 hops 159 follow (<Action.LEFT: 4>, 1) wp +1 p=0.45 best=1.00
+[1429] node 1181 hops 159 follow (<Action.LEFT: 4>, 1) wp +1 p=0.23 best=1.00
+[1430] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1431] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1432] node 1181 hops 159 follow (<Action.LEFT: 4>, 1) wp +1 p=0.56 best=1.00
+[1433] node 1181 hops 159 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1434] node 1181 hops 159 steer-turn (<Action.LEFT: 4>, 3) wp +1 steer yaw=-11 n=44
+[1435] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1436] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1437] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.95
+[1438] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.79
+[1439] node 1183 hops 157 directed (<Action.LEFT: 4>, 6) directed here=-31 planned=+21 need=+52 n=30
+[1440] node 1183 hops 157 directed (<Action.FORWARD: 1>, 2) directed here=+12 planned=+21 need=+9 n=31
+[1441] node 1183 hops 157 directed (<Action.LEFT: 4>, 6) directed here=-1 planned=+21 need=+22 n=31
+[1442] node 1183 hops 157 directed (<Action.FORWARD: 1>, 2) directed here=+23 planned=+21 need=-3 n=29
+[1443] node 1183 hops 157 directed (<Action.FORWARD: 1>, 2) directed here=+24 planned=+21 need=-3 n=36
+[1444] node 1184 hops 156 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1445] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1446] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1447] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1448] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=0.81 best=1.00
+[1449] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1450] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1451] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=0.97 best=1.00
+[1452] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1453] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1454] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1455] node 1183 hops 157 directed (<Action.RIGHT: 8>, 6) directed here=+55 planned=+21 need=-34 n=33
+[1456] node 1183 hops 157 directed (<Action.RIGHT: 8>, 4) directed here=+33 planned=+21 need=-13 n=28
+[1457] node 1184 hops 156 directed (<Action.FORWARD: 1>, 2) directed here=+8 planned=+10 need=+3 n=62
+[1458] node 1184 hops 156 directed (<Action.FORWARD: 1>, 2) directed here=+14 planned=+10 need=-3 n=62
+[1459] node 1184 hops 156 directed (<Action.FORWARD: 1>, 2) directed here=+8 planned=+10 need=+2 n=54
+[1460] node 1184 hops 156 steer-turn (<Action.LEFT: 4>, 5) wp +3 steer yaw=-17 n=49
+[1461] node 1184 hops 156 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+0 n=36 (hold)
+[1462] node 1184 hops 156 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-0 n=47
+[1463] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=61
+[1464] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+3 n=101
+[1465] node 1186 hops 154 steer-turn (<Action.LEFT: 4>, 3) wp +2 steer yaw=-10 n=65
+[1466] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-0 n=69
+[1467] node 1187 hops 153 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+7 n=80
+[1468] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+6 n=82
+[1469] node 1188 hops 152 steer-turn (<Action.RIGHT: 8>, 3) wp +1 steer yaw=+10 n=116
+[1470] node 1188 hops 152 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+31 n=41
+[1471] node 1192 hops 148 steer-fwd (<Action.FORWARD: 1>, 2) wp +6 steer yaw=-9 n=63
+[1472] node 1191 hops 149 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+3 n=91
+[1473] node 1191 hops 149 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-1 n=120
+[1474] node 1191 hops 149 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-6 n=109
+[1475] node 1191 hops 149 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-9 n=86
+[1476] node 1191 hops 149 steer-turn (<Action.LEFT: 4>, 6) wp +7 steer yaw=-21 n=60
+[1477] node 1191 hops 149 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-1 n=55
+[1478] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1479] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.98
+[1480] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1481] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1482] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1483] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +7 p=0.91 best=1.00
+[1484] jump 1191 -> 181: inliers old 23 new 7 -> rejected
+[1484] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1485] jump 1191 -> 181: inliers old 19 new 12 -> rejected
+[1485] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1486] jump 1191 -> 181: inliers old 19 new 17 -> rejected
+[1486] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1487] node 1191 hops 149 follow (<Action.LEFT: 4>, 1) wp +1 p=0.24 best=1.00
+[1488] node 1191 hops 149 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1489] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +2 p=0.94 best=1.00
+[1490] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +3 p=0.86 best=1.00
+[1491] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +3 p=1.00 best=1.00
+[1492] node 1202 hops 138 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-28 n=43
+[1493] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1494] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1495] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1496] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1497] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1498] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1499] node 1202 hops 138 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1500] node 1202 hops 138 spin-break (<Action.FORWARD: 1>, 3) wp +4 steer yaw=-37 n=50
+[1501] node 1202 hops 138 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=+7 n=72
+[1502] node 1202 hops 138 steer-turn (<Action.LEFT: 4>, 3) wp +3 steer yaw=-12 n=103
+[1503] node 1204 hops 136 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-30 n=91
+[1504] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1505] node 1204 hops 136 steer-turn (<Action.LEFT: 4>, 6) wp +4 steer yaw=-23 n=68
+[1506] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1507] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +5 steer yaw=-9 n=80
+[1508] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +5 steer yaw=-10 n=97
+[1509] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 4) wp +5 steer yaw=-15 n=100
+[1510] node 1205 hops 135 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-37 n=30 (hold)
+[1511] node 1205 hops 135 steer-fwd (<Action.FORWARD: 1>, 2) wp +5 steer yaw=-8 n=36 (hold)
+[1512] node 1208 hops 132 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-10 n=55
+[1513] node 1208 hops 132 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-31 n=37 (hold)
+[1514] node 1209 hops 131 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-5 n=62
+[1515] node 1209 hops 131 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-7 n=86
+[1516] node 1209 hops 131 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-6 n=51
+[1517] node 1209 hops 131 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-6 n=37 (hold)
+[1518] node 1209 hops 131 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=31 (hold)
+[1519] node 1209 hops 131 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+21 n=32 (hold)
+[1520] node 1209 hops 131 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.48 best=1.00
+[1521] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1522] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.12 best=1.00
+[1523] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1524] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1525] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1526] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1527] node 1209 hops 131 directed (<Action.RIGHT: 8>, 5) directed here=+37 planned=+21 need=-16 n=21
+[1528] node 1209 hops 131 directed (<Action.FORWARD: 1>, 2) directed here=+23 planned=+21 need=-2 n=20
+[1529] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[1530] node 1209 hops 131 directed (<Action.RIGHT: 8>, 4) directed here=+35 planned=+21 need=-15 n=21
+[1531] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[1532] node 1209 hops 131 directed (<Action.LEFT: 4>, 6) directed here=-7 planned=+21 need=+27 n=21
+[1533] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+49 planned=+21 need=-28 n=20
+[1534] node 1209 hops 131 directed (<Action.RIGHT: 8>, 4) directed here=+35 planned=+21 need=-15 n=22
+[1535] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[1536] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[1537] node 1209 hops 131 directed (<Action.LEFT: 4>, 6) directed here=-6 planned=+21 need=+26 n=20
+[1538] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[1539] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[1540] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1541] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1542] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1543] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1544] jump 1209 -> 178: inliers old 12 new 7 -> rejected
+[1544] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1545] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1546] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.39 best=1.00
+[1547] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.70 best=1.00
+[1548] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.55 best=1.00
+[1549] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1550] node 1209 hops 131 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+80 n=48
+[1551] node 1209 hops 131 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1552] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1553] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1554] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1555] node 1209 hops 131 directed (<Action.LEFT: 4>, 6) directed here=-1 planned=+21 need=+22 n=35
+[1556] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +7 p=0.97 best=1.00
+[1557] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1558] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1559] jump 1209 -> 163: inliers old 29 new 29 -> rejected
+[1559] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1560] jump 1209 -> 163: inliers old 29 new 23 -> rejected
+[1560] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1561] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+126 planned=+21 need=-105 n=33
+[1562] node 1209 hops 131 directed (<Action.FORWARD: 1>, 2) directed here=+13 planned=+21 need=+8 n=45
+[1563] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+96 planned=+21 need=-76 n=35
+[1564] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1565] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+105 planned=+21 need=-85 n=25
+[1566] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[1567] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[1568] jump 1209 -> 180: inliers old 29 new 0 -> rejected
+[1568] node 1209 hops 131 directed (<Action.LEFT: 4>, 6) directed here=-4 planned=+21 need=+25 n=29
+[1569] node 1209 hops 131 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+99 n=54
+[1570] node 1209 hops 131 directed (<Action.LEFT: 4>, 6) directed here=-6 planned=+21 need=+27 n=30
+[1571] node 1209 hops 131 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+98 n=52
+[1572] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+81 planned=+21 need=-60 n=23
+[1573] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[1574] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[1575] jump 1209 -> 180: inliers old 29 new 0 -> rejected
+[1575] node 1209 hops 131 directed (<Action.RIGHT: 8>, 6) directed here=+89 planned=+21 need=-69 n=29
+[1576] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[1577] node 1209 hops 131 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[1578] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1579] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.09 best=1.00
+[1580] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1581] node 1209 hops 131 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+87 n=42
+[1582] node 1209 hops 131 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1583] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1584] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1585] jump 1209 -> 177: inliers old 9 new 0 -> rejected
+[1585] node 1209 hops 131 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1586] jump 1209 -> 177: inliers old 0 new 10 -> rejected
+[1586] node 1209 hops 131 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1587] jump 1209 -> 175: inliers old 0 new 0 -> rejected
+[1587] node 1209 hops 131 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1588] jump 1209 -> 177: inliers old 0 new 13 -> rejected
+[1588] node 1209 hops 131 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1589] jump 1209 -> 177: inliers old 6 new 14 -> rejected
+[1589] node 1209 hops 131 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1590] node 1209 hops 131 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1591] node 1209 hops 131 recover (<Action.LEFT: 4>, 6) wp +1 p=0.00 best=1.00
+[1592] node 1209 hops 131 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1593] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1594] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1595] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1596] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1597] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1598] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1599] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1600] jump 1209 -> 44: inliers old 19 new 21 -> rejected
+[1600] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1601] jump 1209 -> 44: inliers old 20 new 19 -> rejected
+[1601] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1602] jump 1209 -> 44: inliers old 21 new 15 -> rejected
+[1602] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1603] jump 1209 -> 44: inliers old 19 new 17 -> rejected
+[1603] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1604] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.21 best=1.00
+[1605] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.07 best=1.00
+[1606] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.43 best=1.00
+[1607] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.62 best=1.00
+[1608] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.10 best=1.00
+[1609] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) wp +1 p=0.80 best=1.00
+[1610] node 1209 hops 131 follow (<Action.LEFT: 4>, 1) directed here=+52 planned=+21 need=-31 n=20
+[1611] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1612] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=0.20 best=1.00
+[1613] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=0.35 best=1.00
+[1614] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=0.88 best=1.00
+[1615] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1616] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1617] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1618] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=0.83 best=1.00
+[1619] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1620] node 1210 hops 130 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1621] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.88 best=1.00
+[1622] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.87 best=1.00
+[1623] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.75 best=1.00
+[1624] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[1625] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[1626] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.37 best=1.00
+[1627] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.95 best=1.00
+[1628] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1629] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1630] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1631] node 1210 hops 130 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1632] node 1210 hops 130 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1633] node 1208 hops 132 directed (<Action.RIGHT: 8>, 6) directed here=+52 planned=+21 need=-31 n=20
+[1634] node 1208 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1635] node 1208 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1636] node 1205 hops 135 directed (<Action.LEFT: 4>, 6) directed here=+0 planned=+31 need=+31 n=51
+[1637] node 1203 hops 137 directed (<Action.LEFT: 4>, 6) directed here=-22 planned=+21 need=+43 n=44
+[1638] node 1207 hops 133 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.86 best=1.00
+[1639] node 1205 hops 135 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1640] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1641] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1642] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1643] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +5 p=1.00 best=1.00
+[1644] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1645] node 1205 hops 135 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1646] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.81 best=1.00
+[1647] node 1205 hops 135 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1648] node 1205 hops 135 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1649] node 1205 hops 135 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1650] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1651] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1652] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[1653] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1654] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[1655] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1656] node 1205 hops 135 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.01 best=1.00
+[1657] node 1205 hops 135 follow (<Action.RIGHT: 8>, 1) wp +3 p=0.92 best=1.00
+[1658] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.75 best=1.00
+[1659] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.20 best=1.00
+[1660] node 1202 hops 138 follow (<Action.RIGHT: 8>, 1) wp +3 p=0.95 best=1.00
+[1661] node 1202 hops 138 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.99 best=1.00
+[1662] node 1201 hops 139 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.18 best=1.00
+[1663] node 1199 hops 141 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.40 best=1.00
+[1664] node 1199 hops 141 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.98 best=1.00
+[1665] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +4 p=0.93 best=1.00
+[1666] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +3 p=1.00 best=1.00
+[1667] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +3 p=0.87 best=1.00
+[1668] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[1669] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[1670] node 1198 hops 142 follow (<Action.RIGHT: 8>, 1) wp +2 p=1.00 best=1.00
+[1671] node 1198 hops 142 steer-turn (<Action.LEFT: 4>, 6) wp +2 steer yaw=-36 n=46
+[1672] node 1198 hops 142 steer-turn (<Action.LEFT: 4>, 5) wp +2 steer yaw=-16 n=109
+[1673] node 1200 hops 140 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-65 n=36 (hold)
+[1674] node 1202 hops 138 steer-turn (<Action.LEFT: 4>, 6) wp +3 steer yaw=-41 n=64
+[1675] node 1202 hops 138 spin-break (<Action.FORWARD: 1>, 3) wp +6 p=1.00 best=1.00
+[1676] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+5 n=41
+[1677] node 1203 hops 137 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.81
+[1678] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.71
+[1679] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.62
+[1680] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.59
+[1681] node 1203 hops 137 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1682] node 1203 hops 137 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1683] node 1203 hops 137 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1684] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.71 best=0.72
+[1685] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +2 p=0.81 best=1.00
+[1686] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.85 best=1.00
+[1687] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.74 best=0.80
+[1688] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.50 best=0.70
+[1689] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.41 best=0.81
+[1690] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.65 best=1.00
+[1691] node 1202 hops 138 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.55 best=0.95
+[1692] node 1202 hops 138 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.54 best=0.81
+[1693] node 1202 hops 138 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.68 best=0.85
+[1694] node 1204 hops 136 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.26 best=0.99
+[1695] node 1204 hops 136 directed (<Action.LEFT: 4>, 6) directed here=-11 planned=+31 need=+42 n=33
+[1696] node 1203 hops 137 directed (<Action.RIGHT: 8>, 3) directed here=+33 planned=+21 need=-12 n=22
+[1697] node 1203 hops 137 directed (<Action.FORWARD: 1>, 2) directed here=+28 planned=+21 need=-7 n=25
+[1698] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.69
+[1699] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.20 best=0.90
+[1700] jump 1203 -> 1148: inliers old 19 new 0 -> rejected
+[1700] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.15 best=0.57
+[1701] jump 1203 -> 1148: inliers old 16 new 0 -> rejected
+[1701] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.06 best=0.83
+[1702] jump 1203 -> 1148: inliers old 15 new 0 -> rejected
+[1702] node 1203 hops 137 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.02
+[1703] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.67 best=0.85
+[1704] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.69 best=0.69
+[1705] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.24 best=0.63
+[1706] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.21 best=0.92
+[1707] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.25 best=0.74
+[1708] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.48 best=0.73
+[1709] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.27 best=1.00
+[1710] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.43 best=0.67
+[1711] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.20 best=0.93
+[1712] node 1203 hops 137 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.42 best=0.69
+[1713] node 1204 hops 136 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.19 best=0.95
+[1714] node 1204 hops 136 directed (<Action.LEFT: 4>, 6) directed here=-12 planned=+31 need=+43 n=27
+[1715] node 1204 hops 136 directed (<Action.LEFT: 4>, 5) directed here=+13 planned=+31 need=+18 n=37
+[1716] node 1204 hops 136 directed (<Action.FORWARD: 1>, 2) directed here=+32 planned=+31 need=-2 n=31
+[1717] node 1204 hops 136 directed (<Action.RIGHT: 8>, 6) directed here=+55 planned=+31 need=-24 n=21
+[1718] node 1204 hops 136 directed (<Action.RIGHT: 8>, 4) directed here=+45 planned=+31 need=-14 n=21
+[1719] node 1204 hops 136 directed (<Action.FORWARD: 1>, 2) directed here=+26 planned=+31 need=+5 n=24
+[1720] node 1204 hops 136 directed (<Action.LEFT: 4>, 6) directed here=-9 planned=+31 need=+40 n=20
+[1721] node 1204 hops 136 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1722] node 1204 hops 136 directed (<Action.RIGHT: 8>, 5) directed here=+49 planned=+31 need=-18 n=24
+[1723] node 1204 hops 136 directed (<Action.FORWARD: 1>, 2) directed here=+29 planned=+31 need=+2 n=24
+[1724] node 1204 hops 136 directed (<Action.LEFT: 4>, 6) directed here=-8 planned=+31 need=+39 n=21
+[1725] node 1204 hops 136 directed (<Action.LEFT: 4>, 5) directed here=+13 planned=+31 need=+18 n=23
+[1726] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[1727] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.19
+[1728] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.25
+[1729] jump 1204 -> 1613: inliers old 20 new 0 -> rejected
+[1729] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.31
+[1730] jump 1204 -> 1613: inliers old 22 new 0 -> rejected
+[1730] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.21
+[1731] jump 1204 -> 1613: inliers old 21 new 0 -> rejected
+[1731] node 1204 hops 136 directed (<Action.RIGHT: 8>, 3) directed here=+41 planned=+31 need=-11 n=21
+[1732] node 1204 hops 136 directed (<Action.LEFT: 4>, 6) directed here=-6 planned=+31 need=+37 n=23
+[1733] node 1203 hops 137 directed (<Action.RIGHT: 8>, 6) directed here=+54 planned=+21 need=-33 n=25
+[1734] node 1203 hops 137 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1735] node 1203 hops 137 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[1736] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +1 p=0.58 best=0.77
+[1737] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +4 p=0.80 best=1.00
+[1738] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[1739] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1740] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1741] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +2 p=1.00 best=1.00
+[1742] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-39 n=48
+[1743] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-29 n=54
+[1744] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 6) wp +5 steer yaw=-26 n=62
+[1745] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +6 steer yaw=-4 n=31 (hold)
+[1746] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 5) wp +5 steer yaw=-17 n=60
+[1747] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1748] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1749] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +7 p=0.88 best=1.00
+[1750] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +7 p=0.83 best=1.00
+[1751] node 1203 hops 137 follow (<Action.LEFT: 4>, 1) wp +7 p=1.00 best=1.00
+[1752] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 3) wp +7 steer yaw=-11 n=47
+[1753] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+5 n=37 (hold)
+[1754] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+1 n=54
+[1755] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-3 n=43
+[1756] jump 1203 -> 593: inliers old 15 new 12 -> rejected
+[1756] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-7 n=30 (hold)
+[1757] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 6) wp +7 steer yaw=-43 n=30 (hold)
+[1758] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-4 n=43
+[1759] node 1203 hops 137 steer-turn (<Action.LEFT: 4>, 4) wp +7 steer yaw=-15 n=42
+[1760] node 1203 hops 137 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-3 n=49
+[1761] node 1204 hops 136 steer-turn (<Action.LEFT: 4>, 6) wp +6 steer yaw=-24 n=38 (hold)
+[1762] no progress for 150 steps at hops 136: detour around nodes 1204..1214, next node now 1205 (136 hops)
+[1762] node 1204 hops 136 steer-turn (<Action.LEFT: 4>, 4) wp +6 steer yaw=-12 n=34 (hold)
+[1763] node 1204 hops 136 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=-5 n=38 (hold)
+[1764] node 1204 hops 136 steer-turn (<Action.LEFT: 4>, 4) wp +7 steer yaw=-12 n=34 (hold)
+[1765] node 1204 hops 136 steer-fwd (<Action.FORWARD: 1>, 2) wp +7 steer yaw=+5 n=41
+[1766] node 1204 hops 136 steer-turn (<Action.RIGHT: 8>, 6) wp +6 steer yaw=+21 n=40
+[1767] node 1204 hops 136 damp-fwd (<Action.FORWARD: 1>, 1) wp +7 p=1.00 best=1.00
+[1768] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1769] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1770] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +6 p=0.89 best=1.00
+[1771] node 1204 hops 136 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1772] jump 1204 -> 657: inliers old 0 new 20 -> rejected
+[1772] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.83 best=1.00
+[1773] jump 1204 -> 657: inliers old 18 new 25 -> rejected
+[1773] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.98 best=1.00
+[1774] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.85 best=1.00
+[1775] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1776] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1777] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1778] node 1204 hops 136 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1779] node 1204 hops 136 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1780] node 1204 hops 136 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1781] node 1204 hops 136 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[1782] node 1204 hops 136 recover (<Action.LEFT: 4>, 6) look for wp +1 (9/45 ticks) p=0.00
+[1783] node 1204 hops 136 recover (<Action.LEFT: 4>, 6) look for wp +1 (9/45 ticks) p=0.00
+[1784] lost at node 1204 (0 inliers): relocalised to 1177 (78 inliers)
+[1784] node 1177 hops 163 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-4 n=48
+[1785] node 1176 hops 164 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=-2 n=67
+[1786] node 1176 hops 164 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=54
+[1787] node 1179 hops 161 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+32 n=35 (hold)
+[1788] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-36 planned=+31 need=+67 n=34
+[1789] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-17 planned=+31 need=+48 n=51
+[1790] node 1179 hops 161 wp-search (<Action.LEFT: 4>, 3) directed here=+70 planned=+31 need=-39 n=58
+[1791] node 1180 hops 160 follow (<Action.LEFT: 4>, 1) wp +1 p=0.69 best=1.00
+[1792] node 1180 hops 160 follow (<Action.LEFT: 4>, 1) wp +1 p=0.45 best=1.00
+[1793] node 1176 hops 164 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+34 n=49
+[1794] node 1179 hops 161 steer-turn (<Action.RIGHT: 8>, 6) wp +1 steer yaw=+49 n=34 (hold)
+[1795] node 1179 hops 161 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1796] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1797] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1798] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1799] node 1179 hops 161 directed (<Action.FORWARD: 1>, 2) directed here=+39 planned=+31 need=-8 n=26
+[1800] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-21 planned=+31 need=+52 n=24
+[1801] node 1179 hops 161 directed (<Action.RIGHT: 8>, 6) directed here=+63 planned=+31 need=-32 n=20
+[1802] node 1179 hops 161 directed (<Action.RIGHT: 8>, 4) directed here=+45 planned=+31 need=-14 n=21
+[1803] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-22 planned=+31 need=+53 n=23
+[1804] node 1179 hops 161 directed (<Action.RIGHT: 8>, 6) directed here=+61 planned=+31 need=-30 n=22
+[1805] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-28 planned=+31 need=+59 n=27
+[1806] node 1179 hops 161 directed (<Action.RIGHT: 8>, 6) directed here=+58 planned=+31 need=-27 n=23
+[1807] node 1179 hops 161 directed (<Action.FORWARD: 1>, 2) directed here=+39 planned=+31 need=-8 n=24
+[1808] node 1179 hops 161 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (30/45 ticks) p=0.00
+[1809] node 1179 hops 161 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (33/45 ticks) p=0.00
+[1810] node 1179 hops 161 directed (<Action.RIGHT: 8>, 4) directed here=+45 planned=+31 need=-14 n=20
+[1811] node 1179 hops 161 directed (<Action.FORWARD: 1>, 2) directed here=+39 planned=+31 need=-8 n=21
+[1812] node 1179 hops 161 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (42/45 ticks) p=0.00
+[1813] node 1179 hops 161 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (45/45 ticks) p=0.00
+[1814] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1815] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1816] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1817] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1818] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1819] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1820] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1821] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1822] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1823] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1824] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1825] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1826] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=-33 planned=+31 need=+64 n=21
+[1827] node 1179 hops 161 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[1828] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.92
+[1829] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.90
+[1830] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.86
+[1831] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1832] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1833] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1834] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1835] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1836] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1837] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[1838] node 1179 hops 161 directed (<Action.FORWARD: 1>, 2) directed here=+37 planned=+31 need=-6 n=24
+[1839] node 1179 hops 161 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.40
+[1840] node 1179 hops 161 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.38
+[1841] jump 1179 -> 2129: inliers old 10 new 0 -> rejected
+[1841] node 1179 hops 161 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=0.57
+[1842] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.48
+[1843] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.45
+[1844] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.47
+[1845] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.71
+[1846] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1847] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1848] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1849] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1850] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1851] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.86
+[1852] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=+8 planned=+31 need=+23 n=27
+[1853] node 1179 hops 161 directed (<Action.LEFT: 4>, 3) directed here=+20 planned=+31 need=+11 n=38
+[1854] node 1179 hops 161 directed (<Action.FORWARD: 1>, 2) directed here=+23 planned=+31 need=+8 n=37
+[1855] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.47
+[1856] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1857] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1858] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +4 p=0.91 best=1.00
+[1859] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1860] node 1179 hops 161 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1861] node 1179 hops 161 directed (<Action.LEFT: 4>, 6) directed here=+9 planned=+31 need=+22 n=21
+[1862] node 1179 hops 161 directed (<Action.LEFT: 4>, 5) directed here=+14 planned=+31 need=+17 n=34
+[1863] node 1183 hops 157 directed (<Action.LEFT: 4>, 6) directed here=-30 planned=+21 need=+51 n=20
+[1864] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-40 planned=+0 need=+40 n=24
+[1865] node 1186 hops 154 directed (<Action.FORWARD: 1>, 2) directed here=-9 planned=+0 need=+9 n=28
+[1866] node 1183 hops 157 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1867] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-89 planned=+0 need=+89 n=32
+[1868] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-74 planned=+0 need=+74 n=24
+[1869] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-31 planned=+0 need=+31 n=26
+[1870] node 1186 hops 154 directed (<Action.FORWARD: 1>, 2) directed here=-8 planned=+0 need=+8 n=42
+[1871] node 1186 hops 154 directed (<Action.FORWARD: 1>, 2) directed here=-10 planned=+0 need=+10 n=38
+[1872] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-36 planned=+0 need=+36 n=48
+[1873] node 1186 hops 154 directed (<Action.FORWARD: 1>, 2) directed here=-8 planned=+0 need=+8 n=62
+[1874] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-28 planned=+0 need=+28 n=62
+[1875] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-8 n=63
+[1876] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-8 n=58
+[1877] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +6 p=1.00 best=1.00
+[1878] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=0.95 best=1.00
+[1879] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1880] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1881] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1882] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1883] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1884] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1885] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +5 p=1.00 best=1.00
+[1886] node 1187 hops 153 steer-turn (<Action.LEFT: 4>, 3) wp +1 steer yaw=-12 n=48
+[1887] node 1187 hops 153 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+1 n=39 (hold)
+[1888] node 1187 hops 153 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-1 n=51
+[1889] node 1187 hops 153 steer-fwd (<Action.FORWARD: 1>, 2) wp +2 steer yaw=+6 n=49
+[1890] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+0 n=81
+[1891] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-0 n=99
+[1892] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+6 n=120
+[1893] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+5 n=87
+[1894] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+4 n=76
+[1895] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-3 n=50
+[1896] node 1188 hops 152 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=-7 n=35 (hold)
+[1897] node 1188 hops 152 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1898] node 1188 hops 152 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1899] node 1188 hops 152 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1900] jump 1188 -> 180: inliers old 0 new 9 -> rejected
+[1900] node 1188 hops 152 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1901] jump 1188 -> 181: inliers old 15 new 15 -> rejected
+[1901] node 1188 hops 152 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1902] node 1188 hops 152 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1903] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.63 best=1.00
+[1904] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.78 best=1.00
+[1905] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1906] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.61 best=1.00
+[1907] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1908] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1909] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1910] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1911] node 1187 hops 153 directed (<Action.FORWARD: 1>, 2) directed here=-14 planned=-10 need=+4 n=20
+[1912] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.63 best=1.00
+[1913] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1914] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.68 best=1.00
+[1915] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1916] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1917] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[1918] node 1186 hops 154 steer-fwd (<Action.FORWARD: 1>, 2) wp +1 steer yaw=+0 n=40
+[1919] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.63 best=1.00
+[1920] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1921] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.03 best=1.00
+[1922] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1923] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1924] node 1187 hops 153 directed (<Action.RIGHT: 8>, 6) directed here=+111 planned=-10 need=-121 n=31
+[1925] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1926] node 1187 hops 153 directed (<Action.FORWARD: 1>, 2) directed here=-0 planned=-10 need=-10 n=40
+[1927] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[1928] node 1187 hops 153 directed (<Action.RIGHT: 8>, 4) directed here=+2 planned=-10 need=-13 n=28
+[1929] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[1930] node 1187 hops 153 directed (<Action.RIGHT: 8>, 6) directed here=+103 planned=-10 need=-113 n=24
+[1931] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[1932] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[1933] node 1187 hops 153 directed (<Action.FORWARD: 1>, 2) directed here=-1 planned=-10 need=-10 n=23
+[1934] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[1935] no progress for 150 steps at hops 153: detour around nodes 1187..1197, next node now 1188 (153 hops)
+[1935] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[1936] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[1937] jump 1187 -> 1202: inliers old 20 new 28 -> rejected
+[1937] node 1187 hops 153 directed (<Action.RIGHT: 8>, 6) directed here=+114 planned=-10 need=-124 n=20
+[1938] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[1939] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1940] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1941] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1942] jump 1187 -> 1203: inliers old 22 new 30 -> rejected
+[1942] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1943] jump 1187 -> 1202: inliers old 19 new 28 -> rejected
+[1943] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1944] jump 1187 -> 1203: inliers old 20 new 34 -> rejected
+[1944] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1945] jump 1187 -> 1201: inliers old 16 new 13 -> rejected
+[1945] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1946] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1947] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1948] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1949] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1950] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1951] node 1186 hops 154 directed (<Action.LEFT: 4>, 6) directed here=-60 planned=+0 need=+60 n=20
+[1952] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1953] node 1186 hops 154 directed (<Action.FORWARD: 1>, 2) directed here=+2 planned=+0 need=-2 n=20
+[1954] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1955] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1956] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1957] node 1187 hops 153 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1958] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1959] node 1187 hops 153 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1960] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.99 best=1.00
+[1961] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.05 best=1.00
+[1962] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1963] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1964] node 1186 hops 154 follow (<Action.LEFT: 4>, 1) wp +1 p=0.40 best=1.00
+[1965] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.46 best=1.00
+[1966] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.14 best=1.00
+[1967] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.54 best=1.00
+[1968] jump 1185 -> 22: inliers old 10 new 19 -> rejected
+[1968] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.34 best=1.00
+[1969] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1970] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1971] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[1972] node 1185 hops 155 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.59
+[1973] node 1185 hops 155 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[1974] node 1185 hops 155 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[1975] node 1185 hops 155 budget 16 look for wp +1 (6/45 ticks) p=0.00
+╭─ result ─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                                                                  │
+│ 3,989 steps · SPL 0.00                                                                                               │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+1,974 round trips · median 0.7 ms (server 0.7 ms, network 0.0 ms) · your code 436.7 ms per step
+directed steering: 168 decisions replaced a blind turn
+route: localised on the route in 1570 decisions, off it in 335
+jitter: 145 turn reversals; 54 reversals suppressed by the damper
+ticks by reason: follow 1138, directed 729, wp-search 687, steer-turn 553, recover 397, steer-fwd 290, reverse 118, damp-fwd 54, spin-break 15, stuck 8, budget 1
+lost detector: 3 relocalisations
+ticks asked: turning 3063, forward 842, backward 84
+result: Result(goal_tier='failed', nav_steps=3989, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-52-49385', session_id='local-52', arrival=None, think={'steps': 1974, 'ticks': 3989, 'payload_bytes': 454809600, 'rtt_ms_p50': 0.7369165, 'server_ms_p50': 0.7369165, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 436.667979, 'steps_per_second': 2.214366079234377}, attempts_used=0, attempts_allowed=None)

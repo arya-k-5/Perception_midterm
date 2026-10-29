@@ -1,0 +1,21 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-8_dinov2_vits14_k32_d256_2789.npz
+Loaded SuperPoint + LightGlue on mps
+2789 frames from 3 trajectories
+spawn join: drive starts 0 and 702 (139 inliers)
+spawn join: drive starts 0 and 1593 (342 inliers)
+sequence check: kept 291 of 1121 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 291 of 291 shortcuts, rejected 0 look-alikes
+sequence check: kept 291 of 291 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3078 edges, 291 verified shortcuts
+map: measuring traj_0 (832 photos, about a minute per 800; cached afterwards) ...
+map: measuring traj_1 (1066 photos, about a minute per 800; cached afterwards) ...

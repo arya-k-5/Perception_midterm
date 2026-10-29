@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/Users/arya/vis_nav_player_work/.venv/lib/python3.12/site-packages/vggt/models/vggt.py:65: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+drive 0: 120 frames (every 2), windows of 24, device mps
+  window 1: frames 0..23  (60 s)
+  window 2: frames 16..39  (146 s)
+  window 3: frames 32..55  (327 s)
+  window 4: frames 48..71  (520 s)
+  window 5: frames 64..87  (715 s)
+  window 6: frames 80..103  (858 s)
+  window 7: frames 96..119  (1052 s)
+  window 8: frames 112..119  (1119 s)
+VGGT drive 0: POSITION error median 0.89 m, 90% 1.46 m, max 1.75 m | HEADING error median 60 deg, 90% 164 deg
+(action-based map on maze 8 for comparison: drive 0 median 1.20 m, max 3.43 m, heading ~27 deg)
+wrote logs/vggt_local-8_drive0.json

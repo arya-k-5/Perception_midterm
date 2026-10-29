@@ -1,0 +1,29 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-8_dinov2_vits14_k32_d256_2789.npz
+2789 frames from 3 trajectories
+spawn join: drive starts 0 and 702 (71 inliers)
+spawn join: drive starts 0 and 1593 (150 inliers)
+sequence check: kept 291 of 1121 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 291 of 291 shortcuts, rejected 0 look-alikes
+sequence check: kept 291 of 291 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3078 edges, 291 verified shortcuts
+turn measurements: 2670/2786 pairs; median LEFT +10.8 deg, RIGHT -12.5 deg -> sign +1
+loop closures: 288 of 293 candidate pairs
+drives placed by the loops: 3 of 3
+pose graph residual (rms, in sigmas): 0.21
+MAP ERROR vs truth: median 1.03 m, 90% 2.08 m, max 3.43 m
+   drive 0: median 1.20 m, max 3.43 m
+   drive 1: median 1.01 m, max 2.67 m
+   drive 2: median 0.89 m, max 2.40 m
+no plot: ModuleNotFoundError("No module named 'matplotlib'")

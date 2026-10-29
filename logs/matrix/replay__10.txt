@@ -1,0 +1,827 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-10_dinov2_vits14_k32_d256_2628.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2628 frames from 3 trajectories
+spawn join: drive starts 0 and 656 (44 inliers)
+spawn join: drive starts 0 and 1272 (38 inliers)
+sequence check: kept 245 of 916 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 244 of 245 shortcuts, rejected 1 look-alikes
+sequence check: kept 244 of 244 shortcuts (runs of >= 8 pairs)
+bearing check: 17/20 forward pairs point ahead -> sign OK
+graph: 2871 edges, 244 verified shortcuts
+checking your agent on a sample frame...
+goal: node 1088 (view 0, 0 inliers; R-best 1088)
+MAP: added 1450 skip edges (drive revisits within 0.15 m, net turn only)
+MAP: 2628 photos, 4321 edges. ROUTE from spawn photo 656: 293 hops (~879 ticks), 13 drive switches (~31 ticks of turning at them), 0 hops driven in reverse
+ROUTE uses 12 skips, saving 82 recorded steps
+map planning took 5.7 s
+[1] node 0 hops 294 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=0.53
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────╮
+│ Local maze 10                                                                │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=1748293116    │
+│                                                                              │
+│ same maze anywhere:  run(agent, "local:10")                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+goal: node 1589 (view 0, 95 inliers; R-best 26)
+MAP: 2628 photos, 4321 edges. ROUTE from spawn photo 1272: 252 hops (~756 ticks), 6 drive switches (~0 ticks of turning at them), 0 hops driven in reverse
+ROUTE uses 6 skips, saving 65 recorded steps
+map planning took 1.8 s
+[1] node 0 hops 253 replay (<Action.RIGHT: 8>, 5) replay align to 1272: here=+17 n=78
+[2] node 1272 hops 252 replay (<Action.RIGHT: 8>, 9) replay 1272->1275: RIGHT x3 (here=+0 n=155)
+[3] node 1273 hops 251 steer-turn (<Action.RIGHT: 8>, 6) wp +3 steer yaw=+24 n=43
+[4] node 1277 hops 249 rp-scan-commit (<Action.RIGHT: 8>, 3) scan: photo 1277 (78 inliers), turn back -11 deg
+[5] node 1277 hops 247 replay (<Action.FORWARD: 1>, 3) replay 1277->1278: FORWARD x1 (here=+1 n=107)
+[6] node 1277 hops 247 replay (<Action.RIGHT: 8>, 3) replay 1278->1279: RIGHT x1 (here=+1 n=91)
+[7] node 1277 hops 247 replay (<Action.FORWARD: 1>, 9) replay 1279->1282: FORWARD x3 (here=+4 n=85)
+[8] node 1278 hops 246 replay (<Action.FORWARD: 1>, 9) replay 1282->1285: FORWARD x3 (here=+2 n=66)
+[9] node 1281 hops 243 replay (<Action.FORWARD: 1>, 3) replay 1285->1286: FORWARD x1 (here=-0 n=55)
+[10] node 1281 hops 243 replay (<Action.FORWARD: 1>, 3) replay 1286->1287: FORWARD x1 (here=+1 n=60)
+[11] node 1282 hops 242 replay (<Action.LEFT: 4>, 9) replay 1287->1290: LEFT x3 (here=-1 n=87)
+[12] node 1283 hops 241 replay (<Action.FORWARD: 1>, 3) replay 1290->1291: FORWARD x1 (here=+2 n=38)
+[13] node 1283 hops 241 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[14] node 1283 hops 241 follow (<Action.RIGHT: 8>, 1) wp +1 p=1.00 best=1.00
+[15] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[16] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[17] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[18] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[19] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[20] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[21] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[22] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[23] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[24] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[25] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1286 (32 inliers)
+[26] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1284 (38 inliers)
+[27] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1284 (38 inliers)
+[28] node 1283 hops 241 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1284 (38 inliers)
+[29] node 1283 hops 241 rp-scan-commit (<Action.LEFT: 4>, 4) scan: photo 1283 (64 inliers), turn back +14 deg
+[30] node 1283 hops 241 replay (<Action.LEFT: 4>, 6) replay align to 1283: here=-26 n=98
+[31] node 1283 hops 241 replay (<Action.FORWARD: 1>, 3) replay 1284->1285: FORWARD x1 (here=-7 n=65)
+[32] node 1283 hops 241 replay (<Action.FORWARD: 1>, 3) replay 1285->1286: FORWARD x1 (here=-10 n=62)
+[33] node 1285 hops 239 replay (<Action.FORWARD: 1>, 3) replay 1286->1287: FORWARD x1 (here=-9 n=92)
+[34] node 1285 hops 239 replay (<Action.LEFT: 4>, 3) replay 1287->1288: LEFT x1 (here=-10 n=62)
+[35] node 1285 hops 239 replay (<Action.LEFT: 4>, 3) replay 1288->1289: LEFT x1 (here=-9 n=88)
+[36] node 1285 hops 239 replay (<Action.LEFT: 4>, 3) replay 1289->1290: LEFT x1 (here=-9 n=75)
+[37] node 1285 hops 239 replay (<Action.LEFT: 4>, 4) replay align to 1290: here=-14 n=56
+[38] node 1285 hops 239 replay (<Action.FORWARD: 1>, 3) replay 1290->1291: FORWARD x1 (here=+4 n=45)
+[39] node 1285 hops 239 replay (<Action.LEFT: 4>, 3) replay 1291->1292: LEFT x1 (here=+8 n=30)
+[40] node 1289 hops 235 replay (<Action.LEFT: 4>, 6) replay align to 1292: here=-21 n=32
+[41] node 1289 hops 235 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[42] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[43] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[44] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[45] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[46] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[47] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[48] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[49] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[50] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[51] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[52] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[53] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[54] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[55] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[56] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[57] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1291 (26 inliers)
+[58] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1289 (27 inliers)
+[59] node 1289 hops 235 rp-scan-commit (<Action.FORWARD: 1>, 1) scan: photo 1289 (31 inliers), turn back +1 deg
+[60] node 1289 hops 235 replay (<Action.LEFT: 4>, 3) replay 1289->1290: LEFT x1 (here=-4 n=31)
+[61] node 1290 hops 234 replay (<Action.LEFT: 4>, 3) replay 1291->1292: LEFT x1 (here=+0 n=30)
+[62] node 1290 hops 234 damp-fwd (<Action.FORWARD: 1>, 1) wp +3 p=1.00 best=1.00
+[63] node 1289 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.85 best=1.00
+[64] node 1289 hops 235 follow (<Action.RIGHT: 8>, 1) wp +4 p=0.80 best=1.00
+[65] node 1289 hops 235 replay (<Action.RIGHT: 8>, 4) replay align to 1291: here=+13 n=30
+[66] node 1289 hops 235 replay (<Action.LEFT: 4>, 3) replay 1291->1292: LEFT x1 (here=+5 n=30)
+[67] node 1289 hops 235 replay (<Action.FORWARD: 1>, 3) replay 1292->1293: FORWARD x1 (here=+1 n=31)
+[68] node 1289 hops 235 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[69] node 1289 hops 235 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[70] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1292 (28 inliers)
+[71] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[72] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[73] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[74] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[75] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[76] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[77] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[78] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[79] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[80] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[81] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[82] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[83] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[84] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[85] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[86] node 1289 hops 235 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1294 (38 inliers)
+[87] node 1294 hops 235 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1294 (38 inliers), turn back -336 deg
+[88] node 1294 hops 230 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[89] node 1294 hops 230 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[90] node 1294 hops 230 replay (<Action.RIGHT: 8>, 6) replay align to 1294: here=+35 n=40
+[91] node 1296 hops 228 replay (<Action.LEFT: 4>, 4) replay align to 1296: here=-15 n=37
+[92] node 1296 hops 228 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[93] node 1296 hops 228 replay (<Action.LEFT: 4>, 3) replay 1296->1297: LEFT x1 (here=-1 n=34)
+[94] node 1296 hops 228 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[95] node 1296 hops 228 replay (<Action.LEFT: 4>, 3) replay 1297->1298: LEFT x1 (here=-0 n=32)
+[96] jump 1296 -> 721: inliers old 14 new 0 -> rejected
+[96] node 1296 hops 228 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[97] node 1296 hops 228 directed (<Action.LEFT: 4>, 5) directed here=+3 planned=+21 need=+17 n=21
+[98] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1298 (22 inliers)
+[99] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[100] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[101] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[102] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[103] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[104] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[105] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[106] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[107] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[108] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[109] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[110] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[111] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[112] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[113] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[114] node 1296 hops 228 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1299 (34 inliers)
+[115] node 1299 hops 228 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1299 (34 inliers), turn back -340 deg
+[116] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[117] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[118] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[119] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[120] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[121] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[122] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[123] node 1299 hops 225 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[124] lost at node 1299 (0 inliers): relocalised to 1287 (77 inliers)
+[124] node 1287 hops 237 replay (<Action.LEFT: 4>, 9) replay 1287->1290: LEFT x3 (here=-5 n=77)
+[125] node 1288 hops 236 replay (<Action.LEFT: 4>, 6) replay align to 1290: here=-23 n=59
+[126] node 1289 hops 235 replay (<Action.LEFT: 4>, 4) replay align to 1290: here=-13 n=55
+[127] node 1289 hops 235 replay (<Action.LEFT: 4>, 3) replay 1291->1292: LEFT x1 (here=-7 n=96)
+[128] node 1289 hops 235 replay (<Action.FORWARD: 1>, 3) replay 1292->1293: FORWARD x1 (here=-3 n=105)
+[129] node 1289 hops 235 replay (<Action.LEFT: 4>, 3) replay align to 1293: here=-12 n=91
+[130] node 1289 hops 235 replay (<Action.LEFT: 4>, 9) replay 1293->1296: LEFT x3 (here=-0 n=113)
+[131] node 1289 hops 235 replay (<Action.LEFT: 4>, 6) replay align to 1296: here=-28 n=54
+[132] node 1295 hops 229 replay (<Action.LEFT: 4>, 3) replay 1296->1297: LEFT x1 (here=-7 n=73)
+[133] node 1295 hops 229 replay (<Action.LEFT: 4>, 4) replay align to 1297: here=-14 n=65
+[134] node 1295 hops 229 replay (<Action.LEFT: 4>, 3) replay 1297->1298: LEFT x1 (here=-5 n=55)
+[135] node 1297 hops 227 replay (<Action.FORWARD: 1>, 6) replay 1298->1300: FORWARD x2 (here=+2 n=60)
+[136] node 1297 hops 227 replay (<Action.LEFT: 4>, 3) replay 1300->1301: LEFT x1 (here=+4 n=34)
+[137] node 1297 hops 227 replay (<Action.FORWARD: 1>, 3) replay 1301->1302: FORWARD x1 (here=-10 n=32)
+[138] node 1297 hops 227 follow (<Action.FORWARD: 1>, 1) wp +6 p=0.84 best=1.00
+[139] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1303 (29 inliers)
+[140] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[141] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[142] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[143] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[144] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[145] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[146] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[147] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[148] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[149] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[150] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[151] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1302 (30 inliers)
+[152] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1298 (33 inliers)
+[153] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1298 (33 inliers)
+[154] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1298 (33 inliers)
+[155] node 1297 hops 227 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1298 (36 inliers)
+[156] node 1299 hops 227 rp-scan-commit (<Action.LEFT: 4>, 11) scan: photo 1299 (52 inliers), turn back +39 deg
+[157] node 1301 hops 223 replay (<Action.LEFT: 4>, 6) replay align to 1301: here=-21 n=34
+[158] node 1303 hops 221 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[159] node 1301 hops 223 replay (<Action.FORWARD: 1>, 3) replay 1302->1303: FORWARD x1 (here=+3 n=30)
+[160] node 1303 hops 221 replay (<Action.FORWARD: 1>, 3) replay 1303->1304: FORWARD x1 (here=-0 n=31)
+[161] node 1303 hops 221 replay (<Action.FORWARD: 1>, 3) replay 1304->1305: FORWARD x1 (here=+10 n=32)
+[162] node 1304 hops 220 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[163] node 1303 hops 221 replay (<Action.RIGHT: 8>, 24) skip 1305->1315: net turn -81 deg (drive turned -72)
+[164] node 1310 hops 219 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.34 best=1.00
+[165] node 1310 hops 219 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[166] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[167] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (23 inliers)
+[168] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1310 (27 inliers)
+[169] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[170] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[171] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[172] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[173] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[174] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[175] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[176] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[177] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[178] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[179] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[180] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[181] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1326 (32 inliers)
+[182] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1310 (38 inliers)
+[183] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1310 (38 inliers)
+[184] node 1310 hops 219 rp-scan-commit (<Action.RIGHT: 8>, 11) scan: photo 1310 (38 inliers), turn back -37 deg
+[185] node 1315 hops 218 replay (<Action.LEFT: 4>, 6) replay align to 1317: here=-24 n=39
+[186] node 1315 hops 218 follow (<Action.LEFT: 4>, 1) wp +1 p=0.79 best=1.00
+[187] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.36 best=1.00
+[188] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[189] node 1310 hops 219 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[190] node 1310 hops 219 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[191] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[192] node 1310 hops 219 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[193] node 1310 hops 219 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[194] node 1307 hops 219 replay (<Action.RIGHT: 8>, 10) skip 1307->1315: net turn -35 deg (drive turned -52)
+[195] node 1310 hops 219 replay (<Action.RIGHT: 8>, 6) replay align to 1315: here=+43 n=35
+[196] node 1315 hops 218 replay (<Action.LEFT: 4>, 5) replay align to 1317: here=-16 n=33
+[197] node 1310 hops 219 replay (<Action.RIGHT: 8>, 6) replay align to 1315: here=+40 n=32
+[198] node 1315 hops 218 replay (<Action.LEFT: 4>, 3) replay 1316->1317: LEFT x1 (here=-12 n=36)
+[199] node 1316 hops 217 replay (<Action.LEFT: 4>, 3) replay 1317->1318: LEFT x1 (here=-5 n=39)
+[200] node 1310 hops 219 replay (<Action.RIGHT: 8>, 5) replay align to 1318: here=+17 n=31
+[201] node 1315 hops 218 replay (<Action.LEFT: 4>, 6) replay align to 1318: here=-29 n=35
+[202] node 1315 hops 218 replay (<Action.LEFT: 4>, 4) replay align to 1318: here=-13 n=30
+[203] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[204] node 1308 hops 219 replay (<Action.RIGHT: 8>, 10) skip 1308->1315: net turn -33 deg (drive turned -41)
+[205] node 1315 hops 218 replay (<Action.LEFT: 4>, 3) replay 1317->1318: LEFT x1 (here=-9 n=40)
+[206] node 1315 hops 218 replay (<Action.LEFT: 4>, 5) replay align to 1318: here=-19 n=34
+[207] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[208] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1310 (24 inliers)
+[209] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[210] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[211] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[212] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[213] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[214] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[215] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[216] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[217] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[218] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[219] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[220] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[221] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[222] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (29 inliers)
+[223] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1315 (39 inliers)
+[224] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1315 (39 inliers)
+[225] node 1315 hops 219 rp-scan-commit (<Action.RIGHT: 8>, 10) scan: photo 1315 (39 inliers), turn back -33 deg
+[226] node 1310 hops 219 replay (<Action.LEFT: 4>, 5) replay align to 1316: here=-15 n=36
+[227] node 1310 hops 219 replay (<Action.RIGHT: 8>, 6) replay align to 1315: here=+29 n=43
+[228] node 1315 hops 218 replay (<Action.FORWARD: 1>, 3) replay 1315->1316: FORWARD x1 (here=+5 n=37)
+[229] node 1310 hops 219 replay (<Action.LEFT: 4>, 3) replay 1316->1317: LEFT x1 (here=+1 n=35)
+[230] node 1310 hops 219 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[231] node 1310 hops 219 replay (<Action.RIGHT: 8>, 6) skip 1310->1315: net turn -20 deg (drive turned -21)
+[232] node 1310 hops 219 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[233] node 1310 hops 219 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[234] node 1310 hops 219 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[235] node 1310 hops 219 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[236] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[237] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[238] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[239] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[240] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[241] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[242] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[243] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[244] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[245] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[246] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[247] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[248] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[249] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[250] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[251] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[252] node 1310 hops 219 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1317 (31 inliers)
+[253] node 1317 hops 219 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1317 (31 inliers), turn back -346 deg
+[254] node 1317 hops 216 directed (<Action.LEFT: 4>, 3) directed here=-1 planned=+10 need=+12 n=23
+[255] node 1320 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[256] node 1320 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.88 best=1.00
+[257] node 1320 hops 213 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.52 best=1.00
+[258] node 1320 hops 213 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.59 best=1.00
+[259] node 1320 hops 213 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[260] node 1322 hops 211 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[261] node 1322 hops 211 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[262] node 1322 hops 211 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[263] node 1322 hops 211 directed (<Action.RIGHT: 8>, 6) directed here=+20 planned=-21 need=-41 n=20
+[264] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1324 (20 inliers)
+[265] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1324 (20 inliers)
+[266] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1324 (20 inliers)
+[267] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[268] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[269] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[270] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[271] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[272] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[273] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (28 inliers)
+[274] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[275] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[276] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[277] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[278] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[279] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[280] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1333 (29 inliers)
+[281] node 1322 hops 211 rp-scan-none (<Action.FORWARD: 1>, 2) scan: no route photo found (best 29)
+[282] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[283] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[284] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[285] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[286] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[287] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (24/45 ticks) p=0.00
+[288] jump 1322 -> 178: inliers old 14 new 20 -> rejected
+[288] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (27/45 ticks) p=0.00
+[289] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (30/45 ticks) p=0.00
+[290] node 1322 hops 211 directed (<Action.LEFT: 4>, 6) directed here=-83 planned=-21 need=+62 n=20
+[291] node 1322 hops 211 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (36/45 ticks) p=0.00
+[292] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[293] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[294] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[295] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[296] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[297] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[298] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[299] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[300] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[301] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[302] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[303] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[304] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[305] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[306] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[307] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[308] node 1322 hops 211 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (30 inliers)
+[309] node 1325 hops 211 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1325 (30 inliers), turn back -348 deg
+[310] node 1325 hops 208 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (42/45 ticks) p=0.00
+[311] node 1325 hops 208 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (45/45 ticks) p=0.00
+[312] node 1325 hops 208 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[313] node 1325 hops 208 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[314] jump 1325 -> 41: inliers old 0 new 0 -> rejected
+[314] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[315] jump 1325 -> 39: inliers old 0 new 8 -> rejected
+[315] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[316] jump 1325 -> 39: inliers old 0 new 0 -> rejected
+[316] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[317] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[318] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[319] node 1325 hops 208 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[320] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1335 (16 inliers)
+[321] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1325 (18 inliers)
+[322] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1331 (25 inliers)
+[323] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1331 (25 inliers)
+[324] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1331 (25 inliers)
+[325] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (33 inliers)
+[326] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[327] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[328] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[329] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[330] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[331] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[332] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[333] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[334] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[335] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[336] node 1325 hops 208 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1338 (44 inliers)
+[337] node 1338 hops 208 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1338 (44 inliers), turn back -222 deg
+[338] node 1340 hops 193 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[339] node 1332 hops 201 follow (<Action.LEFT: 4>, 1) wp +1 p=0.66 best=1.00
+[340] node 1332 hops 201 follow (<Action.LEFT: 4>, 1) wp +7 p=0.87 best=1.00
+[341] node 1332 hops 201 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[342] node 1332 hops 201 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[343] node 1336 hops 197 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.27 best=1.00
+[344] node 1336 hops 197 follow (<Action.FORWARD: 1>, 1) wp +3 p=0.96 best=1.00
+[345] node 1336 hops 197 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.06 best=1.00
+[346] node 1336 hops 197 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.20 best=1.00
+[347] node 1336 hops 197 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.20 best=1.00
+[348] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1337 (20 inliers)
+[349] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (27 inliers)
+[350] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (27 inliers)
+[351] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (28 inliers)
+[352] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (30 inliers)
+[353] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (30 inliers)
+[354] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (30 inliers)
+[355] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1346 (30 inliers)
+[356] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[357] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[358] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[359] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[360] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[361] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[362] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[363] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[364] node 1336 hops 197 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1343 (36 inliers)
+[365] node 1343 hops 197 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1343 (36 inliers), turn back -217 deg
+[366] node 1344 hops 189 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.49 best=1.00
+[367] node 1344 hops 189 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.58 best=1.00
+[368] node 1344 hops 189 follow (<Action.LEFT: 4>, 1) wp +1 p=0.57 best=1.00
+[369] node 1344 hops 189 follow (<Action.LEFT: 4>, 1) wp +1 p=0.14 best=1.00
+[370] node 1344 hops 189 follow (<Action.LEFT: 4>, 1) wp +1 p=0.07 best=1.00
+[371] node 1344 hops 189 follow (<Action.LEFT: 4>, 1) wp +1 p=0.24 best=1.00
+[372] node 1344 hops 189 follow (<Action.LEFT: 4>, 1) wp +1 p=0.14 best=1.00
+[373] node 1344 hops 189 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[374] node 1344 hops 189 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[375] node 1348 hops 185 follow (<Action.LEFT: 4>, 1) wp +4 p=1.00 best=1.00
+[376] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1349 (23 inliers)
+[377] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1349 (23 inliers)
+[378] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1349 (23 inliers)
+[379] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1349 (23 inliers)
+[380] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1349 (23 inliers)
+[381] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1348 (26 inliers)
+[382] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1348 (28 inliers)
+[383] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1353 (31 inliers)
+[384] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1353 (33 inliers)
+[385] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1353 (40 inliers)
+[386] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1353 (40 inliers)
+[387] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[388] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[389] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[390] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[391] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[392] node 1348 hops 185 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1354 (43 inliers)
+[393] node 1354 hops 185 rp-scan-commit (<Action.RIGHT: 8>, 45) scan: photo 1354 (43 inliers), turn back -154 deg
+[394] node 1350 hops 183 replay (<Action.FORWARD: 1>, 3) replay 1354->1355: FORWARD x1 (here=-0 n=49)
+[395] node 1353 hops 180 replay (<Action.FORWARD: 1>, 9) replay 1355->1358: FORWARD x3 (here=-2 n=62)
+[396] node 1354 hops 179 replay (<Action.FORWARD: 1>, 3) replay 1358->1359: FORWARD x1 (here=-2 n=110)
+[397] node 1356 hops 177 replay (<Action.RIGHT: 8>, 9) replay 1359->1362: RIGHT x3 (here=-2 n=84)
+[398] node 1356 hops 177 replay (<Action.RIGHT: 8>, 6) replay align to 1363: here=+40 n=71
+[399] node 1359 hops 174 replay (<Action.RIGHT: 8>, 6) replay align to 1363: here=+19 n=92
+[400] node 1362 hops 171 replay (<Action.RIGHT: 8>, 5) replay align to 1364: here=+17 n=104
+[401] node 1364 hops 169 replay (<Action.RIGHT: 8>, 9) replay 1364->1367: RIGHT x3 (here=-1 n=106)
+[402] node 1364 hops 169 replay (<Action.LEFT: 4>, 6) replay align to 1367: here=-62 n=52
+[403] node 1364 hops 169 replay (<Action.RIGHT: 8>, 6) replay align to 1367: here=+20 n=84
+[404] node 1364 hops 169 replay (<Action.LEFT: 4>, 6) replay align to 1367: here=-62 n=55
+[405] node 1364 hops 169 replay (<Action.RIGHT: 8>, 6) replay align to 1367: here=+20 n=94
+[406] node 1364 hops 169 replay (<Action.LEFT: 4>, 6) replay align to 1367: here=-61 n=48
+[407] node 1364 hops 169 replay (<Action.RIGHT: 8>, 5) replay align to 1367: here=+19 n=94
+[408] node 1365 hops 168 replay (<Action.RIGHT: 8>, 6) replay align to 1367: here=+19 n=33
+[409] node 1365 hops 168 follow (<Action.RIGHT: 8>, 1) wp +6 p=1.00 best=1.00
+[410] node 1367 hops 166 replay (<Action.RIGHT: 8>, 6) replay align to 1369: here=+23 n=34
+[411] node 1370 hops 163 replay (<Action.FORWARD: 1>, 3) replay 1370->1371: FORWARD x1 (here=+2 n=50)
+[412] node 1370 hops 163 replay (<Action.FORWARD: 1>, 3) replay 1371->1372: FORWARD x1 (here=+2 n=59)
+[413] node 1372 hops 161 replay (<Action.LEFT: 4>, 3) replay 1373->1374: LEFT x1 (here=+8 n=59)
+[414] node 1374 hops 159 replay (<Action.LEFT: 4>, 9) replay 1374->1377: LEFT x3 (here=+3 n=63)
+[415] node 1376 hops 157 replay (<Action.LEFT: 4>, 4) replay align to 1377: here=-15 n=53
+[416] node 1376 hops 157 replay (<Action.FORWARD: 1>, 3) replay 1377->1378: FORWARD x1 (here=+0 n=52)
+[417] node 1376 hops 157 replay (<Action.LEFT: 4>, 3) replay 1378->1379: LEFT x1 (here=+6 n=38)
+[418] node 1376 hops 157 replay (<Action.FORWARD: 1>, 3) replay 1379->1380: FORWARD x1 (here=-1 n=41)
+[419] node 1376 hops 157 replay (<Action.FORWARD: 1>, 3) replay 1381->1382: FORWARD x1 (here=+6 n=33)
+[420] node 1376 hops 157 replay (<Action.RIGHT: 8>, 5) replay align to 1382: here=+18 n=49
+[421] node 1376 hops 157 replay (<Action.FORWARD: 1>, 3) replay 1382->1383: FORWARD x1 (here=-6 n=34)
+[422] node 1376 hops 157 replay (<Action.RIGHT: 8>, 4) replay align to 1383: here=+12 n=41
+[423] node 1376 hops 157 replay (<Action.FORWARD: 1>, 3) replay 1383->1384: FORWARD x1 (here=-2 n=36)
+[424] node 1376 hops 157 replay (<Action.LEFT: 4>, 3) replay 1384->1385: LEFT x1 (here=+7 n=33)
+[425] node 1376 hops 157 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[426] jump 1376 -> 1308: inliers old 24 new 72 -> accepted
+[426] linked 1376 <-> 1308: both seen as this place (24 and 72 inliers)
+[426] node 1308 hops 158 rp-scan-commit (<Action.RIGHT: 8>, 2) scan: photo 1308 (72 inliers), turn back -8 deg
+[427] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[428] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[429] node 1308 hops 158 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.10
+[430] node 1308 hops 158 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[431] node 1376 hops 157 replay (<Action.RIGHT: 8>, 6) replay align to 1377: here=+30 n=35
+[432] node 1308 hops 158 replay (<Action.RIGHT: 8>, 6) replay align to 1377: here=+22 n=46
+[433] node 1308 hops 158 replay (<Action.RIGHT: 8>, 5) replay align to 1377: here=+17 n=43
+[434] node 1376 hops 157 replay (<Action.LEFT: 4>, 3) replay 1378->1379: LEFT x1 (here=+0 n=53)
+[435] node 1308 hops 158 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.59 best=0.98
+[436] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[437] node 1308 hops 158 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1308 (43 inliers)
+[438] node 1308 hops 158 rp-scan-commit (<Action.RIGHT: 8>, 1) scan: photo 1308 (85 inliers), turn back -4 deg
+[439] node 1377 hops 156 replay (<Action.RIGHT: 8>, 6) replay align to 1377: here=+42 n=30
+[440] node 1309 hops 159 reverse (<Action.LEFT: 4>, 2) reverse 1309->1308: undo RIGHT
+[441] node 1308 hops 158 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[442] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.40 best=1.00
+[443] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.66 best=1.00
+[444] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[445] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[446] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.52 best=1.00
+[447] node 1309 hops 159 reverse (<Action.LEFT: 4>, 2) reverse 1309->1308: undo RIGHT
+[448] node 1308 hops 158 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.30 best=1.00
+[449] node 1308 hops 158 rp-scan-commit (<Action.FORWARD: 1>, 1) scan: photo 1308 (81 inliers), turn back +2 deg
+[450] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[451] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.41 best=1.00
+[452] node 1377 hops 156 replay (<Action.RIGHT: 8>, 6) replay align to 1379: here=+31 n=45
+[453] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.10 best=1.00
+[454] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.36 best=1.00
+[455] node 1308 hops 158 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.60 best=1.00
+[456] node 1377 hops 156 replay (<Action.RIGHT: 8>, 6) replay align to 1378: here=+21 n=39
+[457] node 1309 hops 159 reverse (<Action.LEFT: 4>, 2) reverse 1309->1308: undo RIGHT
+[458] node 1377 hops 156 replay (<Action.RIGHT: 8>, 6) replay align to 1377: here=+29 n=37
+[459] node 1378 hops 155 replay (<Action.LEFT: 4>, 3) replay 1378->1379: LEFT x1 (here=+1 n=75)
+[460] node 1308 hops 158 replay (<Action.FORWARD: 1>, 3) replay 1379->1380: FORWARD x1 (here=+1 n=43)
+[461] node 1378 hops 155 replay (<Action.LEFT: 4>, 3) replay 1380->1381: LEFT x1 (here=-2 n=77)
+[462] node 1378 hops 155 replay (<Action.FORWARD: 1>, 3) replay 1381->1382: FORWARD x1 (here=+11 n=53)
+[463] node 1378 hops 155 replay (<Action.FORWARD: 1>, 6) replay 1382->1384: FORWARD x2 (here=-1 n=63)
+[464] node 1381 hops 152 replay (<Action.LEFT: 4>, 3) replay 1384->1385: LEFT x1 (here=+12 n=59)
+[465] node 1381 hops 152 replay (<Action.LEFT: 4>, 5) replay align to 1386: here=-17 n=49
+[466] node 1385 hops 148 replay (<Action.LEFT: 4>, 5) replay align to 1387: here=-16 n=72
+[467] node 1386 hops 147 replay (<Action.LEFT: 4>, 3) replay 1388->1389: LEFT x1 (here=-10 n=80)
+[468] node 1386 hops 147 replay (<Action.FORWARD: 1>, 3) replay 1389->1390: FORWARD x1 (here=-5 n=76)
+[469] node 1389 hops 144 replay (<Action.RIGHT: 8>, 20) skip 1390->1409: net turn -68 deg (drive turned -72)
+[470] node 1403 hops 148 replay (<Action.RIGHT: 8>, 6) replay align to 1409: here=+40 n=41
+[471] node 1404 hops 147 replay (<Action.RIGHT: 8>, 6) replay align to 1409: here=+38 n=55
+[472] node 1405 hops 146 replay (<Action.RIGHT: 8>, 6) replay align to 1409: here=+33 n=56
+[473] node 1407 hops 144 replay (<Action.RIGHT: 8>, 4) replay align to 1409: here=+14 n=59
+[474] node 1407 hops 144 replay (<Action.FORWARD: 1>, 3) replay 1409->1410: FORWARD x1 (here=+0 n=43)
+[475] node 1407 hops 144 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[476] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1411 (26 inliers)
+[477] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[478] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[479] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[480] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[481] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[482] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1409 (32 inliers)
+[483] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[484] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[485] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[486] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[487] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[488] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[489] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[490] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[491] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[492] node 1409 hops 142 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1419 (44 inliers)
+[493] node 1419 hops 142 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1419 (44 inliers), turn back -263 deg
+[494] node 1419 hops 132 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[495] node 1419 hops 132 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[496] node 1419 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[497] node 1419 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[498] node 1419 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[499] node 1419 hops 132 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[500] jump 1419 -> 865: inliers old 0 new 67 -> accepted
+[500] node 865 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 865->864: undo LEFT
+[501] node 865 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 865->864: undo LEFT
+[502] node 865 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 865->864: undo LEFT
+[503] node 865 hops 271 reverse (<Action.RIGHT: 8>, 2) reverse 865->864: undo LEFT
+[504] node 862 hops 270 replay (<Action.RIGHT: 8>, 3) skip 871->862: net turn -10 deg (drive turned -21)
+[505] node 864 hops 270 reverse (<Action.RIGHT: 8>, 2) reverse 864->863: undo LEFT
+[506] node 863 hops 269 reverse (<Action.RIGHT: 8>, 2) reverse 863->862: undo LEFT
+[507] node 863 hops 269 reverse (<Action.RIGHT: 8>, 2) reverse 863->862: undo LEFT
+[508] node 863 hops 269 reverse (<Action.RIGHT: 8>, 2) reverse 863->862: undo LEFT
+[509] node 863 hops 269 reverse (<Action.RIGHT: 8>, 2) reverse 863->862: undo LEFT
+[510] node 862 hops 268 reverse (<Action.RIGHT: 8>, 2) reverse 862->861: undo LEFT
+[511] node 862 hops 268 reverse (<Action.RIGHT: 8>, 2) reverse 862->861: undo LEFT
+[512] node 862 hops 268 reverse (<Action.RIGHT: 8>, 2) reverse 862->861: undo LEFT
+[513] node 861 hops 267 reverse (<Action.BACKWARD: 2>, 2) reverse 861->860: undo FORWARD
+[514] node 861 hops 267 reverse (<Action.BACKWARD: 2>, 2) reverse 861->860: undo FORWARD
+[515] node 861 hops 267 reverse (<Action.BACKWARD: 2>, 2) reverse 861->860: undo FORWARD
+[516] node 860 hops 266 reverse (<Action.RIGHT: 8>, 2) reverse 860->859: undo LEFT
+[517] node 860 hops 266 reverse (<Action.RIGHT: 8>, 2) reverse 860->859: undo LEFT
+[518] node 860 hops 266 reverse (<Action.RIGHT: 8>, 2) reverse 860->859: undo LEFT
+[519] node 860 hops 266 reverse (<Action.RIGHT: 8>, 2) reverse 860->859: undo LEFT
+[520] node 860 hops 266 reverse (<Action.RIGHT: 8>, 2) reverse 860->859: undo LEFT
+[521] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[522] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[523] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[524] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[525] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[526] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[527] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[528] node 857 hops 263 reverse (<Action.LEFT: 4>, 2) reverse 857->856: undo RIGHT
+[529] node 855 hops 261 reverse (<Action.LEFT: 4>, 2) reverse 855->854: undo RIGHT
+[530] node 854 hops 260 reverse (<Action.LEFT: 4>, 2) reverse 854->853: undo RIGHT
+[531] node 854 hops 260 reverse (<Action.LEFT: 4>, 2) reverse 854->853: undo RIGHT
+[532] node 854 hops 260 reverse (<Action.LEFT: 4>, 2) reverse 854->853: undo RIGHT
+[533] node 854 hops 260 reverse (<Action.LEFT: 4>, 2) reverse 854->853: undo RIGHT
+[534] node 854 hops 260 reverse (<Action.LEFT: 4>, 2) reverse 854->853: undo RIGHT
+[535] node 1431 hops 120 follow (<Action.LEFT: 4>, 1) wp +1 p=1.00 best=1.00
+[536] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1432 (21 inliers)
+[537] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1432 (21 inliers)
+[538] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1432 (21 inliers)
+[539] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1432 (21 inliers)
+[540] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[541] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[542] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[543] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[544] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[545] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[546] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[547] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[548] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[549] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[550] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[551] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[552] node 1431 hops 120 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1443 (30 inliers)
+[553] node 1443 hops 120 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1443 (30 inliers), turn back -270 deg
+[554] node 1443 hops 108 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[555] node 1443 hops 108 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[556] node 1443 hops 108 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[557] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[558] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (6/45 ticks) p=0.00
+[559] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (9/45 ticks) p=0.00
+[560] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (12/45 ticks) p=0.00
+[561] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (15/45 ticks) p=0.00
+[562] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (18/45 ticks) p=0.00
+[563] node 1443 hops 108 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (21/45 ticks) p=0.00
+[564] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1455 (22 inliers)
+[565] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1455 (22 inliers)
+[566] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1455 (22 inliers)
+[567] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[568] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[569] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[570] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[571] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[572] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[573] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[574] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[575] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[576] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[577] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[578] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[579] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[580] node 1443 hops 108 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1453 (35 inliers)
+[581] node 1453 hops 108 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1453 (35 inliers), turn back -265 deg
+[582] node 1453 hops 98 follow (<Action.FORWARD: 1>, 1) wp +1 p=1.00 best=1.00
+[583] node 1454 hops 97 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[584] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.65 best=1.00
+[585] node 1454 hops 97 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[586] lost at node 1453 (0 inliers): relocalised to 858 (90 inliers)
+[586] node 858 hops 264 reverse (<Action.BACKWARD: 2>, 2) reverse 858->857: undo FORWARD
+[587] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.31 best=1.00
+[588] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[589] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[590] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.05 best=1.00
+[591] jump 1453 -> 536: inliers old 13 new 0 -> rejected
+[591] node 1453 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[592] jump 1453 -> 536: inliers old 12 new 0 -> rejected
+[592] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1482 (21 inliers)
+[593] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[594] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[595] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[596] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[597] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[598] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[599] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[600] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[601] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[602] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[603] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[604] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[605] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[606] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[607] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1457 (32 inliers)
+[608] node 1453 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (36 inliers)
+[609] node 1479 hops 98 rp-scan-commit (<Action.RIGHT: 8>, 4) scan: photo 1479 (36 inliers), turn back -15 deg
+[610] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[611] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[612] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[613] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[614] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[615] node 1472 hops 94 follow (<Action.LEFT: 4>, 1) wp +1 p=0.66 best=1.00
+[616] node 1472 hops 94 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[617] node 1472 hops 94 follow (<Action.LEFT: 4>, 1) wp +1 p=0.38 best=1.00
+[618] node 1472 hops 94 follow (<Action.LEFT: 4>, 1) wp +1 p=0.49 best=1.00
+[619] node 1472 hops 94 follow (<Action.LEFT: 4>, 1) wp +1 p=0.69 best=1.00
+[620] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (25 inliers)
+[621] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (25 inliers)
+[622] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (25 inliers)
+[623] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (25 inliers)
+[624] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (25 inliers)
+[625] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[626] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[627] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[628] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[629] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[630] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[631] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[632] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (32 inliers)
+[633] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (35 inliers)
+[634] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[635] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[636] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[637] node 1479 hops 94 rp-scan-commit (<Action.RIGHT: 8>, 16) scan: photo 1479 (37 inliers), turn back -57 deg
+[638] node 1462 hops 89 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[639] node 1462 hops 89 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[640] node 1462 hops 89 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[641] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[642] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[643] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[644] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[645] node 1473 hops 93 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.66 best=1.00
+[646] node 1473 hops 93 follow (<Action.LEFT: 4>, 1) wp +1 p=0.64 best=1.00
+[647] node 1473 hops 93 follow (<Action.LEFT: 4>, 1) wp +1 p=0.23 best=1.00
+[648] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (18 inliers)
+[649] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (26 inliers)
+[650] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (26 inliers)
+[651] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (26 inliers)
+[652] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (26 inliers)
+[653] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[654] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[655] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[656] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[657] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[658] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[659] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[660] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[661] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1477 (28 inliers)
+[662] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[663] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[664] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (37 inliers)
+[665] node 1479 hops 93 rp-scan-commit (<Action.RIGHT: 8>, 14) scan: photo 1479 (37 inliers), turn back -48 deg
+[666] node 1462 hops 89 replay (<Action.FORWARD: 1>, 3) replay 1479->1480: FORWARD x1 (here=-4 n=31)
+[667] node 1462 hops 89 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[668] node 1462 hops 89 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[669] node 1462 hops 89 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[670] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[671] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[672] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[673] jump 1462 -> 839: inliers old 15 new 29 -> rejected
+[673] node 1462 hops 89 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[674] node 1473 hops 93 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[675] node 1473 hops 93 follow (<Action.LEFT: 4>, 1) wp +1 p=0.67 best=1.00
+[676] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1486 (19 inliers)
+[677] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (20 inliers)
+[678] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (20 inliers)
+[679] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (20 inliers)
+[680] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (20 inliers)
+[681] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[682] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[683] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[684] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[685] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[686] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[687] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[688] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[689] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[690] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[691] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[692] node 1473 hops 93 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1474 (32 inliers)
+[693] node 1474 hops 93 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1474 (32 inliers), turn back -234 deg
+[694] node 1474 hops 92 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[695] node 1472 hops 94 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.06 best=1.00
+[696] node 1472 hops 94 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[697] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.15
+[698] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.07
+[699] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[700] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.02
+[701] node 1472 hops 94 directed (<Action.RIGHT: 8>, 6) directed here=-4 planned=-31 need=-27 n=23
+[702] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[703] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (21/45 ticks) p=0.00
+[704] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (22 inliers)
+[705] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1476 (22 inliers)
+[706] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1481 (27 inliers)
+[707] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[708] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[709] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[710] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[711] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[712] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[713] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[714] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[715] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1479 (28 inliers)
+[716] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (29 inliers)
+[717] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (29 inliers)
+[718] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (29 inliers)
+[719] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (29 inliers)
+[720] node 1472 hops 94 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1473 (29 inliers)
+[721] node 1472 hops 94 rp-scan-none (<Action.FORWARD: 1>, 2) scan: no route photo found (best 29)
+[722] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[723] node 1472 hops 94 directed (<Action.RIGHT: 8>, 3) directed here=-19 planned=-31 need=-12 n=20
+[724] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (33/45 ticks) p=0.00
+[725] node 1472 hops 94 directed (<Action.RIGHT: 8>, 6) directed here=-9 planned=-31 need=-22 n=20
+[726] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[727] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[728] node 1472 hops 94 wp-search (<Action.LEFT: 4>, 3) directed here=-1 planned=-31 need=-30 n=21
+[729] node 1472 hops 94 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[730] node 1472 hops 94 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[731] node 1468 hops 98 follow (<Action.LEFT: 4>, 1) wp +1 p=0.43 best=1.00
+[732] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1472 (27 inliers)
+[733] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1472 (28 inliers)
+[734] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1481 (29 inliers)
+[735] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[736] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[737] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[738] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[739] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[740] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[741] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[742] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[743] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[744] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[745] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[746] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[747] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[748] node 1468 hops 98 rp-scan (<Action.LEFT: 4>, 6) scan: best so far photo 1480 (44 inliers)
+[749] node 1480 hops 98 rp-scan-commit (<Action.RIGHT: 8>, 52) scan: photo 1480 (44 inliers), turn back -287 deg
+[750] node 1473 hops 93 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[751] node 1473 hops 93 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[752] node 1473 hops 93 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[753] node 1472 hops 94 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.83 best=1.00
+[754] node 1473 hops 93 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[755] node 1473 hops 93 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[756] node 1473 hops 93 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[757] node 1473 hops 93 follow (<Action.LEFT: 4>, 1) wp +1 p=0.25 best=1.00
+[758] node 1473 hops 93 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[759] node 1473 hops 93 directed (<Action.RIGHT: 8>, 6) directed here=+14 planned=-31 need=-45 n=24
+[760] node 1473 hops 93 budget 16 directed here=+14 planned=-31 need=-45 n=24
+╭─ result ─────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                          │
+│ 3,991 steps · SPL 0.00                                                       │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+759 round trips · median 0.9 ms (server 0.9 ms, network 0.0 ms) · your code 
+741.1 ms per step
+look-once scans: 26; skips taken: 6
+replay: 123 decisions taught-and-repeated (50 re-alignments, 62 advanced past the best-matching photo, 22 extra steps in the fast lane)
+directed steering: 8 decisions replaced a blind turn
+route: localised on the route in 241 decisions, off it in 144
+jitter: 84 turn reversals; 21 reversals suppressed by the damper
+ticks by reason: rp-scan 2232, rp-scan-commit 695, replay 608, wp-search 207, follow 101, reverse 76, directed 41, damp-fwd 21, steer-turn 6, rp-scan-none 4, budget 1
+lost detector: 2 relocalisations
+ticks asked: turning 3799, forward 184, backward 8
+result: Result(goal_tier='failed', nav_steps=3991, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-10-93116', session_id='local-10', arrival=None, think={'steps': 759, 'ticks': 3991, 'payload_bytes': 174873600, 'rtt_ms_p50': 0.8608955, 'server_ms_p50': 0.8608955, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 741.1368535, 'steps_per_second': 1.2865804321292194}, attempts_used=0, attempts_allowed=None)

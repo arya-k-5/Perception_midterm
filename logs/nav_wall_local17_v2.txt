@@ -1,0 +1,761 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-17_dinov2_vits14_k32_d256_2723.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2723 frames from 3 trajectories
+spawn join: drive starts 0 and 907 (83 inliers)
+spawn join: drive starts 0 and 1464 (88 inliers)
+sequence check: kept 533 of 1313 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 531 of 533 shortcuts, rejected 2 look-alikes
+sequence check: kept 531 of 531 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3251 edges, 531 verified shortcuts
+checking your agent on a sample frame...
+goal: node 1783 (view 0, 0 inliers; R-best 1783)
+MAP: 2723 photos, 3251 edges. ROUTE from spawn photo 0: 193 hops (~579 ticks), 1 drive switches (~0 ticks of turning at them), 0 hops driven in reverse
+map planning took 0.0 s
+GOAL check (all 4 goal photos, F/L/B/R): base goal 1783: 0 = [0, 0, 0, 0]; best place 0: 0 = [0, 0, 0, 0]
+wall guard check: floor ahead on 60 forward-driving photos: median 0.76, 0% would count as a wall
+[1] node 0 hops 193 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.68
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 17                                                                                                        │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=2321593239                                            │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:17")                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+goal: node 2106 (view 3, 28 inliers; R-best 358)
+MAP: 2723 photos, 3251 edges. ROUTE from spawn photo 907: 416 hops (~1248 ticks), 2 drive switches (~0 ticks of turning at them), 0 hops driven in reverse
+map planning took 0.0 s
+GOAL check (all 4 goal photos, F/L/B/R): base goal 2106: 81 = [21, 18, 14, 28]; best place 1169: 202 = [55, 70, 43, 34]
+GOAL moved to photo 1177 (front-photo frame of that place)
+wall guard check: floor ahead on 60 forward-driving photos: median 0.76, 0% would count as a wall
+[1] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[2] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[3] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[4] node 1464 hops 270 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.00 best=1.00
+[5] node 1464 hops 270 wp-search (<Action.RIGHT: 8>, 3) look for wp +1 (3/45 ticks) p=0.00
+[6] node 1464 hops 270 follow (<Action.RIGHT: 8>, 1) wp +1 p=0.66 best=1.00
+[7] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.99 best=1.00
+[8] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.64 best=1.00
+[9] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.07 best=1.00
+[10] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[11] node 1464 hops 270 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.56 best=1.00
+[12] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[13] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[14] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.06 best=1.00
+[15] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.47 best=1.00
+[16] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.41 best=1.00
+[17] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.02 best=1.00
+[18] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.09 best=1.00
+[19] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.16 best=1.00
+[20] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.21 best=1.00
+[21] node 1464 hops 270 follow (<Action.LEFT: 4>, 1) wp +1 p=0.64 best=1.00
+[22] node 1464 hops 270 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.41 best=1.00
+[23] jump 1464 -> 499: inliers old 13 new 45 -> accepted
+[23] node 492 hops 404 undo-turn (<Action.RIGHT: 8>, 17) undo 499->492 in one go: turn -57 deg (drive turned +72 there)
+[24] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[25] node 475 hops 391 undo-turn (<Action.RIGHT: 8>, 45) undo 486->475 in one go: turn -153 deg (drive turned +72 there)
+[26] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[27] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[28] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[29] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[30] node 471 hops 376 reverse (<Action.LEFT: 4>, 2) reverse 471->470: undo RIGHT
+[31] node 467 hops 373 undo-turn (<Action.LEFT: 4>, 12) undo 468->467 in one go: turn +42 deg (drive turned -10 there)
+[32] node 471 hops 376 reverse (<Action.LEFT: 4>, 2) reverse 471->470: undo RIGHT
+[33] node 471 hops 376 reverse (<Action.LEFT: 4>, 2) reverse 471->470: undo RIGHT
+[34] node 471 hops 376 reverse (<Action.LEFT: 4>, 2) reverse 471->470: undo RIGHT
+[35] jump 471 -> 482: inliers old 21 new 45 -> accepted
+[35] linked 471 <-> 482: both seen as this place (21 and 45 inliers)
+[35] node 482 hops 377 damp-fwd (<Action.FORWARD: 1>, 1) wp +1 p=0.49 best=1.00
+[36] node 482 hops 377 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.80 best=1.00
+[37] node 482 hops 377 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[38] node 482 hops 377 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[39] node 482 hops 377 follow (<Action.FORWARD: 1>, 1) wp +1 p=0.00 best=1.00
+[40] node 482 hops 377 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=1.00
+[41] jump 482 -> 489: inliers old 17 new 35 -> rejected
+[41] node 482 hops 377 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (3/45 ticks) p=0.00
+[42] jump 482 -> 489: inliers old 17 new 54 -> accepted
+[42] linked 482 <-> 489: both seen as this place (17 and 54 inliers)
+[42] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (6/45 ticks) p=0.00
+[43] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (9/45 ticks) p=0.00
+[44] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (12/45 ticks) p=0.00
+[45] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (15/45 ticks) p=0.00
+[46] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (18/45 ticks) p=0.00
+[47] node 492 hops 382 undo-turn (<Action.RIGHT: 8>, 4) undo 493->492 in one go: turn -15 deg (drive turned +10 there)
+[48] node 492 hops 381 reverse (<Action.BACKWARD: 2>, 2) reverse 492->491: undo FORWARD
+[49] node 489 hops 379 undo-turn (<Action.RIGHT: 8>, 8) undo 490->489 in one go: turn -26 deg (drive turned +10 there)
+[50] node 489 hops 378 damp-fwd (<Action.FORWARD: 1>, 1) look for wp +1 (21/45 ticks) p=0.00
+[51] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (24/45 ticks) p=0.00
+[52] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (27/45 ticks) p=0.00
+[53] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (30/45 ticks) p=0.00
+[54] node 489 hops 379 undo-turn (<Action.RIGHT: 8>, 10) undo 490->489 in one go: turn -34 deg (drive turned +10 there)
+[55] node 489 hops 378 damp-fwd (<Action.FORWARD: 1>, 1) look for wp +1 (33/45 ticks) p=0.00
+[56] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (36/45 ticks) p=0.00
+[57] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (39/45 ticks) p=0.00
+[58] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (42/45 ticks) p=0.00
+[59] node 489 hops 378 wp-search (<Action.LEFT: 4>, 3) look for wp +1 (45/45 ticks) p=0.00
+[60] node 491 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 491->490: undo FORWARD
+[61] node 491 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 491->490: undo FORWARD
+[62] no progress for 60 steps at hops 379: detour around nodes 490..464, next node now 489 (395 hops)
+[62] node 488 hops 395 undo-turn (<Action.RIGHT: 8>, 14) undo 490->488 in one go: turn -49 deg (drive turned +21 there)
+[63] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[64] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[65] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[66] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[67] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[68] node 488 hops 393 reverse (<Action.BACKWARD: 2>, 2) reverse 488->487: undo FORWARD
+[69] node 475 hops 388 undo-turn (<Action.RIGHT: 8>, 26) undo 483->475 in one go: turn -88 deg (drive turned +82 there)
+[70] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[71] node 475 hops 384 undo-turn (<Action.RIGHT: 8>, 16) undo 479->475 in one go: turn -53 deg (drive turned +41 there)
+[72] node 475 hops 381 undo-turn (<Action.RIGHT: 8>, 6) undo 476->475 in one go: turn -21 deg (drive turned +10 there)
+[73] node 475 hops 380 reverse (<Action.BACKWARD: 2>, 2) reverse 475->474: undo FORWARD
+[74] node 467 hops 379 undo-turn (<Action.LEFT: 4>, 16) undo 474->467 in one go: turn +56 deg (drive turned -72 there)
+[75] node 467 hops 372 reverse (<Action.BACKWARD: 2>, 2) reverse 467->466: undo FORWARD
+[76] node 467 hops 374 undo-turn (<Action.LEFT: 4>, 1) undo 469->467 in one go: turn +4 deg (drive turned -21 there)
+[77] node 467 hops 374 undo-turn (<Action.LEFT: 4>, 1) undo 469->467 in one go: turn +2 deg (drive turned -21 there)
+[78] node 467 hops 372 reverse (<Action.BACKWARD: 2>, 2) reverse 467->466: undo FORWARD
+[79] node 467 hops 372 reverse (<Action.BACKWARD: 2>, 2) reverse 467->466: undo FORWARD
+[80] node 467 hops 372 reverse (<Action.BACKWARD: 2>, 2) reverse 467->466: undo FORWARD
+[81] node 463 hops 371 undo-turn (<Action.LEFT: 4>, 16) undo 466->463 in one go: turn +57 deg (drive turned -31 there)
+[82] node 462 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 462->461: undo FORWARD
+[83] node 461 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[84] node 461 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[85] node 461 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[86] node 461 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[87] node 463 hops 370 undo-turn (<Action.LEFT: 4>, 13) undo 465->463 in one go: turn +44 deg (drive turned -21 there)
+[88] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[89] node 464 hops 369 reverse (<Action.LEFT: 4>, 2) reverse 464->463: undo RIGHT
+[90] node 463 hops 370 undo-turn (<Action.LEFT: 4>, 11) undo 465->463 in one go: turn +37 deg (drive turned -21 there)
+[91] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[92] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[93] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[94] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[95] no progress for 60 steps at hops 368: detour around nodes 463..453, next node now 462 (368 hops)
+[95] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[96] node 463 hops 368 stuck (<Action.FORWARD: 1>, 4) reverse 463->462: undo FORWARD
+[97] node 463 hops 368 recover (<Action.RIGHT: 8>, 11) reverse 463->462: undo FORWARD
+[98] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[99] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[100] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[101] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[102] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[103] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[104] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[105] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[106] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[107] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[108] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[109] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[110] no progress for 60 steps at hops 368: detour around nodes 463..453, next node now 462 (368 hops)
+[110] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[111] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[112] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[113] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[114] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[115] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[116] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[117] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[118] jump 463 -> 271: inliers old 15 new 0 -> rejected
+[118] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[119] jump 463 -> 271: inliers old 16 new 0 -> rejected
+[119] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[120] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[121] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[122] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[123] no progress for 60 steps at hops 368: detour around nodes 463..453, next node now 462 (368 hops)
+[123] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[124] jump 463 -> 147: inliers old 16 new 20 -> rejected
+[124] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[125] jump 463 -> 147: inliers old 15 new 24 -> rejected
+[125] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[126] jump 463 -> 147: inliers old 14 new 16 -> rejected
+[126] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[127] node 463 hops 368 stuck (<Action.FORWARD: 1>, 4) reverse 463->462: undo FORWARD
+[128] node 463 hops 368 recover (<Action.LEFT: 4>, 14) reverse 463->462: undo FORWARD
+[129] no progress for 60 steps at hops 368: detour around nodes 463..453, next node now 462 (368 hops)
+[129] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[130] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[131] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[132] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[133] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[134] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[135] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[136] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[137] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[138] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[139] node 463 hops 368 stuck (<Action.FORWARD: 1>, 4) reverse 463->462: undo FORWARD
+[140] node 463 hops 368 recover (<Action.RIGHT: 8>, 17) reverse 463->462: undo FORWARD
+[141] no progress for 60 steps at hops 368: detour around nodes 463..453, next node now 462 (368 hops)
+[141] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[142] node 463 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[143] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[144] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[145] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[146] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[147] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[148] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[149] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[150] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[151] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[152] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[153] jump 459 -> 147: inliers old 24 new 22 -> rejected
+[153] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[154] node 459 hops 364 stuck (<Action.FORWARD: 1>, 4) reverse 459->458: undo FORWARD
+[155] node 459 hops 364 recover (<Action.LEFT: 4>, 8) reverse 459->458: undo FORWARD
+[156] no progress for 60 steps at hops 364: detour around nodes 459..816, next node now 458 (365 hops)
+[156] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[157] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[158] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[159] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[160] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[161] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[162] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[163] node 459 hops 365 stuck (<Action.FORWARD: 1>, 4) reverse 459->458: undo FORWARD
+[164] node 459 hops 365 recover (<Action.RIGHT: 8>, 11) reverse 459->458: undo FORWARD
+[165] no progress for 60 steps at hops 366: detour around nodes 460..450, next node now 459 (366 hops)
+[165] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[166] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[167] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[168] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[169] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[170] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[171] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[172] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[173] jump 460 -> 1784: inliers old 12 new 24 -> rejected
+[173] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[174] node 460 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 460->459: undo FORWARD
+[175] node 460 hops 366 stuck (<Action.FORWARD: 1>, 4) reverse 460->459: undo FORWARD
+[176] node 460 hops 366 recover (<Action.LEFT: 4>, 14) reverse 460->459: undo FORWARD
+[177] no progress for 60 steps at hops 370: detour around nodes 464..454, next node now 463 (370 hops)
+[177] node 463 hops 370 undo-turn (<Action.LEFT: 4>, 6) undo 464->463 in one go: turn +22 deg (drive turned -10 there)
+[178] node 463 hops 369 reverse (<Action.BACKWARD: 2>, 2) reverse 463->462: undo FORWARD
+[179] node 462 hops 368 reverse (<Action.BACKWARD: 2>, 2) reverse 462->461: undo FORWARD
+[180] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[181] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[182] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[183] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[184] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[185] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[186] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[187] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[188] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[189] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[190] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[191] jump 461 -> 114: inliers old 14 new 23 -> rejected
+[191] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[192] no progress for 60 steps at hops 367: detour around nodes 461..451, next node now 460 (367 hops)
+[192] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[193] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[194] node 461 hops 367 stuck (<Action.FORWARD: 1>, 4) reverse 461->460: undo FORWARD
+[195] node 461 hops 367 recover (<Action.RIGHT: 8>, 17) reverse 461->460: undo FORWARD
+[196] no progress for 60 steps at hops 367: detour around nodes 461..451, next node now 460 (367 hops)
+[196] node 461 hops 367 reverse (<Action.BACKWARD: 2>, 2) reverse 461->460: undo FORWARD
+[197] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[198] node 459 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[199] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[200] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[201] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[202] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[203] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[204] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[205] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[206] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[207] node 457 hops 363 reverse (<Action.LEFT: 4>, 2) reverse 457->456: undo RIGHT
+[208] node 456 hops 363 undo-turn (<Action.LEFT: 4>, 17) undo 457->456 in one go: turn +59 deg (drive turned -10 there)
+[209] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[210] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[211] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[212] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[213] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[214] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[215] jump 456 -> 114: inliers old 22 new 26 -> rejected
+[215] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[216] jump 456 -> 114: inliers old 24 new 24 -> rejected
+[216] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[217] jump 456 -> 114: inliers old 21 new 23 -> rejected
+[217] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[218] jump 456 -> 114: inliers old 26 new 25 -> rejected
+[218] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[219] jump 456 -> 114: inliers old 25 new 23 -> rejected
+[219] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[220] node 456 hops 362 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[221] no progress for 60 steps at hops 362: detour around nodes 456..818, next node now 455 (364 hops)
+[221] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[222] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[223] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[224] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[225] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[226] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[227] jump 456 -> 147: inliers old 22 new 30 -> rejected
+[227] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[228] jump 456 -> 147: inliers old 25 new 37 -> rejected
+[228] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[229] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[230] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[231] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[232] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[233] node 456 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[234] no progress for 60 steps at hops 364: detour around nodes 456..816, next node now 455 (365 hops)
+[234] node 456 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[235] node 456 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[236] node 456 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[237] node 456 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[238] node 456 hops 365 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[239] node 456 hops 365 stuck (<Action.FORWARD: 1>, 4) reverse 456->455: undo FORWARD
+[240] node 456 hops 365 recover (<Action.LEFT: 4>, 8) reverse 456->455: undo FORWARD
+[241] no progress for 60 steps at hops 365: detour around nodes 456..815, next node now 455 (366 hops)
+[241] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[242] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[243] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[244] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[245] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[246] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[247] jump 456 -> 114: inliers old 24 new 28 -> rejected
+[247] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[248] node 456 hops 366 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[249] node 456 hops 366 stuck (<Action.FORWARD: 1>, 4) reverse 456->455: undo FORWARD
+[250] node 456 hops 366 recover (<Action.RIGHT: 8>, 11) reverse 456->455: undo FORWARD
+[251] no progress for 60 steps at hops 366: detour around nodes 456..814, next node now 455 (361 hops)
+[251] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[252] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[253] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[254] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[255] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[256] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[257] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[258] node 456 hops 361 stuck (<Action.FORWARD: 1>, 4) reverse 456->455: undo FORWARD
+[259] node 456 hops 361 recover (<Action.LEFT: 4>, 14) reverse 456->455: undo FORWARD
+[260] no progress for 60 steps at hops 361: detour around nodes 456..819, next node now 455 (361 hops)
+[260] node 456 hops 361 reverse (<Action.BACKWARD: 2>, 2) reverse 456->455: undo FORWARD
+[261] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[262] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[263] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[264] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[265] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[266] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[267] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[268] jump 458 -> 121: inliers old 20 new 0 -> rejected
+[268] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[269] node 458 hops 363 stuck (<Action.FORWARD: 1>, 4) reverse 458->457: undo FORWARD
+[270] node 458 hops 363 recover (<Action.RIGHT: 8>, 17) reverse 458->457: undo FORWARD
+[271] no progress for 60 steps at hops 363: detour around nodes 458..817, next node now 457 (363 hops)
+[271] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[272] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[273] node 454 hops 359 reverse (<Action.LEFT: 4>, 2) reverse 454->453: undo RIGHT
+[274] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[275] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[276] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[277] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[278] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[279] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[280] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[281] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[282] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[283] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[284] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[285] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[286] no progress for 60 steps at hops 357: detour around nodes 452..823, next node now 451 (357 hops)
+[286] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[287] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[288] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[289] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[290] jump 452 -> 459: inliers old 15 new 29 -> rejected
+[290] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[291] jump 452 -> 459: inliers old 15 new 35 -> rejected
+[291] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[292] jump 452 -> 459: inliers old 17 new 36 -> rejected
+[292] node 452 hops 357 reverse (<Action.LEFT: 4>, 2) reverse 452->451: undo RIGHT
+[293] jump 452 -> 459: inliers old 7 new 42 -> accepted
+[293] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[294] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[295] node 459 hops 364 reverse (<Action.BACKWARD: 2>, 2) reverse 459->458: undo FORWARD
+[296] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[297] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[298] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[299] no progress for 60 steps at hops 363: detour around nodes 458..817, next node now 457 (363 hops)
+[299] node 458 hops 363 reverse (<Action.BACKWARD: 2>, 2) reverse 458->457: undo FORWARD
+[300] node 456 hops 362 undo-turn (<Action.LEFT: 4>, 10) undo 457->456 in one go: turn +34 deg (drive turned -10 there)
+[301] node 456 hops 362 undo-turn (<Action.LEFT: 4>, 2) undo 457->456 in one go: turn +7 deg (drive turned -10 there)
+[302] node 456 hops 362 undo-turn (<Action.LEFT: 4>, 2) undo 457->456 in one go: turn +7 deg (drive turned -10 there)
+[303] node 456 hops 362 undo-turn (<Action.LEFT: 4>, 1) undo 457->456 in one go: turn +3 deg (drive turned -10 there)
+[304] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[305] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[306] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[307] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[308] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[309] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[310] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[311] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[312] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[312] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[313] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[314] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[315] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[316] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[317] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[318] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[319] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[320] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[321] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[322] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[323] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[324] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[325] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[325] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[326] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[327] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[328] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[329] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[330] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[331] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[332] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[333] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[334] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[335] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[335] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[336] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[337] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[338] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[338] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[339] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[340] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[341] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[342] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[343] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[344] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[345] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[346] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[347] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[348] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[349] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[350] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[351] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[351] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[352] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[353] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[354] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[355] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[356] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[357] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[358] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[359] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[360] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[361] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[362] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[363] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[364] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[364] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[365] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[366] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[367] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[368] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[369] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[370] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[371] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[372] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[373] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[374] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[375] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[376] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[377] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[377] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[378] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[379] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[380] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[381] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[382] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[383] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[384] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[385] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[386] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[387] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[388] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[389] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[390] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[390] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[391] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[392] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[393] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[394] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[395] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[396] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[396] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[397] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[398] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[399] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[400] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[401] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[402] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[403] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[403] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[404] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[405] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[406] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[407] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[408] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[409] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[410] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[411] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[412] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[413] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[414] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[415] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[416] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[416] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[417] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[418] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[419] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[420] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[421] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[422] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[423] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[424] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[425] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[426] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[427] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[428] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[429] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[429] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[430] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[431] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[432] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[433] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[434] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[435] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[436] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[437] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[438] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[439] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[440] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[441] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[442] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[442] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[443] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[444] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[445] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[446] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[447] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[448] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[449] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[450] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[451] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[452] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[453] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[454] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[455] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[455] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[456] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[457] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[457] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[458] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[459] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[460] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[461] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[462] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[463] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[464] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[465] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[466] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[467] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[468] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[468] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[469] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[470] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[471] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[472] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[473] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[474] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[475] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[476] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[477] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[478] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[479] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[480] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[481] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[481] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[482] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[483] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[484] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[485] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[486] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[487] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[488] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[489] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[490] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[491] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[492] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[493] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[494] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[494] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[495] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[496] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[497] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[498] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[499] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[500] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[501] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[502] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[503] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[504] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[505] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[506] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[507] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[507] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[508] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[509] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[510] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[511] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[512] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[513] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[514] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[515] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[516] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[517] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[518] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[518] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[519] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[520] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[520] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[521] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[522] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[523] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[524] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[525] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[526] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[527] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[528] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[529] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[530] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[531] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[532] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[533] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[533] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[534] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[535] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[536] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[537] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[538] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[539] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[540] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[541] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[542] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[543] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[544] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[545] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[546] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[546] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[547] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[548] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[549] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[550] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[551] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[552] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[553] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[554] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[555] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[556] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[557] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[558] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[559] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[559] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[560] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[561] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[562] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[563] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[564] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[565] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[566] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[567] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[568] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[569] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[570] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[571] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[572] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[572] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[573] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[574] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[575] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[576] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[577] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[578] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[579] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[579] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[580] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[581] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[582] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[583] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[584] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[585] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[585] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[586] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[587] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[588] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[589] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[590] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[591] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[592] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[593] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[594] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[595] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[596] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[597] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[598] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[598] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[599] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[600] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[601] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[602] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[603] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[604] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[605] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[606] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[607] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[608] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[609] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[610] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[611] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[611] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[612] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[613] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[614] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[615] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[616] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[617] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[618] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[619] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[620] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[621] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[622] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[623] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[624] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[624] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[625] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[626] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[627] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[628] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[629] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[630] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[631] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[632] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[633] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[634] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[635] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[636] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[637] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[637] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[638] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[639] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[640] no progress for 60 steps at hops 362: detour around nodes 457..818, next node now 456 (362 hops)
+[640] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[641] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[642] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)
+[643] node 456 hops 362 undo-turn (<Action.IDLE: 0>, 1) undo 457->456 in one go: turn +0 deg (drive turned -10 there)

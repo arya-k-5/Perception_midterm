@@ -1,0 +1,857 @@
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: loaded vocabulary + calibration from cache/anyloc_local-8_dinov2_vits14_k32_d256_2789.npz
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+2789 frames from 3 trajectories
+spawn join: drive starts 0 and 702 (71 inliers)
+spawn join: drive starts 0 and 1593 (150 inliers)
+sequence check: kept 291 of 1121 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 291 of 291 shortcuts, rejected 0 look-alikes
+sequence check: kept 291 of 291 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3078 edges, 291 verified shortcuts
+checking your agent on a sample frame...
+goal: node 2480 (view 0, 0 inliers; R-best 2480)
+MAP: 2789 photos, 3078 edges. ROUTE from spawn photo 702: 310 hops (~930 ticks), 2 drive switches (~5 ticks of turning at them), 8 hops driven in reverse
+map planning took 0.5 s
+[1] node 0 hops 311 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.56
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 8                                                                                                         │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=3275557919                                            │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:8")                                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+goal: node 488 (view 2, 82 inliers; R-best 60)
+MAP: 2789 photos, 3078 edges. ROUTE from spawn photo 702: 370 hops (~1110 ticks), 1 drive switches (~2 ticks of turning at them), 0 hops driven in reverse
+map planning took 0.0 s
+[1] node 702 hops 370 replay (<Action.LEFT: 4>, 5) replay align to 702: here=-17 n=97
+[2] node 702 hops 370 replay (<Action.LEFT: 4>, 3) replay 702->703: LEFT (here=-0 n=181)
+[3] node 702 hops 370 replay (<Action.LEFT: 4>, 3) replay 703->704: LEFT (here=-7 n=116)
+[4] node 702 hops 370 replay (<Action.LEFT: 4>, 3) replay 703->704: LEFT (here=+3 n=115)
+[5] node 702 hops 370 replay (<Action.LEFT: 4>, 3) replay 704->705: LEFT (here=+3 n=114)
+[6] node 703 hops 369 replay (<Action.LEFT: 4>, 3) replay 705->706: LEFT (here=-4 n=93)
+[7] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-4 n=101)
+[8] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+6 n=110)
+[9] node 704 hops 368 replay (<Action.RIGHT: 8>, 5) replay align to 706: here=+17 n=71
+[10] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=134)
+[11] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=84)
+[12] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=67
+[13] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=130)
+[14] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=84)
+[15] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=63
+[16] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=123)
+[17] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=89)
+[18] node 704 hops 368 follow (<Action.FORWARD: 1>, 1) wp +4 p=1.00 best=1.00
+[19] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=55
+[20] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=77)
+[21] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=78)
+[22] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=58
+[23] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=89)
+[24] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=78)
+[25] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+19 n=55
+[26] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=90)
+[27] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=85)
+[28] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=50
+[29] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=89)
+[30] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=75)
+[31] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=54
+[32] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=84)
+[33] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=79)
+[34] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=56
+[35] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=74)
+[36] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=69)
+[37] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=51
+[38] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=75)
+[39] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[40] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=48
+[41] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+0 n=86)
+[42] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=79)
+[43] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=54
+[44] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=81)
+[45] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[46] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=56
+[47] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=83)
+[48] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=83)
+[49] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=49
+[50] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=85)
+[51] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[52] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=48
+[53] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=94)
+[54] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=75)
+[55] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=49
+[56] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=94)
+[57] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=79)
+[58] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=53
+[59] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=79)
+[60] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=77)
+[61] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+19 n=52
+[62] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+2 n=87)
+[63] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=77)
+[64] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+22 n=48
+[65] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+2 n=97)
+[66] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=72)
+[67] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=49
+[68] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=94)
+[69] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=79)
+[70] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=57
+[71] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=91)
+[72] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=70)
+[73] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=56
+[74] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=91)
+[75] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[76] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+22 n=56
+[77] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=89)
+[78] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=79)
+[79] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=48
+[80] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+0 n=82)
+[81] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=79)
+[82] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+22 n=51
+[83] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=84)
+[84] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=73)
+[85] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=50
+[86] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=88)
+[87] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=73)
+[88] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=55
+[89] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=87)
+[90] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[91] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=56
+[92] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=86)
+[93] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=74)
+[94] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=51
+[95] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=87)
+[96] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=75)
+[97] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=57
+[98] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+0 n=84)
+[99] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=73)
+[100] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=50
+[101] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=88)
+[102] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=75)
+[103] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=49
+[104] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=81)
+[105] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=77)
+[106] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=53
+[107] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=80)
+[108] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=77)
+[109] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=50
+[110] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=91)
+[111] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=78)
+[112] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=50
+[113] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=86)
+[114] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=83)
+[115] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+19 n=54
+[116] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=84)
+[117] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=87)
+[118] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=53
+[119] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=86)
+[120] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=71)
+[121] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=55
+[122] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+1 n=88)
+[123] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=73)
+[124] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=52
+[125] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=79)
+[126] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=75)
+[127] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=53
+[128] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+0 n=91)
+[129] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+9 n=79)
+[130] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=53
+[131] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=91)
+[132] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+11 n=75)
+[133] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+20 n=50
+[134] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-2 n=82)
+[135] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+8 n=80)
+[136] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=57
+[137] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-1 n=92)
+[138] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=84)
+[139] node 704 hops 368 replay (<Action.RIGHT: 8>, 6) replay align to 706: here=+21 n=56
+[140] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=-0 n=88)
+[141] node 704 hops 368 replay (<Action.LEFT: 4>, 3) replay 706->707: LEFT (here=+10 n=70)
+[142] node 705 hops 367 replay (<Action.RIGHT: 8>, 4) replay align to 707: here=+14 n=73
+[143] node 705 hops 367 replay (<Action.FORWARD: 1>, 3) replay 707->708: FORWARD (here=-0 n=119)
+[144] node 705 hops 367 replay (<Action.FORWARD: 1>, 3) replay 707->708: FORWARD (here=-1 n=49)
+[145] node 705 hops 367 replay (<Action.RIGHT: 8>, 5) replay align to 705: here=+19 n=35
+[146] node 705 hops 367 replay (<Action.LEFT: 4>, 5) replay align to 707: here=-17 n=43
+[147] node 705 hops 367 replay (<Action.RIGHT: 8>, 6) replay align to 705: here=+21 n=37
+[148] node 705 hops 367 replay (<Action.LEFT: 4>, 6) replay align to 707: here=-21 n=39
+[149] node 705 hops 367 replay (<Action.RIGHT: 8>, 5) replay align to 705: here=+19 n=35
+[150] node 705 hops 367 replay (<Action.LEFT: 4>, 5) replay align to 707: here=-17 n=38
+[151] node 705 hops 367 replay (<Action.RIGHT: 8>, 5) replay align to 705: here=+17 n=33
+[152] node 705 hops 367 replay (<Action.LEFT: 4>, 5) replay align to 707: here=-18 n=40
+[153] node 705 hops 367 replay (<Action.RIGHT: 8>, 5) replay align to 705: here=+18 n=34
+[154] node 705 hops 367 replay (<Action.LEFT: 4>, 6) replay align to 707: here=-19 n=37
+[155] node 705 hops 367 replay (<Action.FORWARD: 1>, 3) replay 707->708: FORWARD (here=+5 n=36)
+[156] node 708 hops 364 replay (<Action.FORWARD: 1>, 3) replay 709->710: FORWARD (here=+4 n=60)
+[157] node 708 hops 364 replay (<Action.FORWARD: 1>, 3) replay 709->710: FORWARD (here=+2 n=69)
+[158] node 709 hops 363 steer-turn (<Action.LEFT: 4>, 4) wp +3 steer yaw=-12 n=41
+[159] node 709 hops 363 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-10 n=49
+[160] node 709 hops 363 steer-fwd (<Action.FORWARD: 1>, 2) wp +3 steer yaw=-9 n=50
+[161] node 711 hops 361 follow (<Action.FORWARD: 1>, 1) wp +2 p=1.00 best=1.00
+[162] node 711 hops 361 follow (<Action.FORWARD: 1>, 1) wp +2 p=0.82 best=1.00
+[163] node 711 hops 361 replay (<Action.RIGHT: 8>, 4) replay align to 129: here=+14 n=52
+[164] node 128 hops 360 replay (<Action.FORWARD: 1>, 3) replay 129->130: FORWARD (here=-10 n=49)
+[165] node 128 hops 360 replay (<Action.RIGHT: 8>, 3) replay 130->131: RIGHT (here=-2 n=44)
+[166] node 131 hops 357 replay (<Action.RIGHT: 8>, 3) replay 131->132: RIGHT (here=+8 n=68)
+[167] node 131 hops 357 replay (<Action.RIGHT: 8>, 3) replay 132->133: RIGHT (here=+8 n=63)
+[168] node 131 hops 357 replay (<Action.RIGHT: 8>, 3) replay 132->133: RIGHT (here=-4 n=58)
+[169] node 132 hops 356 replay (<Action.RIGHT: 8>, 3) replay 133->134: RIGHT (here=+6 n=65)
+[170] node 133 hops 355 replay (<Action.RIGHT: 8>, 3) replay 133->134: RIGHT (here=-7 n=67)
+[171] node 134 hops 354 replay (<Action.FORWARD: 1>, 3) replay 134->135: FORWARD (here=+4 n=69)
+[172] node 134 hops 354 replay (<Action.RIGHT: 8>, 4) replay align to 135: here=+12 n=66
+[173] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[174] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+3 n=69)
+[175] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[176] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+1 n=63)
+[177] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-5 n=56)
+[178] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-13 n=47
+[179] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+1 n=53)
+[180] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-9 n=52)
+[181] node 134 hops 354 replay (<Action.LEFT: 4>, 6) replay align to 134: here=-28 n=49
+[182] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-1 n=55)
+[183] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-15 n=51
+[184] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[185] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+7 n=74)
+[186] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-5 n=48)
+[187] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-15 n=54
+[188] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[189] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+7 n=66)
+[190] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-4 n=59)
+[191] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-11 n=47)
+[192] node 134 hops 354 replay (<Action.LEFT: 4>, 6) replay align to 134: here=-37 n=43
+[193] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-1 n=61)
+[194] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-11 n=49)
+[195] node 134 hops 354 replay (<Action.LEFT: 4>, 6) replay align to 134: here=-34 n=45
+[196] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-4 n=55)
+[197] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-14 n=54
+[198] node 718 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+0 n=74)
+[199] node 718 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-7 n=56)
+[200] node 718 hops 354 replay (<Action.LEFT: 4>, 6) replay align to 135: here=-24 n=45
+[201] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[202] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+5 n=69)
+[203] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-4 n=54)
+[204] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-14 n=54
+[205] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[206] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+6 n=70)
+[207] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+2 n=59)
+[208] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-13 n=47
+[209] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[210] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+3 n=72)
+[211] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+0 n=50)
+[212] node 134 hops 354 replay (<Action.LEFT: 4>, 5) replay align to 135: here=-17 n=50
+[213] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+2 n=69)
+[214] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-9 n=47)
+[215] node 134 hops 354 replay (<Action.LEFT: 4>, 5) replay align to 135: here=-18 n=49
+[216] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[217] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+6 n=74)
+[218] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 134: here=-15 n=56
+[219] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+11 n=75)
+[220] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[221] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+5 n=77)
+[222] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+0 n=64)
+[223] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-14 n=49
+[224] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[225] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+8 n=70)
+[226] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-1 n=62)
+[227] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-13 n=52
+[228] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[229] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+8 n=74)
+[230] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-4 n=56)
+[231] node 134 hops 354 replay (<Action.LEFT: 4>, 6) replay align to 135: here=-23 n=44
+[232] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+9 n=70)
+[233] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-3 n=65)
+[234] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-12 n=48
+[235] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[236] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+2 n=68)
+[237] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-1 n=59)
+[238] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-12 n=49
+[239] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[240] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+5 n=76)
+[241] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-5 n=56)
+[242] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-15 n=49
+[243] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[244] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+10 n=71)
+[245] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=-2 n=63)
+[246] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-13 n=46
+[247] node 719 hops 355 reverse (<Action.LEFT: 4>, 2) reverse 719->718: undo RIGHT
+[248] node 134 hops 354 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+10 n=73)
+[249] node 134 hops 354 replay (<Action.LEFT: 4>, 4) replay align to 135: here=-13 n=49
+[250] node 134 hops 354 replay (<Action.FORWARD: 1>, 3) replay 134->135: FORWARD (here=-2 n=67)
+[251] node 134 hops 354 replay (<Action.FORWARD: 1>, 3) replay 136->137: FORWARD (here=-3 n=58)
+[252] node 133 hops 355 replay (<Action.RIGHT: 8>, 3) replay 135->136: RIGHT (here=+4 n=33)
+[253] node 136 hops 352 replay (<Action.LEFT: 4>, 6) replay align to 136: here=-20 n=50
+[254] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=-7 n=70)
+[255] node 141 hops 347 replay (<Action.LEFT: 4>, 6) replay align to 143: here=-20 n=57
+[256] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+4 n=62)
+[257] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=-3 n=62)
+[258] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-15 n=60
+[259] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=-1 n=67)
+[260] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-13 n=60
+[261] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+3 n=66)
+[262] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=-12 n=69)
+[263] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-12 n=46
+[264] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=-7 n=66)
+[265] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-14 n=52
+[266] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+3 n=71)
+[267] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-13 n=66
+[268] node 141 hops 347 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+2 n=62)
+[269] node 141 hops 347 replay (<Action.LEFT: 4>, 4) replay align to 143: here=-13 n=64
+[270] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=78)
+[271] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=60
+[272] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=76)
+[273] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=61)
+[274] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=43
+[275] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=70)
+[276] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=64)
+[277] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+25 n=43
+[278] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=75)
+[279] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=59)
+[280] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=46
+[281] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=76)
+[282] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=67)
+[283] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=44
+[284] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=71)
+[285] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=63
+[286] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=76)
+[287] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=71)
+[288] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=56
+[289] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=68)
+[290] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=60
+[291] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=85)
+[292] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=72)
+[293] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[294] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=80)
+[295] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=75)
+[296] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=60
+[297] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=74)
+[298] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=58)
+[299] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 143: here=+28 n=42
+[300] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=68)
+[301] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=66
+[302] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=77)
+[303] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=75)
+[304] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=56
+[305] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=74)
+[306] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=62
+[307] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=79)
+[308] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=76)
+[309] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=56
+[310] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=72)
+[311] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=59)
+[312] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=47
+[313] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=70)
+[314] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=59
+[315] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-4 n=77)
+[316] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+12 n=68
+[317] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=74)
+[318] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=74)
+[319] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=59
+[320] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=71)
+[321] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=58)
+[322] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 143: here=+20 n=45
+[323] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=74)
+[324] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=63
+[325] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=78)
+[326] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=69)
+[327] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=58
+[328] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=78)
+[329] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=59
+[330] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=75)
+[331] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=76)
+[332] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 143: here=+17 n=54
+[333] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+2 n=75)
+[334] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=69)
+[335] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=57
+[336] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+6 n=70)
+[337] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=70)
+[338] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=75)
+[339] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=55)
+[340] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+25 n=47
+[341] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=75)
+[342] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=63)
+[343] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+24 n=47
+[344] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[345] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=62)
+[346] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+26 n=47
+[347] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=79)
+[348] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=66)
+[349] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=48
+[350] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=75)
+[351] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=51
+[352] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=76)
+[353] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=75)
+[354] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=51
+[355] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[356] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=63)
+[357] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+25 n=46
+[358] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=75)
+[359] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=58
+[360] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=76)
+[361] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[362] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+23 n=54
+[363] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-4 n=77)
+[364] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=66)
+[365] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=55
+[366] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=81)
+[367] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=67)
+[368] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=56
+[369] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[370] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=58
+[371] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-5 n=80)
+[372] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=64)
+[373] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=52
+[374] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=70)
+[375] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+12 n=58
+[376] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=73)
+[377] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=63)
+[378] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+25 n=51
+[379] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=74)
+[380] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=67
+[381] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-5 n=75)
+[382] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=61)
+[383] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=59
+[384] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=75)
+[385] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+12 n=58
+[386] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[387] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=62
+[388] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=82)
+[389] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=70)
+[390] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[391] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=82)
+[392] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=68)
+[393] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=56
+[394] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[395] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=61)
+[396] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+25 n=40
+[397] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[398] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=62
+[399] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=76)
+[400] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=71)
+[401] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=52
+[402] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=76)
+[403] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=57)
+[404] node 142 hops 346 replay (<Action.RIGHT: 8>, 3) replay 142->143: RIGHT (here=+9 n=51)
+[405] node 142 hops 346 replay (<Action.RIGHT: 8>, 3) replay 142->143: RIGHT (here=-7 n=65)
+[406] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=71)
+[407] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=65)
+[408] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=40
+[409] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+2 n=74)
+[410] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[411] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=43
+[412] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=76)
+[413] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=67
+[414] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=82)
+[415] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=77)
+[416] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=61
+[417] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=85)
+[418] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=69)
+[419] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=58
+[420] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=80)
+[421] no progress for 150 steps at hops 345: detour around nodes 143..153, next node now 144 (345 hops)
+[421] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=63
+[422] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=81)
+[423] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=70)
+[424] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=54
+[425] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[426] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=67
+[427] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=79)
+[428] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=72)
+[429] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=56
+[430] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=77)
+[431] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=65)
+[432] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+28 n=43
+[433] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=73)
+[434] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=61
+[435] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=78)
+[436] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=66)
+[437] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=54
+[438] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[439] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=62
+[440] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-5 n=82)
+[441] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=71)
+[442] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=60
+[443] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=78)
+[444] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=64
+[445] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=84)
+[446] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=67)
+[447] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=54
+[448] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=82)
+[449] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=67)
+[450] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=55
+[451] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=80)
+[452] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[453] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=57
+[454] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=78)
+[455] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[456] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=60
+[457] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=81)
+[458] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=63)
+[459] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=52
+[460] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[461] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=63
+[462] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=76)
+[463] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=69)
+[464] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=61
+[465] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=75)
+[466] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=71)
+[467] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=57
+[468] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=79)
+[469] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=70)
+[470] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=52
+[471] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[472] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=71)
+[473] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=55
+[474] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[475] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=63
+[476] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=70)
+[477] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=68)
+[478] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=63
+[479] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+2 n=73)
+[480] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=58)
+[481] node 142 hops 346 replay (<Action.RIGHT: 8>, 3) replay 142->143: RIGHT (here=+5 n=55)
+[482] node 142 hops 346 replay (<Action.RIGHT: 8>, 3) replay 142->143: RIGHT (here=-5 n=64)
+[483] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=75)
+[484] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=63
+[485] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=82)
+[486] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=70)
+[487] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=57
+[488] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=80)
+[489] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=67)
+[490] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=57
+[491] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[492] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=62)
+[493] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+28 n=42
+[494] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=77)
+[495] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+12 n=62)
+[496] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=44
+[497] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=77)
+[498] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=65
+[499] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=85)
+[500] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=71)
+[501] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=52
+[502] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=81)
+[503] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=69)
+[504] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=55
+[505] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+6 n=75)
+[506] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-10 n=73)
+[507] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=73)
+[508] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=67
+[509] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=82)
+[510] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[511] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=59
+[512] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=81)
+[513] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=69)
+[514] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=58
+[515] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=79)
+[516] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=68)
+[517] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=51
+[518] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=79)
+[519] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=69
+[520] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=82)
+[521] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=73)
+[522] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=54
+[523] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=68)
+[524] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=64
+[525] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=81)
+[526] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=72)
+[527] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=54
+[528] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=79)
+[529] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=70)
+[530] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=53
+[531] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=79)
+[532] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=59)
+[533] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=40
+[534] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=74)
+[535] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[536] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=44
+[537] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=70)
+[538] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=58
+[539] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=83)
+[540] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=72)
+[541] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=56
+[542] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=76)
+[543] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=63
+[544] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=79)
+[545] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=70)
+[546] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=57
+[547] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=75)
+[548] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=62)
+[549] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+19 n=44
+[550] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=74)
+[551] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=58
+[552] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[553] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=75)
+[554] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=58
+[555] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=80)
+[556] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[557] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=59
+[558] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=74)
+[559] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=59)
+[560] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=43
+[561] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=76)
+[562] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=66
+[563] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=78)
+[564] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=72)
+[565] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=55
+[566] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=72)
+[567] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=60
+[568] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=82)
+[569] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=67)
+[570] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=57
+[571] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=72)
+[572] no progress for 150 steps at hops 345: detour around nodes 143..153, next node now 144 (345 hops)
+[572] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=58
+[573] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=80)
+[574] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=79)
+[575] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[576] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=72)
+[577] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=78)
+[578] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=57
+[579] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=75)
+[580] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=61)
+[581] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=45
+[582] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=78)
+[583] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=63
+[584] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=72)
+[585] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=67)
+[586] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=53
+[587] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=79)
+[588] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+7 n=69)
+[589] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=82)
+[590] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=67)
+[591] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+19 n=55
+[592] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=85)
+[593] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+12 n=63
+[594] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=82)
+[595] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=72)
+[596] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[597] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=80)
+[598] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=74)
+[599] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=56
+[600] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=74)
+[601] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=62)
+[602] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=54
+[603] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[604] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[605] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 143: here=+27 n=45
+[606] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[607] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[608] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=43
+[609] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=76)
+[610] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=67)
+[611] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=42
+[612] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=71)
+[613] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=58
+[614] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=80)
+[615] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=77)
+[616] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=56
+[617] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=75)
+[618] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=70)
+[619] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=61
+[620] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=74)
+[621] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=66
+[622] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=79)
+[623] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=76)
+[624] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=58
+[625] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=72)
+[626] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=65
+[627] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=82)
+[628] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=71)
+[629] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=56
+[630] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[631] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=66)
+[632] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=45
+[633] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=71)
+[634] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=63)
+[635] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=44
+[636] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=72)
+[637] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=61
+[638] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[639] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[640] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=57
+[641] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=82)
+[642] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=75)
+[643] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=61
+[644] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=70)
+[645] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=62)
+[646] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+28 n=42
+[647] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=76)
+[648] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=60
+[649] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-7 n=83)
+[650] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=68)
+[651] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+19 n=59
+[652] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=71)
+[653] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=62)
+[654] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=50
+[655] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=79)
+[656] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=66
+[657] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=77)
+[658] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=67)
+[659] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=57
+[660] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=74)
+[661] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=61)
+[662] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+22 n=42
+[663] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=79)
+[664] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=63)
+[665] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 143: here=+22 n=41
+[666] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=73)
+[667] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[668] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=44
+[669] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=71)
+[670] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=60
+[671] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+0 n=73)
+[672] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-10 n=69)
+[673] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=67)
+[674] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=67)
+[675] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=45
+[676] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=77)
+[677] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=63
+[678] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=77)
+[679] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=71)
+[680] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=51
+[681] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=83)
+[682] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=68)
+[683] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=57
+[684] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=76)
+[685] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=65
+[686] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=81)
+[687] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=71)
+[688] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=60
+[689] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=85)
+[690] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=65)
+[691] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=54
+[692] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+2 n=72)
+[693] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-10 n=73)
+[694] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+5 n=77)
+[695] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=64)
+[696] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=42
+[697] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=71)
+[698] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=65
+[699] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[700] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=72)
+[701] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=61
+[702] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=79)
+[703] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=60
+[704] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[705] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=72)
+[706] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=59
+[707] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=72)
+[708] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=60
+[709] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=75)
+[710] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=65)
+[711] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=60
+[712] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=80)
+[713] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=67)
+[714] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=51
+[715] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=75)
+[716] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=63)
+[717] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=44
+[718] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=76)
+[719] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=57)
+[720] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=43
+[721] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=74)
+[722] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=67)
+[723] no progress for 150 steps at hops 345: detour around nodes 143..153, next node now 144 (345 hops)
+[723] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+21 n=45
+[724] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=68)
+[725] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=62
+[726] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[727] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=73)
+[728] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=57
+[729] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-2 n=79)
+[730] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=76)
+[731] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=64
+[732] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=79)
+[733] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=73)
+[734] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=55
+[735] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=77)
+[736] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=63
+[737] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=82)
+[738] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=70)
+[739] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=57
+[740] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=82)
+[741] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=72)
+[742] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=58
+[743] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=71)
+[744] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=65
+[745] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=77)
+[746] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=71)
+[747] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=57
+[748] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=84)
+[749] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=69)
+[750] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+14 n=55
+[751] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+0 n=70)
+[752] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=59
+[753] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=78)
+[754] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=67
+[755] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=80)
+[756] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=73)
+[757] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=60
+[758] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-0 n=72)
+[759] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=72)
+[760] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[761] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[762] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+10 n=74)
+[763] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+19 n=57
+[764] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=83)
+[765] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=66)
+[766] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+24 n=53
+[767] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=83)
+[768] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=66)
+[769] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+23 n=48
+[770] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=77)
+[771] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+8 n=70)
+[772] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+18 n=52
+[773] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+1 n=75)
+[774] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-5 n=72)
+[775] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+1 n=74)
+[776] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+11 n=65)
+[777] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+27 n=38
+[778] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=76)
+[779] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=65
+[780] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=82)
+[781] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=74)
+[782] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+13 n=57
+[783] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay 143->144: RIGHT (here=+4 n=72)
+[784] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-4 n=67)
+[785] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=71)
+[786] node 143 hops 345 replay (<Action.RIGHT: 8>, 4) replay align to 145: here=+15 n=69
+[787] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=80)
+[788] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=63)
+[789] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+23 n=53
+[790] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-3 n=81)
+[791] node 143 hops 345 replay (<Action.RIGHT: 8>, 3) replay align to 145: here=+12 n=69
+[792] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+3 n=74)
+[793] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+7 n=64)
+[794] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+17 n=55
+[795] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+6 n=79)
+[796] node 143 hops 345 replay (<Action.RIGHT: 8>, 5) replay align to 145: here=+16 n=64
+[797] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=80)
+[798] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=72)
+[799] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+20 n=58
+[800] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-1 n=81)
+[801] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+4 n=74)
+[802] node 143 hops 345 replay (<Action.RIGHT: 8>, 6) replay align to 145: here=+19 n=56
+[803] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=-6 n=72)
+[804] node 143 hops 345 replay (<Action.LEFT: 4>, 3) replay 145->146: LEFT (here=+9 n=72)
+[805] node 143 hops 345 budget 16 replay 145->146: LEFT (here=+9 n=72)
+╭─ result ─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ FAILED   0 / 10 pts                                                                                                  │
+│ 2,989 steps · SPL 0.00                                                                                               │
+│ no points: the goal is distance ≤ 0.2 m and heading ≤ 20                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+804 round trips · median 0.8 ms (server 0.8 ms, network 0.0 ms) · your code 458.1 ms per step
+replay: 783 decisions taught-and-repeated (277 of them re-alignments)
+directed steering: 0 decisions replaced a blind turn
+route: localised on the route in 786 decisions, off it in 18
+jitter: 546 turn reversals; 0 reversals suppressed by the damper
+ticks by reason: replay 2948, reverse 30, steer-turn 4, steer-fwd 4, follow 3, budget 1
+lost detector: 0 relocalisations
+ticks asked: turning 2955, forward 34, backward 0
+result: Result(goal_tier='failed', nav_steps=2989, spl=0.0, points=0.0, max_points=10.0, awarded={'Distance': 0.0, 'Heading': 0.0, 'SPL': 0.0}, job_id='local-8-57919', session_id='local-8', arrival=None, think={'steps': 804, 'ticks': 2989, 'payload_bytes': 185241600, 'rtt_ms_p50': 0.8474585, 'server_ms_p50': 0.8474585, 'network_ms_p50': 0.0, 'decode_ms_p50': 0.0, 'think_ms_p50': 458.053354, 'steps_per_second': 1.9993418294742669}, attempts_used=0, attempts_allowed=None)

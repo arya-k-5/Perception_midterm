@@ -1,0 +1,13 @@
+usage: my_agent_1820.py [-h] [--challenge CHALLENGE] [--local [SEED]]
+                        [--api-key API_KEY] [--server SERVER] [--yes]
+                        [--no-browser] [--no-check] [--fps FPS] [--data DATA]
+                        [--r R] [--l L] [--device DEVICE] [--burst BURST]
+                        [--budget BUDGET] [--s-local S_LOCAL]
+                        [--s-reach S_REACH] [--s-shortcut S_SHORTCUT]
+                        [--superglue | --no-superglue] [--geo-min GEO_MIN]
+                        [--motion-seed MOTION_SEED] [--explore]
+                        [--place {r,anyloc}] [--min-run MIN_RUN] [--no-join]
+                        [--no-steer] [--localiser {argmax,bayes}]
+                        [--smooth-steer] [--goal-watch] [--steer-hold]
+                        [--detour-once] [--verbose] [--log-dir LOG_DIR]
+my_agent_1820.py: error: unrecognized arguments: --map-ticks --think-confused

@@ -1,0 +1,41 @@
+recording exploration data for local maze 55 into data/local-55 ...
+Using cache found in /Users/arya/.cache/torch/hub/facebookresearch_dinov2_main
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/Users/arya/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+exploration data: data/local-55 (3384 frames on 3 routes)
+SPTM scorer on mps
+AnyLoc scorer: dinov2_vits14 on cpu, K=32, PCA 256
+AnyLoc: building a 32-word vocabulary from 2843 exploration frames ...
+AnyLoc calibration: different places ~ 0.281, same place ~ 0.441
+Loaded SuperPoint + LightGlue on mps
+2843 frames from 3 trajectories
+spawn join: drive starts 0 and 807 (192 inliers)
+spawn join: drive starts 0 and 1584 (371 inliers)
+sequence check: kept 505 of 1691 shortcuts (runs of >= 8 pairs)
+geometric check (SuperGlue): kept 505 of 505 shortcuts, rejected 0 look-alikes
+sequence check: kept 505 of 505 shortcuts (runs of >= 8 pairs)
+bearing check: 20/20 forward pairs point ahead -> sign OK
+graph: 3346 edges, 505 verified shortcuts
+map: measuring traj_0 (966 photos, about a minute per 800; cached afterwards) ...
+map: measuring traj_1 (911 photos, about a minute per 800; cached afterwards) ...
+map: measuring traj_2 (1507 photos, about a minute per 800; cached afterwards) ...
+map links: 810 added (1260 of 3860 candidates checked with SuperGlue); every edge now costs its ticks (823 s)
+checking your agent on a sample frame...
+goal: node 2655 (view 0, 0 inliers; R-best 2655)
+GOAL check (all 4 goal photos, F/L/B/R): base goal 2655: 0 = [0, 0, 0, 0]; best place 1944: 6 = [0, 0, 0, 6]
+GOAL kept
+Loaded SuperPoint model
+Loaded SuperGlue model ("indoor" weights)
+CALIBRATION inliers  same place: SuperGlue median 65, LightGlue 147 | different places: SuperGlue median 11 (max 26), LightGlue 13 (max 22)
+[1] node 0 hops 42 follow (<Action.LEFT: 4>, 1) wp +1 p=0.00 best=0.39
+starting the local simulator...
+╭─ local ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Local maze 55                                                                                                        │
+│ no attempt spent, nothing recorded  ·  replay with motion_seed=2406166794                                            │
+│                                                                                                                      │
+│ same maze anywhere:  run(agent, "local:55")                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

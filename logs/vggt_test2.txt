@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/Users/arya/vis_nav_player_work/.venv/lib/python3.12/site-packages/vggt/models/vggt.py:65: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+drive 0: 64 frames (every 2), windows of 16, device mps
+  window 1: frames 0..15  (32 s)
+  window 2: frames 10..25  (83 s)
