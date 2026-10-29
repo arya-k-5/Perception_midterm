@@ -16,7 +16,7 @@ Both loops come from Kartik's "reverse" rule (drive back along a drive by undoin
 
     uv run source/my_agent_1820lg2.py --local 10 --budget 4000
   3. NEAR THE GOAL, LOOK FOR IT; 4. NO FLIP-FLOPPING BETWEEN DRIVES; 5. STICK TO THE DRIVE;
-  6. LAST-METRE THRESHOLDS SCALED FOR LIGHTGLUE; 7. LAST-METRE DAMPER (constants below).
+  6. LAST-METRE THRESHOLDS SCALED FOR LIGHTGLUE; 7. LAST-METRE DAMPER; 8. NO CHECK-IN > 15 HOPS OUT (constants below).
     --no-undo1 / --no-lookroute / --no-goalnear switch fixes off
 """
 
@@ -27,7 +27,7 @@ import sys
 
 import numpy as np
 import sg_matcher
-from geometry import yaw_from_e
+from geometry import scale_ratio, yaw_from_e
 from lg_matcher import LGMatcher
 from my_agent import with_defaults
 from my_agent_1820g import FLAGS
@@ -45,7 +45,10 @@ LOOK_HOPS = 6  # route hops whose recorded turns decide the look-around side
 #    into a wall ~100 times until the budget ran out; Kartik's approach only starts at <= 3 hops). Within GOAL_NEAR
 #    hops on the map, every decision checks the 4 goal photos; a clear match starts the goal approach. Instead of
 #    backing up there, it turns on the spot (6 ticks at a time, at most a full circle) looking for them.
-GOAL_NEAR = 20
+GOAL_NEAR = 10  # was 20: on maze 8 a goal-photo wall seen 16-17 hops out (scale 1.3-1.5) restarted the approach 27x
+GOAL_SCALE_LO, GOAL_SCALE_HI = 0.7, 1.3  # the goal photo must look about as big as at the goal spot
+APPROACH_MAX = 40  # approach decisions without getting within APPROACH_DONE_HOPS -> give up for APPROACH_BLOCK
+APPROACH_DONE_HOPS, APPROACH_BLOCK = 5, 60
 GOAL_SEEN_N = 60  # LightGlue inliers with a goal photo (look-alikes elsewhere reach ~30-45)
 NEAR_SCAN_MAX = 18
 # 4. NO FLIP-FLOPPING BETWEEN DRIVES (maze 67, steps 900-930: belief 1538 <-> 2480 every few decisions, each asking
@@ -67,6 +70,9 @@ LG_GOTO_MIN = 70  # base 30
 #    approach turn (front, side or back photo) that reverses the previous one first waits one tick and measures
 #    again; a check-in needs the previous reading inside the gate too. (Ran without problems in nav_route2.)
 GATE_DEG, GATE_SCALE, MAX_WAITS = 10.0, 0.10, 3
+# 8. NO CHECK-IN FAR FROM THE GOAL ON THE MAP (maze 8: checked in at photo 426, 30 hops from the goal, on a
+#    17-inlier front-photo reading -> 0 pts). Never check in when the map says more than CHECKIN_MAX_HOPS.
+CHECKIN_MAX_HOPS = 15
 RE_APPR = re.compile(r"left=([+-]?[\d.]+) scale=([\d.]+)")
 LG_CHECKIN_STAGES = [(0.0, 50, 8.0, 0.10), (0.3, 45, 10.0, 0.12), (0.7, 40, 15.0, 0.15)]  # base 16/14/14 inliers
 
@@ -94,6 +100,8 @@ class LG2Agent(LGAgent):
         self.near_scan, self.last_jump_t = 0, -100
         self.c_stick = 0
         self.ap_prev, self.ap_turn, self.ap_waits, self.c_wait = None, 0, 0, 0
+        self.c_fake = 0
+        self.ap_run, self.ap_block_until, self.c_apgiveup = 0, -1, 0
 
     def act(self, obs):
         self._obs = obs
@@ -128,8 +136,15 @@ class LG2Agent(LGAgent):
         return node
 
     def _goal_seen(self) -> int:
+        """Best inliers over the 4 goal photos, counting only matches where the goal photo looks about as big as it
+        does from the goal spot (a goal-photo wall seen from elsewhere looks bigger or smaller)."""
         live = self.gm.features(self._obs.image)
-        return max(self.gm.match(tf, live, self.focal).n for tf in self.tfeat)
+        best = 0
+        for tf in self.tfeat:
+            m = self.gm.match(tf, live, self.focal)
+            if m.n > best and GOAL_SCALE_LO <= scale_ratio(m) <= GOAL_SCALE_HI:
+                best = m.n
+        return best
 
     def _turn_of(self, k: int) -> float:
         a = self.frames[k].action
@@ -207,13 +222,30 @@ class LG2Agent(LGAgent):
         return None
 
     def _out(self, a, why: str):
+        if why == "arrived" and getattr(self, "hops", 0) > CHECKIN_MAX_HOPS:
+            self.lock, self.side_target = 0, None
+            self.c_fake += 1
+            self.state += f" -> NOT checking in: {self.hops} hops from the goal on the map"
+            return super()._out((Action.IDLE, 1), "fake-goal")
         if self.lgth_on and (why.startswith("approach") or why == "arrived"):
             w = self._last_metre(a, why)
             if w is not None:
                 return super()._out(w, "approach-wait")
         elif not why.startswith("approach"):
             self.ap_turn = 0
-        near = 0 <= getattr(self, "hops", -1) <= GOAL_NEAR and self._obs is not None
+        # approach time limit: approaching for long while the map still says we are far -> stop, let the route bring us
+        if why.startswith("approach"):
+            self.ap_run += 1
+            if self.ap_run > APPROACH_MAX and getattr(self, "hops", 0) > APPROACH_DONE_HOPS:
+                self.lock, self.side_target, self.ap_run = 0, None, 0
+                self.ap_block_until = self.t + APPROACH_BLOCK
+                self.c_apgiveup += 1
+                self.state += f" -> approach gave up ({self.hops} hops on the map): following the route"
+                return super()._out((Action.IDLE, 1), "approach-giveup")
+        elif why not in ("approach-wait", "goal-near-seen"):
+            self.ap_run = 0
+        near = (0 <= getattr(self, "hops", -1) <= GOAL_NEAR and self._obs is not None
+                and self.t >= self.ap_block_until)
         if near and self.goal_on and getattr(self, "lock", 0) == 0 and not why.startswith("approach") \
                 and why not in ("arrived", "budget", "stuck", "recover"):
             try:
@@ -253,7 +285,8 @@ class LG2Agent(LGAgent):
     def finish(self, result) -> None:
         print(f"fixes: undo-turns {self.c_undo}, look-around side changed {self.c_look}, goal seen near {self.c_goal}, "
               f"near-goal scan steps {self.c_nscan}, far jumps held {self.c_hold}, stayed on the drive {self.c_stick}, "
-              f"last-metre waits {self.c_wait}")
+              f"last-metre waits {self.c_wait}, check-ins refused far from the goal {self.c_fake}, "
+              f"approaches given up {self.c_apgiveup}")
         super().finish(result)
 
 
